@@ -4,497 +4,182 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>BLACKMOUTH · Que tu marca diga algo</title>
-<meta name="description" content="Agencia de publicidad y branding en Cali. Toca a Mr. Lips y ahora sí, abre la boca.">
+<meta name="description" content="Agencia de publicidad y branding en Cali. Que tu marca diga algo.">
 <meta property="og:title" content="BLACKMOUTH · Que tu marca diga algo">
 <meta property="og:description" content="Agencia de publicidad y branding en Cali. Ahora sí, abre la boca.">
-<meta property="og:image" content="https://conoce-mas.link/blackmouth/img/og.jpg">
+<meta property="og:image" content="https://conoce-mas.link/blackmouth/img/hero.webp">
 <meta property="og:url" content="https://conoce-mas.link/blackmouth/">
 <link rel="canonical" href="https://conoce-mas.link/blackmouth/">
-<meta name="theme-color" content="#1332A9">
+<meta name="theme-color" content="#0a0b10">
 <link rel="icon" href="favicon.png">
-<link rel="preload" as="image" href="boca/00.webp">
 <link rel="stylesheet" href="https://use.typekit.net/dfu3yuy.css">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--nar:#F39200;--azul:#1332A9;--rosa:#E570A8;--ng:#08090d;--bl:#fff;
-  --f:"franklin-gothic-atf","Libre Franklin","Franklin Gothic Medium",Arial,sans-serif;
-  --gx:0;--gy:0;--resorte:cubic-bezier(.2,1.35,.35,1)}
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--nar:#F39200;--azul:#1332A9;--rosa:#E570A8;--ng:#0a0b10;--bl:#fff;
+  --f:"franklin-gothic-atf","Libre Franklin","Franklin Gothic Medium",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
 html{background:var(--ng)}
-body{font-family:var(--f);color:var(--bl);background:var(--ng);overflow-x:clip;-webkit-font-smoothing:antialiased;
-  overscroll-behavior-y:none}
-body.cerrado{overflow:hidden;height:100svh}
+body{font-family:var(--f);color:var(--bl);background:var(--ng);min-height:100vh;overflow-x:clip;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-.grano{position:fixed;inset:0;pointer-events:none;opacity:.08;mix-blend-mode:overlay;z-index:90}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.grano{position:fixed;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;z-index:50}
+.wrap{max-width:520px;margin:0 auto;padding:0 16px 56px}
 
-/* ====================== PUERTA (entrada) ====================== */
-#puerta{position:fixed;inset:0;z-index:80;background:var(--azul);display:flex;flex-direction:column;align-items:center;
-  justify-content:flex-end;overflow:hidden;touch-action:manipulation}
-#puerta .tramas{position:absolute;inset:-20%;background-image:radial-gradient(rgba(0,0,0,.22) 1.6px,transparent 1.8px);
-  background-size:14px 14px;transform:translate(calc(var(--gx)*-14px),calc(var(--gy)*-14px)) rotate(-8deg)}
-#puerta .foco{position:absolute;left:50%;top:22%;width:140vw;height:140vw;transform:translate(-50%,-50%);
-  background:radial-gradient(circle,rgba(255,255,255,.22),transparent 60%)}
-#bocaPuerta{position:relative;width:min(108vw,560px);height:auto;aspect-ratio:480/628;display:block;transform-origin:50% 29.7%;
-  will-change:transform;margin-bottom:-6vh;transform:translate(calc(var(--gx)*6px),calc(var(--gy)*4px))}
-#puerta .llamada{position:absolute;left:0;right:0;top:max(28px,env(safe-area-inset-top));text-align:center;z-index:2;padding:0 20px}
-#puerta .llamada small{display:block;font-weight:700;font-size:12px;letter-spacing:.32em;color:rgba(255,255,255,.8)}
-#puerta .llamada b{display:block;font-weight:900;font-size:clamp(44px,13.5vw,74px);line-height:.86;letter-spacing:-.03em;margin-top:12px;
-  text-shadow:0 6px 30px rgba(0,0,0,.35)}
-#puerta .llamada b i{font-style:normal;color:var(--nar)}
-#puerta .toca{position:absolute;bottom:max(26px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:3;
-  background:#fff;color:#000;font-weight:900;font-size:17px;letter-spacing:.04em;text-transform:uppercase;padding:16px 26px 15px;border-radius:999px;
-  white-space:nowrap;box-shadow:0 10px 40px rgba(0,0,0,.35);animation:late 1.6s ease-in-out infinite}
-#puerta .toca span{color:var(--nar)}
-@keyframes late{50%{transform:translateX(-50%) scale(1.06)}}
-#puerta .sonido{position:absolute;bottom:calc(max(26px,env(safe-area-inset-bottom)) + 66px);left:0;right:0;text-align:center;z-index:3;
-  font-size:13px;font-weight:500;color:rgba(255,255,255,.85)}
-#puerta .saltar{position:absolute;top:max(14px,env(safe-area-inset-top));right:14px;z-index:4;font-size:12px;font-weight:700;letter-spacing:.14em;
-  text-transform:uppercase;color:rgba(255,255,255,.7);padding:8px 10px}
-#puerta.abriendo .toca,#puerta.abriendo .sonido,#puerta.abriendo .saltar,#puerta.abriendo .llamada{opacity:0;transition:opacity .25s}
-#puerta .garganta{position:absolute;inset:0;background:#120406;opacity:0;pointer-events:none;z-index:5}
-#puerta.fuera{opacity:0;pointer-events:none;transition:opacity .5s .1s}
+/* ---------- portada ---------- */
+.hero{position:relative;height:min(118vw,620px);margin:0 -16px;overflow:hidden}
+.hero img.foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%;
+  transform:scale(1.08);animation:respira 9s ease-in-out infinite alternate}
+@keyframes respira{to{transform:scale(1.15) translateY(-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,11,16,.55) 0,rgba(10,11,16,0) 30%,rgba(10,11,16,0) 52%,rgba(10,11,16,.92) 86%,var(--ng) 100%)}
+.hero .logo{position:absolute;top:22px;left:20px;width:150px;z-index:2}
+.hero .tit{position:absolute;left:20px;right:20px;bottom:18px;z-index:2}
+.eti{font-weight:700;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+h1{font-weight:900;font-size:clamp(46px,13vw,68px);line-height:.88;letter-spacing:-.025em;margin-top:8px;
+  text-shadow:0 4px 30px rgba(0,0,0,.6)}
+h1 em{font-style:normal;color:var(--nar)}
+.sub{font-size:17px;line-height:1.35;color:rgba(255,255,255,.85);margin-top:12px;max-width:34ch}
 
-/* ====================== BARRA AL AIRE ====================== */
-.barra{position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:10px;padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top));
-  background:rgba(8,9,13,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
-.barra canvas{width:44px;height:44px;border-radius:50%;background:var(--azul);flex:none}
-.barra .quien{flex:1;min-width:0}
-.barra .quien b{display:block;font-weight:900;font-size:16px;letter-spacing:-.01em}
-.barra .quien span{display:block;font-size:12px;color:rgba(255,255,255,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.aire{display:flex;align-items:center;gap:6px;font-weight:900;font-size:11px;letter-spacing:.16em;padding:6px 9px;border-radius:6px;
-  border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.45);transition:all .2s}
-.aire i{width:8px;height:8px;border-radius:50%;background:currentColor}
-body.hablando .aire{border-color:#ff2d2d;color:#fff;background:#ff2d2d;box-shadow:0 0 18px rgba(255,45,45,.7)}
-body.hablando .aire i{animation:parpadea .6s steps(2) infinite}
-@keyframes parpadea{50%{opacity:.2}}
-.mute{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1.5px solid rgba(255,255,255,.2)}
-.mute svg{width:20px;height:20px}
-.mute .off{display:none}
-body.mudo .mute .on{display:none}
-body.mudo .mute .off{display:block}
+/* ---------- ficha ---------- */
+.ficha{display:flex;align-items:center;gap:12px;margin:18px 0 22px}
+.ficha img{width:48px;height:48px;border-radius:50%;border:2px solid var(--nar)}
+.ficha b{font-weight:700;font-size:16px;display:block}
+.ficha span{font-size:14px;color:rgba(255,255,255,.6)}
 
-/* ====================== ESCENARIO ====================== */
-.escena{position:relative;overflow:hidden;padding:26px 18px 0;background:
-  radial-gradient(120% 70% at 50% 100%,rgba(19,50,169,.85),transparent 70%),var(--ng)}
-.escena .tramas{position:absolute;inset:-10%;opacity:.35;background-image:radial-gradient(rgba(255,255,255,.18) 1.4px,transparent 1.6px);
-  background-size:13px 13px;transform:translate(calc(var(--gx)*-10px),calc(var(--gy)*-10px));
-  -webkit-mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent);mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)}
-.titular{position:relative;font-weight:900;font-size:clamp(52px,15.5vw,84px);line-height:.84;letter-spacing:-.035em;text-transform:uppercase}
-.titular .pal{display:inline-block;transform:translateY(110%) rotate(6deg);opacity:0}
-body.abierto .titular .pal{animation:sube .9s var(--resorte) forwards}
-@keyframes sube{to{transform:none;opacity:1}}
-.titular .naranja{color:var(--nar);position:relative}
-.marcador{position:absolute;left:-6%;right:-8%;bottom:-.06em;height:.22em;overflow:visible}
-.marcador path{fill:none;stroke:var(--nar);stroke-width:7;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420}
-body.abierto .marcador path{animation:traza .7s 1.15s cubic-bezier(.6,0,.2,1) forwards}
-@keyframes traza{to{stroke-dashoffset:0}}
-.bajada{position:relative;font-size:17px;line-height:1.35;color:rgba(255,255,255,.82);margin-top:14px;max-width:30ch;
-  opacity:0;transition:opacity .8s .9s}
-body.abierto .bajada{opacity:1}
-.host{position:relative;margin:4px -18px 0;height:min(118vw,620px);display:flex;justify-content:center;align-items:flex-end}
-.host .halo{position:absolute;left:50%;bottom:6%;width:92vw;height:92vw;max-width:520px;max-height:520px;transform:translateX(-50%);
-  border-radius:50%;background:radial-gradient(circle,rgba(243,146,0,.55),rgba(243,146,0,0) 64%);filter:blur(4px);
-  transition:transform .3s}
-body.hablando .host .halo{transform:translateX(-50%) scale(1.12)}
-#bocaHost{position:relative;height:100%;width:auto;aspect-ratio:480/628;touch-action:manipulation;cursor:pointer;
-  transform:translate(calc(var(--gx)*-10px),0) rotate(calc(var(--gx)*-2deg));transition:transform .2s;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))}
-#bocaHost.toque{animation:rebota .45s var(--resorte)}
-@keyframes rebota{30%{transform:scale(.94,1.04)}}
-.globo{position:absolute;left:18px;right:18px;bottom:7%;z-index:3;background:#fff;color:#000;border-radius:18px;padding:14px 16px 15px;
-  font-weight:700;font-size:18px;line-height:1.22;box-shadow:0 14px 40px rgba(0,0,0,.4);transform-origin:50% -20%;
-  opacity:0;transform:scale(.6) translateY(-10px);transition:opacity .2s,transform .35s var(--resorte);pointer-events:none}
-.globo::after{content:"";position:absolute;left:50%;margin-left:-10px;top:-22px;border:10px solid transparent;border-bottom:14px solid #fff}
-.globo.ver{opacity:1;transform:none}
-.globo b{color:var(--nar);font-weight:900}
-.tocame{position:absolute;right:14px;top:14%;z-index:3;font-weight:900;font-size:14px;letter-spacing:.14em;text-transform:uppercase;
-  background:var(--nar);color:#000;padding:9px 12px 8px;border-radius:999px;transform:rotate(-8deg);animation:late2 1.8s ease-in-out infinite}
-.tocame::before{content:"";position:absolute;left:-16px;top:50%;width:18px;height:2px;background:var(--nar)}
-@keyframes late2{50%{transform:rotate(-8deg) scale(1.08)}}
-body.yaToco .tocame{display:none}
+/* ---------- tarjetas ---------- */
+.lista{display:grid;gap:12px}
+.card{position:relative;display:block;height:118px;border-radius:18px;overflow:hidden;isolation:isolate;
+  background:#14161f;box-shadow:0 12px 34px rgba(0,0,0,.45);
+  opacity:0;transform:translateY(18px);animation:entra .7s cubic-bezier(.2,.8,.2,1) forwards}
+.card:nth-child(1){animation-delay:.10s}.card:nth-child(2){animation-delay:.18s}.card:nth-child(3){animation-delay:.26s}
+.card:nth-child(4){animation-delay:.34s}.card:nth-child(5){animation-delay:.42s}
+@keyframes entra{to{opacity:1;transform:none}}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg,rgba(10,11,16,.92) 0,rgba(10,11,16,.72) 46%,rgba(10,11,16,.12) 100%)}
+.card .txt{position:absolute;left:20px;top:50%;transform:translateY(-50%);right:70px}
+.card b{display:block;font-weight:900;font-size:24px;line-height:1;letter-spacing:-.01em;text-transform:uppercase}
+.card span{display:block;font-size:14px;line-height:1.3;color:rgba(255,255,255,.75);margin-top:6px}
+.card .fl{position:absolute;right:16px;top:50%;width:40px;height:40px;margin-top:-20px;border-radius:50%;
+  display:grid;place-items:center;background:var(--c,var(--nar));color:#000;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.card .fl svg{width:18px;height:18px}
+.card .barra{position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c,var(--nar))}
+.card:hover img,.card:focus-visible img{transform:scale(1.07)}
+.card:hover .fl,.card:focus-visible .fl{transform:translateX(4px) rotate(-8deg)}
+.card:active{transform:scale(.985)}
+.card.big{height:150px}
+.card.big b{font-size:30px}
+.card.big::before{background:linear-gradient(90deg,rgba(243,146,0,.95) 0,rgba(243,146,0,.80) 44%,rgba(243,146,0,.10) 100%)}
+.card.big b,.card.big span{color:#000}
+.card.big .fl{background:#000;color:var(--nar)}
+.card.big .barra{display:none}
+.azul{--c:var(--azul)}.azul .fl{color:#fff}.rosa{--c:var(--rosa)}
 
-/* ====================== TARJETAS ====================== */
-.zona{padding:30px 16px 0;position:relative}
-.eti{font-weight:700;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.6);margin:0 4px 14px}
-.lista{position:relative;z-index:2;display:grid;gap:18px;perspective:900px}
-.card{position:relative;display:block;min-height:150px;border-radius:24px;padding:22px 20px 20px;color:#fff;
-  background:var(--c);transform-style:preserve-3d;
-  transform:rotateX(calc(var(--gy)*-5deg)) rotateY(calc(var(--gx)*7deg));
-  box-shadow:0 18px 40px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.08);
-  opacity:0;translate:0 40px;rotate:x 40deg;transition:opacity .6s, translate .9s var(--resorte), rotate .9s var(--resorte), scale .15s}
-.card.in{opacity:1;translate:0 0;rotate:x 0deg}
-.card:active{scale:.965}
-.card .tramas{position:absolute;inset:0;border-radius:inherit;opacity:.18;
-  background-image:radial-gradient(rgba(0,0,0,.6) 1.3px,transparent 1.5px);background-size:11px 11px;
-  -webkit-mask-image:linear-gradient(110deg,#000,transparent 65%);mask-image:linear-gradient(110deg,#000,transparent 65%)}
-.card .obj{position:absolute;right:-8px;bottom:8px;width:40%;max-width:210px;height:auto;pointer-events:none;
-  transform:translateZ(60px) translate(calc(var(--gx)*-12px),calc(var(--gy)*-8px)) rotate(var(--r,-6deg));
-  filter:drop-shadow(0 18px 18px rgba(0,0,0,.35))}
-.card .txt{position:relative;width:62%;transform:translateZ(30px)}
-.card b{display:block;font-weight:900;font-size:27px;line-height:.9;letter-spacing:-.02em;text-transform:uppercase}
-.card span{display:block;font-size:14.5px;line-height:1.3;margin-top:9px;opacity:.88}
-.card .ir{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-weight:900;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
-  background:rgba(0,0,0,.85);color:#fff;padding:9px 13px 8px;border-radius:999px}
-.card .ir svg{width:14px;height:14px}
-.c-rosa{--c:var(--rosa);color:#000}.c-rosa .ir{background:#000}
-.c-azul{--c:var(--azul)}
-.c-nar{--c:var(--nar);color:#000}
-.c-bl{--c:#fff;color:#000}.c-bl .tramas{opacity:.1}
-.c-ng{--c:#111318;box-shadow:0 18px 40px rgba(0,0,0,.45),inset 0 0 0 1.5px rgba(255,255,255,.14)}
-.c-ng .ir{background:var(--nar);color:#000}
-.card.wa{min-height:210px}
-.card.wa b{font-size:38px}
-.card.wa .obj{width:46%;bottom:-4px;--r:8deg;animation:canta 2.4s ease-in-out infinite}
-@keyframes canta{50%{rotate:-6deg}}
-.card.wa .pulso{position:relative;display:inline-flex;margin-bottom:14px;transform:translateZ(30px);align-items:center;gap:6px;font-weight:900;font-size:11px;letter-spacing:.16em;
-  text-transform:uppercase;background:#000;color:#fff;padding:5px 9px;border-radius:6px}
-.card.wa .pulso i{width:7px;height:7px;border-radius:50%;background:#2ee26b;box-shadow:0 0 10px #2ee26b;animation:parpadea 1s steps(2) infinite}
-.card.wa .txt{padding-top:0}
+/* ---------- regalos ---------- */
+.regalos{position:relative;margin-top:34px;border-radius:22px;overflow:hidden;padding:24px 20px 22px;background:var(--azul);isolation:isolate}
+.regalos img{position:absolute;right:-60px;top:-40px;width:260px;opacity:.55;z-index:-1;transform:rotate(8deg);
+  -webkit-mask-image:radial-gradient(circle at 50% 45%,#000 42%,transparent 70%);mask-image:radial-gradient(circle at 50% 45%,#000 42%,transparent 70%)}
+.regalos h2{font-weight:900;font-size:34px;line-height:.92;letter-spacing:-.02em;text-transform:uppercase}
+.regalos h2 em{font-style:normal;color:var(--nar)}
+.regalos p{font-size:15px;line-height:1.35;color:rgba(255,255,255,.88);margin:10px 0 16px;max-width:30ch}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chip{display:block;background:#fff;color:#000;border-radius:14px;padding:12px 14px 13px;transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s}
+.chip b{display:block;font-weight:900;font-size:22px;letter-spacing:.02em}
+.chip span{display:block;font-size:12.5px;line-height:1.25;color:#333;margin-top:3px}
+.chip:hover,.chip:focus-visible{transform:translateY(-3px) rotate(-1deg);background:var(--nar)}
+.nota{font-size:12px;color:rgba(255,255,255,.7);margin-top:12px}
 
-/* ====================== IDEA EN PARACAÍDAS ====================== */
-#idea{position:fixed;left:0;top:0;width:78px;z-index:1;pointer-events:none;opacity:0;transition:opacity .4s;will-change:transform}
-#idea.ver{opacity:1}
+/* ---------- pequeños ---------- */
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.mini a{display:flex;align-items:center;gap:10px;border:1.5px solid rgba(255,255,255,.18);border-radius:14px;padding:14px;
+  font-weight:700;font-size:15px;transition:border-color .3s,background .3s}
+.mini a:hover{border-color:var(--nar);background:rgba(243,146,0,.08)}
+.mini svg{width:20px;height:20px;flex:none;color:var(--nar)}
 
-/* ====================== RASCA Y GANA ====================== */
-.regalos{position:relative;margin:44px 0 0;padding:34px 16px 30px;background:var(--nar);color:#000;overflow:hidden}
-.regalos .tramas{position:absolute;inset:0;opacity:.14;background-image:radial-gradient(#000 1.3px,transparent 1.5px);background-size:12px 12px}
-.regalos .caja{position:absolute;right:-22px;top:-6px;width:36%;max-width:190px;transform:rotate(10deg);animation:salta 2.6s var(--resorte) infinite;
-  filter:drop-shadow(0 16px 18px rgba(0,0,0,.3))}
-@keyframes salta{0%,70%,100%{translate:0 0}80%{translate:0 -14px}}
-.regalos h2{position:relative;font-weight:900;font-size:clamp(48px,14vw,76px);line-height:.84;letter-spacing:-.03em;text-transform:uppercase}
-.regalos h2 i{font-style:normal;color:#fff;-webkit-text-stroke:0}
-.regalos p{position:relative;font-size:16px;line-height:1.35;margin:12px 0 20px;max-width:24ch;font-weight:500}
-.rascas{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.rasca{position:relative;height:178px;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 24px rgba(0,0,0,.22)}
-.rasca .premio{position:absolute;inset:0;padding:14px 14px 12px;display:flex;flex-direction:column;justify-content:space-between}
-.rasca .premio b{font-weight:900;font-size:28px;letter-spacing:-.01em;color:#000}
-.rasca .premio span{font-size:13px;line-height:1.25;color:#222}
-.rasca .premio a{align-self:flex-start;font-weight:900;font-size:12px;letter-spacing:.1em;text-transform:uppercase;background:#000;color:#fff;
-  padding:8px 11px 7px;border-radius:999px;opacity:0;transform:translateY(8px);transition:all .4s .2s var(--resorte);pointer-events:none}
-.rasca.ganada .premio a{opacity:1;transform:none;pointer-events:auto}
-.rasca canvas{position:absolute;inset:0;z-index:2;width:100%;height:100%;touch-action:none;transition:opacity .5s}
-.rasca.ganada canvas{opacity:0;pointer-events:none}
-.regalos .pie{position:relative;font-size:12.5px;margin-top:14px;font-weight:500}
-
-/* ====================== CIERRE ====================== */
-.cierre{position:relative;padding:46px 18px 40px;text-align:center;overflow:hidden}
-.cierre .boca{width:72%;max-width:330px;margin:0 auto;display:block;animation:muerde 3s ease-in-out infinite;transform-origin:50% 60%}
-@keyframes muerde{0%,100%{scale:1 1}45%{scale:1 1}50%{scale:1.04 .9}55%{scale:1 1}}
-.cierre h3{font-weight:900;font-size:clamp(40px,12vw,64px);line-height:.86;letter-spacing:-.03em;text-transform:uppercase;margin-top:18px}
-.cierre h3 i{font-style:normal;color:var(--nar)}
-.cierre .btn{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:var(--nar);color:#000;font-weight:900;font-size:17px;
-  letter-spacing:.04em;text-transform:uppercase;padding:17px 26px 16px;border-radius:999px;box-shadow:0 0 0 0 rgba(243,146,0,.6);animation:onda 2s infinite}
-@keyframes onda{to{box-shadow:0 0 0 22px rgba(243,146,0,0)}}
-.mini{display:flex;justify-content:center;gap:10px;margin-top:22px}
-.mini a{display:flex;align-items:center;gap:8px;border:1.5px solid rgba(255,255,255,.2);border-radius:999px;padding:11px 15px;font-weight:700;font-size:14px}
-.mini svg{width:18px;height:18px;color:var(--nar)}
-.cinta{margin:40px -18px 0;background:#fff;color:#000;transform:rotate(-3deg);overflow:hidden}
-.cinta + .cinta{background:var(--azul);color:#fff;transform:rotate(2deg);margin-top:-6px}
-.cinta div{display:flex;gap:26px;white-space:nowrap;padding:11px 0;font-weight:900;font-size:26px;text-transform:uppercase;letter-spacing:-.01em;
-  width:max-content;animation:corre 16s linear infinite}
-.cinta + .cinta div{animation-direction:reverse}
-.cinta i{font-style:normal;color:var(--nar)}
+/* ---------- cierre ---------- */
+.marquesina{margin:40px -16px 0;overflow:hidden;background:var(--nar);color:#000;transform:rotate(-2deg)}
+.marquesina div{display:flex;gap:28px;white-space:nowrap;padding:12px 0;font-weight:900;font-size:30px;letter-spacing:-.01em;
+  text-transform:uppercase;animation:corre 18s linear infinite;width:max-content}
+.marquesina i{font-style:normal;color:#fff}
 @keyframes corre{to{transform:translateX(-50%)}}
-footer{padding:36px 18px calc(30px + env(safe-area-inset-bottom));text-align:center}
-.logo-svg{width:min(70vw,300px);height:auto}
-.logo-svg .bk{opacity:0}
-.logo-svg .ml{clip-path:inset(0 100% 0 0)}
-footer.in .logo-svg .bk{animation:corte .01s forwards}
-footer.in .logo-svg .ml{animation:escribe .28s forwards}
-@keyframes corte{to{opacity:1}}
-@keyframes escribe{to{clip-path:inset(0 0 0 0)}}
-footer p{font-size:12px;color:rgba(255,255,255,.5);margin-top:14px;letter-spacing:.06em}
-
-#confeti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:85}
-body.sacudido{animation:tiembla .5s}
-@keyframes tiembla{20%{transform:translateX(-8px) rotate(-1deg)}40%{transform:translateX(8px) rotate(1deg)}60%{transform:translateX(-5px)}80%{transform:translateX(4px)}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}
-  .card{opacity:1;translate:0 0;rotate:x 0deg}.titular .pal{transform:none;opacity:1}.bajada{opacity:1}
-  .logo-svg .bk{opacity:1}.logo-svg .ml{clip-path:none}}
-@media (min-width:620px){body{background:radial-gradient(60% 50% at 50% 0,rgba(19,50,169,.45),transparent),var(--ng)}
-  .todo{max-width:480px;margin:0 auto;box-shadow:0 0 0 1px rgba(255,255,255,.06)}}
+footer{text-align:center;margin-top:44px}
+footer img{width:180px}
+footer p{font-size:12px;color:rgba(255,255,255,.5);margin-top:12px;letter-spacing:.04em}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card{opacity:1;transform:none}}
 </style>
 </head>
-<body class="cerrado">
+<body>
 <svg class="grano" width="100%" height="100%" aria-hidden="true"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
-<canvas id="confeti" aria-hidden="true"></canvas>
-<img id="idea" src="obj/ideas.webp" alt="" aria-hidden="true">
 
-<div id="puerta" role="dialog" aria-label="Entrada">
-  <div class="tramas"></div><div class="foco"></div>
-  <div class="llamada"><small>BLACKMOUTH · CALI</small><b>Ahora sí,<br>abre la <i>boca.</i></b></div>
-  <canvas id="bocaPuerta" width="480" height="628" aria-hidden="true"></canvas>
-  <div class="garganta"></div>
-  <button class="saltar" id="saltar" type="button">Saltar</button>
-  <div class="sonido">🔊 Mejor con sonido</div>
-  <button class="toca" id="abrir" type="button">Toca para <span>abrir la boca</span></button>
-</div>
-
-<div class="todo">
-  <header class="barra">
-    <canvas id="bocaMini" width="96" height="96" aria-hidden="true"></canvas>
-    <div class="quien"><b>BLACKMOUTH</b><span>Con Mr. Lips, desde Cali</span></div>
-    <div class="aire" aria-hidden="true"><i></i>AL AIRE</div>
-    <button class="mute" id="mute" type="button" aria-label="Activar o silenciar el sonido">
-      <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
-      <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="m17 9 5 6M22 9l-5 6"/></svg>
-    </button>
+<div class="wrap">
+  <header class="hero">
+    <img class="foto" src="img/hero.webp" alt="Mr. Lips, el anfitrión de BLACKMOUTH, sostiene una idea recién nacida">
+    <img class="logo" src="img/logo-negro.svg" alt="BLACKMOUTH, agencia de publicidad">
+    <div class="tit">
+      <div class="eti">Agencia de publicidad · Cali</div>
+      <h1>Que tu marca<br>diga <em>algo.</em></h1>
+      <p class="sub">Branding, campañas, audiovisual y contenido con una idea detrás.</p>
+    </div>
   </header>
 
-  <section class="escena">
-    <div class="tramas"></div>
-    <h1 class="titular"><span class="pal" style="animation-delay:.05s">Que</span> <span class="pal" style="animation-delay:.12s">tu</span><br><span class="pal" style="animation-delay:.2s">marca</span><br><span class="pal" style="animation-delay:.28s">diga</span> <span class="pal naranja" style="animation-delay:.38s">algo.<svg class="marcador" viewBox="0 0 300 30" preserveAspectRatio="none"><path d="M4 20 C 60 8, 140 6, 296 16"/></svg></span></h1>
-    <p class="bajada">Agencia de publicidad y branding en Cali. Ideas con intención, hechas para que tu marca se recuerde.</p>
-    <div class="host">
-      <div class="halo"></div>
-      <div class="globo" id="globo" aria-live="polite"></div>
-      <canvas id="bocaHost" width="480" height="628" role="button" aria-label="Toca a Mr. Lips para que hable" tabindex="0"></canvas>
-      <div class="tocame">Tócame</div>
+  <div class="ficha">
+    <img src="img/avatar.png" alt="">
+    <div><b>@blackmouth.agency</b><span>Te atiende quien hace el trabajo.</span></div>
+  </div>
+
+  <nav class="lista">
+    <a class="card big" href="https://wa.me/message/RZ4RFIU4PD4FJ1" target="_blank" rel="noopener">
+      <img src="img/whatsapp.webp" alt="" loading="eager"><i class="barra"></i>
+      <div class="txt"><b>Hablemos de tu marca</b><span>Escríbenos por WhatsApp. Las líneas están abiertas.</span></div>
+      <i class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+    </a>
+    <a class="card azul" href="https://cotizaciones.blackmouth.agency/portafolio/" target="_blank" rel="noopener">
+      <img src="img/portafolio.webp" alt="" loading="lazy"><i class="barra"></i>
+      <div class="txt"><b>Portafolio</b><span>Lo que hemos hecho, con el showreel.</span></div>
+      <i class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+    </a>
+    <a class="card rosa" href="https://cotizaciones.blackmouth.agency/blackmouth/" target="_blank" rel="noopener">
+      <img src="img/servicios.webp" alt="" loading="lazy"><i class="barra"></i>
+      <div class="txt"><b>Servicios y planes</b><span>Branding, campañas, redes y webs.</span></div>
+      <i class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+    </a>
+    <a class="card" href="https://cotizaciones.blackmouth.agency/blackmouth/manual/" target="_blank" rel="noopener">
+      <img src="img/manual.webp" alt="" loading="lazy"><i class="barra"></i>
+      <div class="txt"><b>Nuestro manual</b><span>64 páginas de lo que sí somos.</span></div>
+      <i class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+    </a>
+    <a class="card azul" href="https://cotizaciones.blackmouth.agency/invitaciones/" target="_blank" rel="noopener">
+      <img src="img/invitaciones.webp" alt="" loading="lazy"><i class="barra"></i>
+      <div class="txt"><b>Invitaciones digitales</b><span>Para que tu evento también diga algo.</span></div>
+      <i class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+    </a>
+  </nav>
+
+  <section class="regalos">
+    <img src="img/regalos.webp" alt="">
+    <h2>Regalos por<br>una <em>palabra</em></h2>
+    <p>Escríbenos la palabra por mensaje directo o coméntala en cualquier publicación y te llega por DM.</p>
+    <div class="chips">
+      <a class="chip" href="https://ig.me/m/blackmouth.agency" target="_blank" rel="noopener"><b>MANUAL</b><span>Nuestro manual de identidad completo.</span></a>
+      <a class="chip" href="https://ig.me/m/blackmouth.agency" target="_blank" rel="noopener"><b>IDEA</b><span>La plantilla de brief que usamos.</span></a>
+      <a class="chip" href="https://ig.me/m/blackmouth.agency" target="_blank" rel="noopener"><b>IGUAL</b><span>Test: ¿tu marca suena igual a las demás?</span></a>
+      <a class="chip" href="https://ig.me/m/blackmouth.agency" target="_blank" rel="noopener"><b>FRASES</b><span>20 frases que ya no dicen nada.</span></a>
     </div>
   </section>
 
-  <section class="zona">
-    <div class="eti">Escoge tu puerta</div>
-    <nav class="lista">
-      <a class="card c-rosa wa" href="https://wa.me/message/RZ4RFIU4PD4FJ1" data-voz="diga">
-        <i class="tramas"></i>
-        <img class="obj" src="obj/hablemos.webp" alt="">
-        <div class="txt"><span class="pulso"><i></i>Líneas abiertas</span><b>Hablemos de tu marca</b><span>Escríbenos por WhatsApp. Te atiende quien hace el trabajo.</span>
-          <em class="ir">WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></em></div>
-      </a>
-      <a class="card c-azul" href="https://cotizaciones.blackmouth.agency/portafolio/" style="--r:-8deg">
-        <i class="tramas"></i><img class="obj" src="obj/casos.webp" alt="">
-        <div class="txt"><b>Portafolio</b><span>Casos reales y el showreel.</span>
-          <em class="ir">Ver casos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></em></div>
-      </a>
-      <a class="card c-nar" href="https://cotizaciones.blackmouth.agency/blackmouth/" style="--r:6deg">
-        <i class="tramas"></i><img class="obj" src="obj/servicios.webp" alt="">
-        <div class="txt"><b>Servicios y planes</b><span>Branding, campañas, audiovisual, redes y webs.</span>
-          <em class="ir">Ver planes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></em></div>
-      </a>
-      <a class="card c-bl" href="https://cotizaciones.blackmouth.agency/blackmouth/manual/" style="--r:-4deg">
-        <i class="tramas"></i><img class="obj" src="obj/manual.webp" alt="">
-        <div class="txt"><b>Nuestro manual</b><span>64 páginas de lo que sí somos.</span>
-          <em class="ir">Abrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></em></div>
-      </a>
-      <a class="card c-ng" href="https://cotizaciones.blackmouth.agency/invitaciones/" style="--r:8deg">
-        <i class="tramas"></i><img class="obj" src="obj/invitaciones.webp" alt="">
-        <div class="txt"><b>Invitaciones digitales</b><span>Para que tu evento también diga algo.</span>
-          <em class="ir">Ver demos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></em></div>
-      </a>
-    </nav>
-  </section>
+  <div class="mini">
+    <a href="mailto:black.mouth.agency@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Correo</a>
+    <a href="https://www.instagram.com/blackmouth.agency/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>Instagram</a>
+  </div>
 
-  <section class="regalos" id="regalos">
-    <i class="tramas"></i><img class="caja" src="obj/regalos.webp" alt="">
-    <h2>Rasca<br>y <i>gana</i></h2>
-    <p>Pasa el dedo por las tarjetas. Lo que salga es tuyo: pídelo por mensaje.</p>
-    <div class="rascas">
-      <div class="rasca"><canvas></canvas><div class="premio"><b>MANUAL</b><span>Nuestro manual de identidad completo.</span><a href="https://ig.me/m/blackmouth.agency">Pídelo</a></div></div>
-      <div class="rasca"><canvas></canvas><div class="premio"><b>IDEA</b><span>La plantilla de brief que usamos.</span><a href="https://ig.me/m/blackmouth.agency">Pídelo</a></div></div>
-      <div class="rasca"><canvas></canvas><div class="premio"><b>IGUAL</b><span>Test: ¿tu marca suena igual a las demás?</span><a href="https://ig.me/m/blackmouth.agency">Pídelo</a></div></div>
-      <div class="rasca"><canvas></canvas><div class="premio"><b>FRASES</b><span>20 frases que ya no dicen nada.</span><a href="https://ig.me/m/blackmouth.agency">Pídelo</a></div></div>
-    </div>
-    <div class="pie">Escribe la palabra por DM o coméntala en cualquier publicación.</div>
-  </section>
+  <div class="marquesina" aria-hidden="true"><div>
+    <span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span><span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span>
+    <span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span><span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span>
+  </div></div>
 
-  <section class="cierre">
-    <img class="boca" src="obj/mrlips.webp" alt="La boca de Mr. Lips">
-    <h3>¿Y tu marca<br>qué va a <i>decir?</i></h3>
-    <a class="btn" href="https://wa.me/message/RZ4RFIU4PD4FJ1">Escríbenos</a>
-    <div class="mini">
-      <a href="mailto:black.mouth.agency@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Correo</a>
-      <a href="https://www.instagram.com/blackmouth.agency/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>Instagram</a>
-    </div>
-    <div class="cinta" aria-hidden="true"><div><span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span><span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span><span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span><span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span></div></div>
-    <div class="cinta" aria-hidden="true"><div><span>Branding <i>✱</i></span><span>Campañas <i>✱</i></span><span>Audiovisual <i>✱</i></span><span>Contenido <i>✱</i></span><span>Webs <i>✱</i></span><span>Branding <i>✱</i></span><span>Campañas <i>✱</i></span><span>Audiovisual <i>✱</i></span><span>Contenido <i>✱</i></span><span>Webs <i>✱</i></span><span>Branding <i>✱</i></span><span>Campañas <i>✱</i></span><span>Audiovisual <i>✱</i></span><span>Contenido <i>✱</i></span><span>Webs <i>✱</i></span></div></div>
-  </section>
-
-  <footer id="pie">
-    <svg class="logo-svg" role="img" aria-label="BLACKMOUTH" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="52.6 75.6 554.4 142.4"><defs><path id="font_2_36" d="M.5961914 0H.46777345L.41455079 .1586914H.15820313L.10595703 0H.0034179688L.22460938 .6665039H.3725586L.5961914 0M.38232423 .2548828 .28515626 .5522461 .18798828 .2548828H.38232423Z"/><path id="font_2_42" d="M.57910159 .3408203V0H.5258789L.4892578 .08984375C.45052085 .023111979 .39046226-.010253906 .30908204-.010253906 .21826172-.010253906 .150472 .024251303 .10571289 .09326172 .060953779 .16227214 .03857422 .2421875 .03857422 .3330078 .03857422 .42903648 .063557948 .51033529 .11352539 .5769043 .16349285 .6434733 .23339844 .6767578 .3232422 .6767578 .39029948 .6767578 .44547526 .6573079 .48876954 .6184082 .5320638 .5795085 .55940756 .5310872 .5708008 .47314454L.4663086 .45458985C.44677735 .53597006 .4000651 .57666018 .32617188 .57666018 .27897135 .57666018 .24047852 .5574544 .21069336 .51904299 .1809082 .4806315 .16601563 .42154948 .16601563 .34179688 .16601563 .17350261 .21875 .08935547 .32421876 .08935547 .36523438 .08935547 .39916993 .103515628 .4260254 .13183594 .45288087 .16015625 .4663086 .19759114 .4663086 .24414063H.32861329V.3408203H.57910159Z"/><path id="font_2_40" d="M.50634768 0H.07324219V.6665039H.5019531V.5673828H.19335938V.38671876H.44140626V.29003907H.19335938V.103515628H.50634768V0Z"/><path id="font_2_49" d="M.57666018 0H.45996095L.20703125 .42578126C.203125 .43229167 .19677735 .4428711 .18798828 .45751954 .18408203 .46402995 .17805989 .47428385 .16992188 .48828126V0H.07324219V.6665039H.20605469L.43945313 .27392579C.44140626 .27067057 .4555664 .2467448 .4819336 .20214844V.6665039H.57666018V0Z"/><path id="font_2_38" d="M.44580079 .23144531 .5571289 .21923828C.54996749 .15250652 .5241699 .09757487 .47973634 .05444336 .43530274 .011311849 .37695313-.010253906 .3046875-.010253906 .24381511-.010253906 .19441732 .0050455729 .15649414 .03564453 .11857096 .06624349 .08935547 .1077474 .068847659 .16015625 .048339845 .21256511 .038085939 .27034507 .038085939 .3334961 .038085939 .4350586 .06217448 .5176595 .11035156 .5812988 .15852864 .6449382 .22477214 .6767578 .30908204 .6767578 .37516276 .6767578 .43017579 .6564128 .4741211 .61572268 .5180664 .57503256 .54573568 .51676437 .5571289 .44091798L.44580079 .42919923C.42529298 .52978518 .38004557 .5800781 .3100586 .5800781 .26513673 .5800781 .23022461 .5591634 .20532227 .517334 .18041992 .47550456 .16796875 .4148763 .16796875 .33544923 .16796875 .25472007 .18131511 .19376628 .20800781 .15258789 .23470052 .11140951 .27001954 .09082031 .31396485 .09082031 .3491211 .09082031 .379069 .104654949 .4038086 .13232422 .4285482 .15999349 .44254557 .19303386 .44580079 .23144531Z"/><path id="font_2_44" d="M.19335938 0H.07324219V.6665039H.19335938V0Z"/><path id="font_2_3" d=""/><path id="font_2_39" d="M.06982422 0V.6665039H.3154297C.40625 .6665039 .47916667 .6343587 .5341797 .57006838 .5891927 .505778 .6166992 .42643229 .6166992 .33203126 .6166992 .2376302 .5883789 .1586914 .5317383 .095214847 .47509767 .03173828 .39404298 0 .28857423 0H.06982422M.19335938 .09814453H.29345704C.34716798 .09814453 .39274089 .11832682 .43017579 .1586914 .4676107 .19905599 .48632813 .2591146 .48632813 .3388672 .48632813 .40397135 .4699707 .45906578 .43725587 .5041504 .40454103 .54923507 .36132813 .57177737 .3076172 .57177737H.19335938V.09814453Z"/><path id="font_2_51" d="M.19335938 0H.07324219V.6665039H.3461914C.42399089 .6665039 .48168946 .6468913 .5192871 .607666 .55688479 .56844076 .5756836 .52213546 .5756836 .46875 .5756836 .4078776 .55533859 .3585612 .51464846 .32080079 .47395835 .28304038 .42236329 .26416017 .35986329 .26416017H.19335938V0M.19335938 .3671875H.33544923C.3725586 .3671875 .4008789 .3763021 .42041017 .39453126 .4399414 .4127604 .44970704 .43701173 .44970704 .46728517 .44970704 .4946289 .44067384 .5180664 .42260743 .53759768 .40454103 .5571289 .37190757 .56689456 .32470704 .56689456H.19335938V.3671875Z"/><path id="font_2_56" d="M.5307617 .6665039V.23828125C.5307617 .18033855 .5242513 .13574219 .51123049 .10449219 .49820964 .07324219 .47306315 .04630534 .43579103 .02368164 .3985189 .0010579428 .35302735-.010253906 .2993164-.010253906 .24495442-.010253906 .20027669-.00048828127 .1652832 .019042969 .13028972 .03857422 .10514323 .065348308 .08984375 .099365238 .07454427 .13338216 .06689453 .17675781 .06689453 .22949219V.6665039H.18945313V.23828125C.18945313 .1796875 .20174153 .14119466 .22631836 .122802738 .25089518 .104410808 .27945964 .095214847 .31201173 .095214847 .34944663 .095214847 .37939454 .10506185 .40185548 .12475586 .4243164 .14444988 .43554688 .18229167 .43554688 .23828125V.6665039H.5307617Z"/><path id="font_2_37" d="M.07324219 0V.6665039H.3330078C.37695313 .6665039 .41341148 .6619466 .4423828 .65283206 .47135417 .64371749 .49641929 .6246745 .5175781 .5957031 .538737 .56673178 .5493164 .53271487 .5493164 .49365235 .5493164 .4568685 .5385742 .42488609 .51708987 .39770509 .49560548 .37052409 .46598307 .3531901 .42822267 .34570313 .47509767 .3375651 .5105794 .31852214 .53466799 .28857423 .55875656 .2586263 .5708008 .22314453 .5708008 .1821289 .5708008 .13069661 .5539551 .08748373 .5202637 .052490236 .48657228 .017496745 .43473307 0 .3647461 0H.07324219M.18701172 .38671876H.3334961C.363444 .38671876 .38712565 .39567057 .40454103 .41357423 .4219564 .43147788 .43066407 .4542643 .43066407 .4819336 .43066407 .51253256 .4207357 .5350749 .4008789 .54956057 .38102214 .5640462 .3577474 .57128909 .3310547 .57128909H.18701172V.38671876M.18701172 .100097659H.34228517C.37516276 .100097659 .40112306 .10872396 .42016603 .12597656 .43920899 .14322917 .44873048 .1665039 .44873048 .19580078 .44873048 .22379558 .43904624 .2467448 .41967774 .26464845 .40030924 .2825521 .37467448 .2915039 .34277345 .2915039H.18701172V.100097659Z"/><path id="font_2_47" d="M.48339845 0H.07324219V.6665039H.19970703V.10888672H.48339845V0Z"/></defs><g class="lg-black" style="fill:#FFFFFF"><g class="bk" data-l="B"><path transform="matrix(1,0,0,-1,52.6339,188.67899)" d="M0 0 .04 111.536 59.117 111.515C77.733 111.508 91.237 108.812 99.629 103.43 108.02 98.045 112.214 89.382 112.21 77.438 112.208 73.241 111.667 69.367 110.591 65.817 109.513 62.266 108.435 59.737 107.36 58.231L105.745 55.972C109.402 54.14 111.983 49.675 113.489 42.572 114.133 39.667 114.455 36.33 114.453 32.564 114.45 22.448 111.352 14.487 105.163 8.679 98.972 2.87 89.69-.032 77.317-.028Z"/></g><g class="bk" data-l="L"><path transform="matrix(1,0,0,-1,174.0563,77.18619)" d="M0 0 55.526-.02 55.501-70.073 71.965-70.079 71.95-111.562-.04-111.536Z"/></g><g class="bk" data-l="A"><path transform="matrix(1,0,0,-1,315.4124,188.77359)" d="M0 0-.962 17.271-10.808 17.275-11.783 .004-62.628 .023C-61.548 17.669-59.334 35.774-55.991 54.336-52.65 72.897-49.578 87.072-46.775 96.865L-42.734 111.552 33.776 111.524C34.957 107.65 36.461 102.267 38.289 95.381 40.116 88.493 42.802 75.284 46.346 55.751 49.89 36.219 52.304 17.628 53.589-.019Z"/></g><g class="bk" data-l="C"><path transform="matrix(1,0,0,-1,475.0502,184.95719)" d="M0 0C-10.44-3.656-25.263-5.479-44.471-5.472-63.679-5.465-78.366-.564-88.532 9.232-98.697 19.027-103.776 33.584-103.769 52.9-103.762 72.214-98.753 86.445-88.743 95.589-78.732 104.73-63.827 109.3-44.026 109.293-35.741 109.29-27.913 108.802-20.541 107.831-13.172 106.86-7.927 105.89-4.805 104.92L.037 103.466C.025 68.977 .012 34.489 0 0"/></g><g class="bk" data-l="K"><path transform="matrix(1,0,0,-1,539.9465,158.18599)" d="M0 0-.011-30.668-55.537-30.648-55.497 80.888 .029 80.868 .011 30.507 3.562 30.506 10.521 80.864 67.015 80.844 47.303 25.163 66.975-30.693 10.158-30.672 3.551-.001Z"/></g></g><g class="lg-mouth" style="fill:#F39200"><g class="ml" data-l="M"><path transform="matrix(1,0,0,-1,93.7196,154.03429)" d="M0 0C-.332 3.561-.431 7.139-.271 10.712-.195 12.423-.061 14.132 .128 15.835 .256 16.978 .213 16.681 .387 17.818 .521 18.702 .671 19.583 .836 20.462 1.481 23.902 2.357 27.3 3.46 30.622 4.655 34.225 5.674 36.652 7.313 39.928H.053C.087 39.848 .328 39.27 .169 39.653 .317 39.297 .463 38.94 .606 38.582 .837 38.01 1.062 37.435 1.282 36.859 1.778 35.563 2.25 34.257 2.696 32.942 3.564 30.387 4.337 27.799 5.014 25.186 5.671 22.648 6.238 20.086 6.712 17.507 6.963 16.142 7.183 14.772 7.386 13.398 7.407 13.261 7.487 12.694 7.426 13.141 7.467 12.835 7.505 12.529 7.543 12.223 7.637 11.457 7.721 10.691 7.801 9.924 8.027 7.743 9.572 5.611 12.004 5.72 14.201 5.819 16.309 7.571 16.208 9.924 16.152 11.22 16.148 12.516 16.212 13.812 16.242 14.425 16.286 15.038 16.344 15.649 16.376 15.989 16.42 16.327 16.454 16.666 16.522 17.359 16.346 16.081 16.468 16.766 16.924 19.332 17.474 21.841 18.332 24.308 18.534 24.889 18.753 25.462 18.975 26.035 19.068 26.273 19.199 26.579 19.022 26.166 19.156 26.48 19.297 26.791 19.44 27.101 19.982 28.278 20.579 29.431 21.229 30.553 21.845 31.616 22.507 32.651 23.215 33.654 23.412 33.933 23.614 34.208 23.817 34.483 24.262 35.084 23.216 33.753 24.035 34.766 24.464 35.297 24.905 35.818 25.356 36.33 23.014 36.948 20.672 37.567 18.33 38.185 21.862 24.315 23.096 10.515 22.094-3.99 21.942-6.188 24.136-8.29 26.298-8.193 28.705-8.086 30.338-6.345 30.501-3.99 31.53 10.902 30.12 25.956 26.437 40.42 25.689 43.359 21.512 44.659 19.411 42.275 11.61 33.418 7.293 21.756 7.801 9.924H16.208C14.978 21.791 11.997 33.203 7.313 44.171 6.084 47.046 1.365 46.792 .053 44.171-6.753 30.563-9.822 15.175-8.407 0-8.203-2.183-6.62-4.312-4.204-4.204-2.101-4.109 .219-2.345 0 0"/></g><g class="ml" data-l="O"><path transform="matrix(1,0,0,-1,197.1703,116.3987)" d="M0 0C-3.269-5.706-5.125-12.074-5.548-18.63-5.764-21.975-5.502-25.323-4.927-28.622-4.391-31.702-3.51-34.727-1.474-37.165 .722-39.797 4.586-40.84 7.802-39.68 10.775-38.607 13.122-36.217 14.62-33.475 17.537-28.139 17.501-21.374 16.34-15.553 15.038-9.025 11.609-2.834 6.761 1.723 5.158 3.23 2.384 3.432 .816 1.723-.685 .088-.895-2.613 .816-4.221 1.649-5.005 2.44-5.827 3.173-6.705 3.336-6.9 3.497-7.096 3.653-7.296 3.204-6.721 3.607-7.242 3.684-7.355 4.079-7.932 4.48-8.498 4.848-9.093 5.414-10.011 5.93-10.96 6.391-11.935 6.499-12.165 6.604-12.396 6.708-12.628 6.383-11.904 6.722-12.67 6.794-12.856 7.024-13.448 7.235-14.047 7.427-14.653 7.752-15.682 8.022-16.729 8.233-17.787 8.295-18.099 8.352-18.411 8.404-18.724 8.439-18.939 8.54-19.781 8.442-18.926 8.514-19.556 8.572-20.188 8.605-20.821 8.662-21.898 8.657-22.977 8.59-24.053 8.555-24.622 8.504-25.191 8.431-25.757 8.453-25.583 8.566-24.952 8.414-25.77 8.345-26.144 8.282-26.52 8.199-26.892 8.097-27.352 7.945-27.791 7.82-28.243 7.529-29.308 8.072-27.821 7.771-28.414 7.632-28.686 7.508-28.964 7.361-29.232 7.127-29.661 6.845-30.054 6.591-30.47 6.969-29.851 6.73-30.315 6.589-30.467 6.354-30.721 6.095-30.964 5.869-31.225 5.223-31.971 6.295-31.046 5.813-31.309 5.627-31.41 5.446-31.54 5.268-31.655 4.951-31.859 4.441-31.861 5.279-31.678 5.178-31.7 4.751-31.877 4.693-31.832 4.62-31.774 5.613-31.852 4.914-31.758 5.989-31.903 5.319-31.866 5.12-31.784 4.195-31.403 5.567-32.189 5.052-31.778 4.898-31.698 4.751-31.607 4.611-31.504 4.966-31.777 5.034-31.809 4.815-31.603 4.384-31.187 5.131-32.175 4.819-31.654 4.67-31.406 4.522-31.146 4.366-30.903 4.275-30.762 4.038-30.17 4.344-30.932 4.254-30.709 4.174-30.482 4.097-30.254 3.701-29.065 3.439-27.828 3.217-26.596 3.154-26.248 3.097-25.899 3.044-25.55 3.072-25.736 3.122-26.271 3.026-25.406 2.964-24.844 2.909-24.281 2.87-23.717 2.772-22.306 2.754-20.89 2.813-19.477 2.843-18.771 2.893-18.065 2.962-17.361 2.989-17.08 3.021-16.798 3.054-16.517 2.961-17.306 3.139-15.98 3.144-15.955 3.374-14.559 3.682-13.176 4.066-11.815 4.45-10.455 4.904-9.112 5.442-7.805 5.189-8.421 5.541-7.59 5.607-7.447 5.782-7.06 5.965-6.678 6.154-6.298 6.5-5.601 6.872-4.919 7.259-4.243 8.353-2.335 7.77 .441 5.751 1.508 3.751 2.565 1.168 2.038 0 0"/></g><g class="ml" data-l="U"><path transform="matrix(1,0,0,-1,298.1104,124.8232)" d="M0 0C-.934-5.626-1.958-11.778 .19-17.27 2.022-21.952 5.961-26.304 11.121-27.192 16.104-28.051 20.239-25.864 22.835-21.624 24.945-18.178 25.863-14.125 26.38-10.168 27.003-5.39 26.38-.464 24.517 3.986 23.671 6.006 21.698 7.683 19.346 6.922 17.405 6.294 15.5 3.923 16.41 1.751 17.021 .291 17.513-1.215 17.848-2.763 17.944-3.21 18.027-3.661 18.099-4.113 18.206-4.792 18.074-3.518 18.109-4.23 18.119-4.444 18.151-4.659 18.167-4.872 18.247-5.939 18.25-7.011 18.184-8.078 18.156-8.523 17.862-9.494 18.009-9.892 17.982-9.82 18.173-8.84 18.042-9.61 18.018-9.752 17.997-9.895 17.973-10.037 17.9-10.475 17.819-10.912 17.728-11.346 17.425-12.798 17.01-14.212 16.498-15.603 16.13-16.6 16.729-15.179 16.394-15.844 16.219-16.193 16.054-16.546 15.864-16.887 15.703-17.176 15.532-17.46 15.35-17.736 15.274-17.852 15.193-17.964 15.116-18.08 14.632-18.81 15.55-17.653 15.192-17.973 14.968-18.173 14.784-18.426 14.563-18.633 14.488-18.702 14.204-18.899 14.181-18.966 14.21-18.88 14.881-18.556 14.53-18.676 14.376-18.728 13.967-19.136 13.784-19.095 14.66-19.289 14.416-18.657 14.107-18.932 14.029-18.954 13.95-18.976 13.871-18.998 13.545-19.063 13.551-19.071 13.891-19.021 14.162-18.821 14.159-19.013 13.798-19.017 13.571-19.02 13.328-19.01 13.099-19.022 12.847-19.035 12.368-18.858 13.185-19.059 13.018-19.018 12.847-18.991 12.68-18.95 12.37-18.873 11.479-18.526 12.213-18.864 11.788-18.668 11.375-18.446 10.98-18.194 10.782-18.067 10.584-17.932 10.396-17.791 10.543-17.901 10.965-18.3 10.414-17.768 10.109-17.473 9.804-17.186 9.52-16.87 9.398-16.734 9.283-16.594 9.163-16.457 9.657-17.023 9.254-16.579 9.162-16.432 8.906-16.017 8.635-15.615 8.407-15.183 8.294-14.969 8.188-14.751 8.086-14.531 8.336-15.07 8.165-14.707 8.048-14.359 7.859-13.794 7.709-13.216 7.586-12.633 7.539-12.409 7.496-12.185 7.458-11.959 7.553-12.523 7.42-11.593 7.411-11.489 7.354-10.803 7.33-10.114 7.334-9.425 7.349-6.588 7.66-4.923 8.107-2.235 8.465-.074 7.542 2.396 5.171 2.936 3.142 3.398 .385 2.32 0 0"/></g><g class="ml" data-l="T"><path transform="matrix(1,0,0,-1,405.2297,123.5952)" d="M0 0C11.97-1.416 23.939-2.831 35.909-4.247 38.101-4.506 40.206-2.129 40.113-.043 40.001 2.455 38.257 3.882 35.909 4.16 23.939 5.576 11.97 6.991 0 8.407-2.192 8.666-4.297 6.289-4.204 4.204-4.092 1.705-2.348 .278 0 0"/><path transform="matrix(1,0,0,-1,418.9807,124.9301)" d="M0 0C1.204-10.409 2.408-20.817 3.612-31.226 3.863-33.403 5.365-35.539 7.815-35.429 9.876-35.337 12.289-33.565 12.019-31.226 10.815-20.817 9.611-10.409 8.407 0 8.155 2.177 6.654 4.313 4.203 4.204 2.143 4.111-.271 2.339 0 0"/></g><g class="ml" data-l="H"><path transform="matrix(1,0,0,-1,515.2755,121.90259)" d="M0 0C.926-2.468 1.697-4.989 2.286-7.559 2.572-8.806 2.817-10.063 3.021-11.326 3.069-11.624 3.114-11.921 3.157-12.219 3.071-11.625 3.201-12.567 3.213-12.669 3.292-13.342 3.36-14.016 3.416-14.691 3.627-17.242 3.671-19.807 3.549-22.363 3.483-23.717 3.365-25.066 3.21-26.413 3.19-26.585 3.12-27.094 3.184-26.639 3.142-26.937 3.097-27.234 3.049-27.532 2.931-28.275 2.795-29.015 2.65-29.754 2.229-31.905 3.259-34.395 5.586-34.925 7.669-35.399 10.305-34.297 10.757-31.989 12.993-20.584 12.198-8.672 8.107 2.235 7.337 4.287 5.232 5.914 2.936 5.171 .929 4.521-.827 2.204 0 0"/><path transform="matrix(1,0,0,-1,522.6151,143.82959)" d="M0 0C12.212 .109 24.425 .218 36.637 .328 38.835 .347 40.943 2.247 40.841 4.531 40.739 6.792 38.993 8.756 36.637 8.735 24.425 8.625 12.212 8.516 0 8.407-2.198 8.387-4.306 6.488-4.204 4.204-4.102 1.943-2.356-.021 0 0"/><path transform="matrix(1,0,0,-1,554.4555,117.64769)" d="M0 0C.582-13.989 1.164-27.977 1.746-41.966 1.838-44.16 3.614-46.274 5.95-46.17 8.149-46.071 10.251-44.319 10.153-41.966 9.571-27.977 8.989-13.989 8.407 0 8.316 2.194 6.539 4.308 4.203 4.204 2.004 4.105-.098 2.353 0 0"/></g></g><g class="lg-tag" style="fill:#FFFFFF"><use xlink:href="#font_2_36" transform="matrix(22.3079,.008,.008,-22.2071,52.639,217.5629)"/><use xlink:href="#font_2_42" transform="matrix(22.3079,.008,.008,-22.2071,81.19534,217.57312)"/><use xlink:href="#font_2_40" transform="matrix(22.3079,.008,.008,-22.2071,111.132549,217.58386)"/><use xlink:href="#font_2_49" transform="matrix(22.3079,.008,.008,-22.2071,138.72742,217.59375)"/><use xlink:href="#font_2_38" transform="matrix(22.3079,.008,.008,-22.2071,168.84308,217.60456)"/><use xlink:href="#font_2_44" transform="matrix(22.3079,.008,.008,-22.2071,197.37488,217.61479)"/><use xlink:href="#font_2_36" transform="matrix(22.3079,.008,.008,-22.2071,218.94663,217.62253)"/><use xlink:href="#font_2_3" transform="matrix(22.3079,.008,.008,-22.2071,248.01383,217.63295)"/><use xlink:href="#font_2_39" transform="matrix(22.3079,.008,.008,-22.2071,269.20634,217.64055)"/><use xlink:href="#font_2_40" transform="matrix(22.3079,.008,.008,-22.2071,299.43354,217.6514)"/><use xlink:href="#font_2_3" transform="matrix(22.3079,.008,.008,-22.2071,327.0284,217.66129)"/><use xlink:href="#font_2_51" transform="matrix(22.3079,.008,.008,-22.2071,348.22093,217.66889)"/><use xlink:href="#font_2_56" transform="matrix(22.3079,.008,.008,-22.2071,377.19889,217.67928)"/><use xlink:href="#font_2_37" transform="matrix(22.3079,.008,.008,-22.2071,406.08763,217.68964)"/><use xlink:href="#font_2_47" transform="matrix(22.3079,.008,.008,-22.2071,435.24406,217.70009)"/><use xlink:href="#font_2_44" transform="matrix(22.3079,.008,.008,-22.2071,461.98008,217.70967)"/><use xlink:href="#font_2_38" transform="matrix(22.3079,.008,.008,-22.2071,483.55183,217.7174)"/><use xlink:href="#font_2_44" transform="matrix(22.3079,.008,.008,-22.2071,512.0836,217.72763)"/><use xlink:href="#font_2_39" transform="matrix(22.3079,.008,.008,-22.2071,533.65536,217.73538)"/><use xlink:href="#font_2_36" transform="matrix(22.3079,.008,.008,-22.2071,563.32266,217.74602)"/><use xlink:href="#font_2_39" transform="matrix(22.3079,.008,.008,-22.2071,592.38986,217.75644)"/></g></svg>
-    <p>Cali, Colombia · Sacude el celular 😉</p>
+  <footer>
+    <img src="img/logo-negro.svg" alt="BLACKMOUTH">
+    <p>Cali, Colombia</p>
   </footer>
 </div>
-
-<script>
-(()=>{
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const B=document.body, reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const vibra=p=>{try{if(navigator.userActivation&&!navigator.userActivation.hasBeenActive)return;navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
-
-/* ---------- cuadros de la boca ---------- */
-const N=41, cuadros=[];
-let cargados=0;
-for(let i=0;i<N;i++){const im=new Image();im.decoding='async';im.src='boca/'+String(i).padStart(2,'0')+'.webp';
-  im.onload=()=>{cargados++;if(i===0){pinta(cPuerta,0);pinta(cHost,0);pintaMini(0)}};cuadros.push(im)}
-const cPuerta=$('#bocaPuerta'), cHost=$('#bocaHost'), cMini=$('#bocaMini');
-function pinta(cv,f){const im=cuadros[Math.round(f)];if(!im||!im.complete)return;const x=cv.getContext('2d');x.clearRect(0,0,480,628);x.drawImage(im,0,0)}
-function pintaMini(f){const im=cuadros[Math.round(f)];if(!im||!im.complete)return;const x=cMini.getContext('2d');
-  x.clearRect(0,0,96,96);x.drawImage(im,70,10,340,340,6,14,84,84)}
-
-/* ---------- audio y labios ---------- */
-const VOCES={bienvenida:'¡Damas y caballeros! Bienvenidos a <b>BLACKMOUTH</b>. Pasen, pasen… que esto apenas empieza.',
-  sueno:'¿Su marca da <b>sueño</b>? No se preocupe. Para eso estamos.',
-  toque:'Toque, toque sin miedo. Yo no <b>muerdo</b>… casi nunca.',
-  diga:'Que su marca <b>diga algo</b>. Y si no sabe qué decir… para eso tiene esta boca.',
-  regalo:'¡Qué <b>espectáculo</b>! Ese regalo es suyo. Pídamelo por mensaje.',
-  sacudida:'¡Ey, ey! Con cuidado, que se me cae la <b>sonrisa</b>.'};
-let ctx=null, analizador=null, datos=null, buf={}, fuente=null, mudo=false, hablando=false, apertura=0, ultima='';
-try{mudo=localStorage.getItem('bm-mudo')==='1'}catch(e){}
-if(mudo)B.classList.add('mudo');
-function iniciaAudio(){
-  if(ctx)return;const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
-  ctx=new AC();analizador=ctx.createAnalyser();analizador.fftSize=512;datos=new Uint8Array(analizador.fftSize);
-  analizador.connect(ctx.destination);
-  Object.keys(VOCES).forEach(k=>fetch('voz/'+k+'.mp3').then(r=>r.arrayBuffer()).then(a=>ctx.decodeAudioData(a)).then(b=>{buf[k]=b;if(k===esperando)habla(k)}).catch(()=>{}));
-}
-let esperando=null;
-const globo=$('#globo');let tGlobo;
-function habla(k){
-  if(k===ultima&&hablando)return;
-  globo.innerHTML=VOCES[k];globo.classList.add('ver');clearTimeout(tGlobo);
-  if(mudo||!ctx){tGlobo=setTimeout(()=>globo.classList.remove('ver'),3200);simulaLabios(2400);return}
-  if(!buf[k]){esperando=k;return}esperando=null;
-  if(ctx.state==='suspended')ctx.resume();
-  if(fuente){try{fuente.onended=null;fuente.stop()}catch(e){}}
-  fuente=ctx.createBufferSource();fuente.buffer=buf[k];fuente.connect(analizador);fuente.start();
-  hablando=true;ultima=k;B.classList.add('hablando');
-  fuente.onended=()=>{hablando=false;B.classList.remove('hablando');tGlobo=setTimeout(()=>globo.classList.remove('ver'),700)};
-}
-let simHasta=0;
-function simulaLabios(ms){simHasta=performance.now()+ms;B.classList.add('hablando');setTimeout(()=>B.classList.remove('hablando'),ms)}
-function bucleLabios(t){
-  let meta=0;
-  if(hablando&&analizador){analizador.getByteTimeDomainData(datos);let s=0;for(let i=0;i<datos.length;i++){const v=(datos[i]-128)/128;s+=v*v}
-    meta=Math.min(1,Math.sqrt(s/datos.length)*4.2)}
-  else if(t<simHasta){meta=.35+.35*Math.sin(t/70)*Math.sin(t/23)}
-  apertura+= (meta-apertura)*(meta>apertura?.55:.25);
-  const f=apertura*24;
-  if(B.classList.contains('abierto')){pinta(cHost,f);pintaMini(f)}
-  requestAnimationFrame(bucleLabios);
-}
-requestAnimationFrame(bucleLabios);
-
-/* ---------- giroscopio / inclinación ---------- */
-let gx=0,gy=0,tx=0,ty=0;
-function orient(e){if(e.gamma==null)return;tx=Math.max(-1,Math.min(1,e.gamma/25));ty=Math.max(-1,Math.min(1,(e.beta-45)/25))}
-function pidePermisos(){
-  try{if(typeof DeviceOrientationEvent!=='undefined'&&DeviceOrientationEvent.requestPermission){
-      DeviceOrientationEvent.requestPermission().then(r=>{if(r==='granted')addEventListener('deviceorientation',orient)}).catch(()=>{});
-    }else addEventListener('deviceorientation',orient);
-    if(typeof DeviceMotionEvent!=='undefined'&&DeviceMotionEvent.requestPermission){
-      DeviceMotionEvent.requestPermission().then(r=>{if(r==='granted')addEventListener('devicemotion',movimiento)}).catch(()=>{});
-    }else addEventListener('devicemotion',movimiento);
-  }catch(e){}
-}
-addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){tx=(e.clientX/innerWidth-.5)*2;ty=(e.clientY/innerHeight-.5)*2}},{passive:true});
-function bucleGiro(){gx+=(tx-gx)*.08;gy+=(ty-gy)*.08;
-  if(!reducido){document.documentElement.style.setProperty('--gx',gx.toFixed(3));document.documentElement.style.setProperty('--gy',gy.toFixed(3))}
-  requestAnimationFrame(bucleGiro)}
-requestAnimationFrame(bucleGiro);
-
-/* ---------- sacudir ---------- */
-let ultimaSac=0,prevA=null;
-function movimiento(e){const a=e.accelerationIncludingGravity;if(!a||a.x==null)return;
-  if(prevA){const d=Math.abs(a.x-prevA.x)+Math.abs(a.y-prevA.y)+Math.abs(a.z-prevA.z);
-    const ahora=Date.now();if(d>34&&ahora-ultimaSac>4500&&B.classList.contains('abierto')){ultimaSac=ahora;
-      B.classList.remove('sacudido');void B.offsetWidth;B.classList.add('sacudido');vibra([30,40,30]);habla('sacudida');
-      confeti(innerWidth/2,innerHeight/3,140)}}
-  prevA={x:a.x,y:a.y,z:a.z}}
-
-/* ---------- la puerta: abrir la boca ---------- */
-const puerta=$('#puerta');let abierta=false;
-function entra(){
-  B.classList.remove('cerrado');B.classList.add('abierto');puerta.classList.add('fuera');
-  setTimeout(()=>{puerta.remove()},900);observa();
-  setTimeout(()=>habla('bienvenida'),350);
-  setTimeout(()=>{if(!B.classList.contains('yaToco')&&!hablando)habla('toque')},16000);
-}
-function abrir(saltando){
-  if(abierta)return;abierta=true;iniciaAudio();pidePermisos();
-  if(ctx&&ctx.state==='suspended')ctx.resume();
-  if(saltando||reducido){entra();return}
-  puerta.classList.add('abriendo');vibra(10);
-  const t0=performance.now(),D1=850,D2=700,g=$('#puerta .garganta');
-  (function anima(t){const p=(t-t0)/D1;
-    if(p<1){const f=Math.min(40,p*40);pinta(cPuerta,f);if(Math.round(f)%8===0)vibra(6);requestAnimationFrame(anima);return}
-    pinta(cPuerta,40);const q=Math.min(1,(t-t0-D1)/D2),e=q*q*q;
-    cPuerta.style.transform='scale('+(1+e*16)+')';g.style.opacity=Math.max(0,(q-.55)/.45);
-    if(q<1)requestAnimationFrame(anima);else{vibra(25);entra()}
-  })(t0);
-}
-$('#abrir').addEventListener('click',()=>abrir(false));
-$('#saltar').addEventListener('click',e=>{e.stopPropagation();abrir(true)});
-puerta.addEventListener('click',e=>{if(e.target===puerta||e.target.closest('canvas,.llamada,.tramas,.foco'))abrir(false)});
-
-/* ---------- Mr. Lips habla ---------- */
-const frases=['sueno','toque','diga'];let fi=0;
-function tocaHost(){B.classList.add('yaToco');cHost.classList.remove('toque');void cHost.offsetWidth;cHost.classList.add('toque');vibra(12);
-  iniciaAudio();fi=(fi+1)%frases.length;habla(frases[fi])}
-cHost.addEventListener('click',tocaHost);
-cHost.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tocaHost()}});
-$('#mute').addEventListener('click',()=>{mudo=!mudo;B.classList.toggle('mudo',mudo);try{localStorage.setItem('bm-mudo',mudo?'1':'0')}catch(e){}
-  if(mudo&&fuente){try{fuente.stop()}catch(e){}}else iniciaAudio()});
-
-/* ---------- tarjetas: entrada y vibración ---------- */
-function observa(){
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.18});
-  $$('.card').forEach((c,i)=>{c.style.transitionDelay=(i%2?.06:0)+'s';io.observe(c)});
-  io.observe($('#pie'));
-  const lm=$$('#pie .ml');lm.forEach((m,i)=>m.style.animationDelay=(.25+i*.09)+'s');
-}
-$$('.card').forEach(c=>c.addEventListener('pointerdown',()=>vibra(8),{passive:true}));
-
-/* ---------- la idea baja en paracaídas ---------- */
-const idea=$('#idea'),zona=$('.zona'),reg=$('#regalos');
-function bucleIdea(t){
-  const z=zona.getBoundingClientRect(),r=reg.getBoundingClientRect(),vh=innerHeight;
-  const ver=z.top<vh*.55&&r.top>vh*.25;idea.classList.toggle('ver',ver&&B.classList.contains('abierto'));
-  if(ver){const total=z.height+vh*.3,p=Math.min(1,Math.max(0,(vh*.55-z.top)/total));
-    const y=vh*.12+p*vh*.62,x=innerWidth*.72+Math.sin(t/900)*22+gx*30;
-    idea.style.transform='translate('+x+'px,'+y+'px) rotate('+(Math.sin(t/700)*9+gx*10)+'deg)'}
-  requestAnimationFrame(bucleIdea)}
-requestAnimationFrame(bucleIdea);
-
-/* ---------- rasca y gana ---------- */
-let primerPremio=true;
-$$('.rasca').forEach(card=>{
-  const cv=card.querySelector('canvas'),x=cv.getContext('2d');let dpr=Math.min(2,devicePixelRatio||1),w,h,rascando=false,last=null,cont=0;
-  function cubre(){const r=card.getBoundingClientRect();w=r.width;h=r.height;cv.width=w*dpr;cv.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0);
-    x.globalCompositeOperation='source-over';
-    const g=x.createLinearGradient(0,0,w,h);g.addColorStop(0,'#15161b');g.addColorStop(1,'#2a2c34');x.fillStyle=g;x.fillRect(0,0,w,h);
-    x.fillStyle='rgba(255,255,255,.09)';for(let yy=6;yy<h;yy+=10)for(let xx=6+(yy/10%2)*5;xx<w;xx+=10){x.beginPath();x.arc(xx,yy,1.6,0,7);x.fill()}
-    x.fillStyle='#F39200';x.font='900 30px franklin-gothic-atf, "Libre Franklin", Arial';x.textAlign='center';x.fillText('RASCA',w/2,h/2+4);
-    x.fillStyle='rgba(255,255,255,.75)';x.font='700 12px "Libre Franklin", Arial';x.fillText('CON EL DEDO',w/2,h/2+26)}
-  cubre();addEventListener('resize',()=>{if(!card.classList.contains('ganada'))cubre()});
-  function raya(p){x.globalCompositeOperation='destination-out';x.lineWidth=40;x.lineCap='round';x.lineJoin='round';
-    x.beginPath();if(last){x.moveTo(last.x,last.y)}else x.moveTo(p.x-.1,p.y);x.lineTo(p.x,p.y);x.stroke();last=p;
-    if(++cont%7===0){vibra(4);revisa()}}
-  function pos(e){const r=cv.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
-  cv.addEventListener('pointerdown',e=>{rascando=true;last=null;cv.setPointerCapture(e.pointerId);raya(pos(e))});
-  cv.addEventListener('pointermove',e=>{if(rascando)raya(pos(e))});
-  ['pointerup','pointercancel'].forEach(t=>cv.addEventListener(t,()=>{rascando=false;last=null;revisa()}));
-  function revisa(){if(card.classList.contains('ganada'))return;const d=x.getImageData(0,0,cv.width,cv.height).data;let n=0,tot=0;
-    for(let i=3;i<d.length;i+=64){tot++;if(d[i]<40)n++}
-    if(n/tot>.42){card.classList.add('ganada');vibra([20,30,60]);const r=card.getBoundingClientRect();confeti(r.left+r.width/2,r.top+r.height/2,90);
-      if(primerPremio){primerPremio=false;iniciaAudio();habla('regalo')}}}
-});
-
-/* ---------- confeti ---------- */
-const cc=$('#confeti'),cx=cc.getContext('2d');let piezas=[],corriendo=false;
-function tam(){cc.width=innerWidth*Math.min(2,devicePixelRatio||1);cc.height=innerHeight*Math.min(2,devicePixelRatio||1);cx.setTransform(Math.min(2,devicePixelRatio||1),0,0,Math.min(2,devicePixelRatio||1),0,0)}
-tam();addEventListener('resize',tam);
-const COL=['#F39200','#1332A9','#E570A8','#ffffff','#000000'];
-function confeti(x,y,n){if(reducido)return;for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,v=4+Math.random()*9;
-  piezas.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-6,r:Math.random()*6.28,vr:(Math.random()-.5)*.4,w:6+Math.random()*7,h:3+Math.random()*5,
-  c:COL[i%5],o:1})}if(!corriendo){corriendo=true;requestAnimationFrame(bucleConfeti)}}
-function bucleConfeti(){cx.clearRect(0,0,innerWidth,innerHeight);
-  piezas.forEach(p=>{p.vy+=.32;p.vx*=.985;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;if(p.y>innerHeight*.8)p.o-=.04;
-    cx.save();cx.globalAlpha=Math.max(0,p.o);cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore()});
-  piezas=piezas.filter(p=>p.o>0&&p.y<innerHeight+40);
-  if(piezas.length)requestAnimationFrame(bucleConfeti);else{corriendo=false;cx.clearRect(0,0,innerWidth,innerHeight)}}
-})();
-</script>
 </body>
 </html>
