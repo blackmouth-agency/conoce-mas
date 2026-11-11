@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BLACKMOUTH · Que tu marca diga algo</title>
+<meta name="description" content="Agencia de publicidad y branding en Cali. Que tu marca diga algo.">
+<meta property="og:title" content="BLACKMOUTH · Que tu marca diga algo">
+<meta property="og:description" content="Agencia de publicidad y branding en Cali. Ahora sí, abre la boca.">
+<meta property="og:image" content="https://conoce-mas.link/blackmouth/img/hero.webp">
+<meta property="og:url" content="https://conoce-mas.link/blackmouth/">
+<link rel="canonical" href="https://conoce-mas.link/blackmouth/">
+<meta name="theme-color" content="#0a0b10">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="https://use.typekit.net/dfu3yuy.css">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--nar:#F39200;--azul:#1332A9;--rosa:#E570A8;--ng:#0a0b10;--bl:#fff;
+  --f:"franklin-gothic-atf","Libre Franklin","Franklin Gothic Medium",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ng)}
+body{font-family:var(--f);color:var(--bl);background:var(--ng);min-height:100vh;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.grano{position:fixed;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;z-index:50}
+.wrap{max-width:520px;margin:0 auto;padding:0 16px 56px}
+
+/* ---------- portada ---------- */
+.hero{position:relative;height:min(118vw,620px);margin:0 -16px;overflow:hidden}
+.hero img.foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%;
+  transform:scale(1.08);animation:respira 9s ease-in-out infinite alternate}
+@keyframes respira{to{transform:scale(1.15) translateY(-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,11,16,.55) 0,rgba(10,11,16,0) 30%,rgba(10,11,16,0) 52%,rgba(10,11,16,.92) 86%,var(--ng) 100%)}
+.hero .logo{position:absolute;top:22px;left:20px;width:150px;z-index:2}
+.hero .tit{position:absolute;left:20px;right:20px;bottom:18px;z-index:2}
+.eti{font-weight:700;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+h1{font-weight:900;font-size:clamp(46px,13vw,68px);line-height:.88;letter-spacing:-.025em;margin-top:8px;
+  text-shadow:0 4px 30px rgba(0,0,0,.6)}
+h1 em{font-style:normal;color:var(--nar)}
+.sub{font-size:17px;line-height:1.35;color:rgba(255,255,255,.85);margin-top:12px;max-width:34ch}
+
+/* ---------- ficha ---------- */
+.ficha{display:flex;align-items:center;gap:12px;margin:18px 0 22px}
+.ficha img{width:48px;height:48px;border-radius:50%;border:2px solid var(--nar)}
+.ficha b{font-weight:700;font-size:16px;display:block}
+.ficha span{font-size:14px;color:rgba(255,255,255,.6)}
+
+/* ---------- tarjetas ---------- */
+.lista{display:grid;gap:12px}
+.card{position:relative;display:block;height:118px;border-radius:18px;overflow:hidden;isolation:isolate;
+  background:#14161f;box-shadow:0 12px 34px rgba(0,0,0,.45);
+  opacity:0;transform:translateY(18px);animation:entra .7s cubic-bezier(.2,.8,.2,1) forwards}
+.card:nth-child(1){animation-delay:.10s}.card:nth-child(2){animation-delay:.18s}.card:nth-child(3){animation-delay:.26s}
+.card:nth-child(4){animation-delay:.34s}.card:nth-child(5){animation-delay:.42s}
+@keyframes entra{to{opacity:1;transform:none}}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg,rgba(10,11,16,.92) 0,rgba(10,11,16,.72) 46%,rgba(10,11,16,.12) 100%)}
+.card .txt{position:absolute;left:20px;top:50%;transform:translateY(-50%);right:70px}
+.card b{display:block;font-weight:900;font-size:24px;line-height:1;letter-spacing:-.01em;text-transform:uppercase}
+.card span{display:block;font-size:14px;line-height:1.3;color:rgba(255,255,255,.75);margin-top:6px}
+.card .fl{position:absolute;right:16px;top:50%;width:40px;height:40px;margin-top:-20px;border-radius:50%;
+  display:grid;place-items:center;background:var(--c,var(--nar));color:#000;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.card .fl svg{width:18px;height:18px}
+.card .barra{position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c,var(--nar))}
+.card:hover img,.card:focus-visible img{transform:scale(1.07)}
+.card:hover .fl,.card:focus-visible .fl{transform:translateX(4px) rotate(-8deg)}
+.card:active{transform:scale(.985)}
+.card.big{height:150px}
+.card.big b{font-size:30px}
+.card.big::before{background:linear-gradient(90deg,rgba(243,146,0,.95) 0,rgba(243,146,0,.80) 44%,rgba(243,146,0,.10) 100%)}
+.card.big b,.card.big span{color:#000}
+.card.big .fl{background:#000;color:var(--nar)}
+.card.big .barra{display:none}
+.azul{--c:var(--azul)}.azul .fl{color:#fff}.rosa{--c:var(--rosa)}
+
+/* ---------- regalos ---------- */
+.regalos{position:relative;margin-top:34px;border-radius:22px;overflow:hidden;padding:24px 20px 22px;background:var(--azul);isolation:isolate}
+.regalos img{position:absolute;right:-60px;top:-40px;width:260px;opacity:.55;z-index:-1;transform:rotate(8deg);
+  -webkit-mask-image:radial-gradient(circle at 50% 45%,#000 42%,transparent 70%);mask-image:radial-gradient(circle at 50% 45%,#000 42%,transparent 70%)}
+.regalos h2{font-weight:900;font-size:34px;line-height:.92;letter-spacing:-.02em;text-transform:uppercase}
+.regalos h2 em{font-style:normal;color:var(--nar)}
+.regalos p{font-size:15px;line-height:1.35;color:rgba(255,255,255,.88);margin:10px 0 16px;max-width:30ch}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chip{display:block;background:#fff;color:#000;border-radius:14px;padding:12px 14px 13px;transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s}
+.chip b{display:block;font-weight:900;font-size:22px;letter-spacing:.02em}
+.chip span{display:block;font-size:12.5px;line-height:1.25;color:#333;margin-top:3px}
+.chip:hover,.chip:focus-visible{transform:translateY(-3px) rotate(-1deg);background:var(--nar)}
+.nota{font-size:12px;color:rgba(255,255,255,.7);margin-top:12px}
+
+/* ---------- pequeños ---------- */
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.mini a{display:flex;align-items:center;gap:10px;border:1.5px solid rgba(255,255,255,.18);border-radius:14px;padding:14px;
+  font-weight:700;font-size:15px;transition:border-color .3s,background .3s}
+.mini a:hover{border-color:var(--nar);background:rgba(243,146,0,.08)}
+.mini svg{width:20px;height:20px;flex:none;color:var(--nar)}
+
+/* ---------- cierre ---------- */
+.marquesina{margin:40px -16px 0;overflow:hidden;background:var(--nar);color:#000;transform:rotate(-2deg)}
+.marquesina div{display:flex;gap:28px;white-space:nowrap;padding:12px 0;font-weight:900;font-size:30px;letter-spacing:-.01em;
+  text-transform:uppercase;animation:corre 18s linear infinite;width:max-content}
+.marquesina i{font-style:normal;color:#fff}
+@keyframes corre{to{transform:translateX(-50%)}}
+footer{text-align:center;margin-top:44px}
+footer img{width:180px}
+footer p{font-size:12px;color:rgba(255,255,255,.5);margin-top:12px;letter-spacing:.04em}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg class="grano" width="100%" height="100%" aria-hidden="true"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+
+<div class="wrap">
+  <header class="hero">
+    <img class="foto" src="img/hero.webp" alt="Mr. Lips, el anfitrión de BLACKMOUTH, sostiene una idea recién nacida">
+    <img class="logo" src="img/logo-negro.svg" alt="BLACKMOUTH, agencia de publicidad">
+    <div class="tit">
+      <div class="eti">Agencia de publicidad · Cali</div>
+      <h1>Que tu marca<br>diga <em>algo.</em></h1>
+      <p class="sub">Branding, campañas, audiovisual y contenido con una idea detrás.</p>
+    </div>
+  </header>
+
+  <div class="ficha">
+    <img src="img/avatar.png" alt="">
+    <div><b>@blackmouth.agency</b><span>Te atiende quien hace el trabajo.</span></div>
+  </div>
+
+  <nav class="lista">
+    <a class="card big" href="https://wa.me/message/RZ4RFIU4PD4FJ1" target="_blank" rel="noopener">
+      <img src="img/whatsapp.webp" alt="" loading="eager"><i class="barra"></i>
+      <div class="txt"><b>Hablemos de tu marca</b><span>Escríbenos por WhatsApp. Las líneas están abiertas.</span></div>
+      <i class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+    </a>
+    <a class="card azul" href="https://cotizaciones.blackmouth.agency/portafolio/" target="_blank" rel="noopener">
+      <img src="img/portafolio.webp" alt="" loading="lazy"><i class="barra"></i>
+      <div class="txt"><b>Portafolio</b><span>Lo que hemos hecho, con el showreel.</span></div>
+      <i class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+    </a>
+    <a class="card rosa" href="https://cotizaciones.blackmouth.agency/blackmouth/" target="_blank" rel="noopener">
+      <img src="img/servicios.webp" alt="" loading="lazy"><i class="barra"></i>
+      <div class="txt"><b>Servicios y planes</b><span>Branding, campañas, redes y webs.</span></div>
+      <i class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+    </a>
+    <a class="card" href="https://cotizaciones.blackmouth.agency/blackmouth/manual/" target="_blank" rel="noopener">
+      <img src="img/manual.webp" alt="" loading="lazy"><i class="barra"></i>
+      <div class="txt"><b>Nuestro manual</b><span>64 páginas de lo que sí somos.</span></div>
+      <i class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+    </a>
+    <a class="card azul" href="https://cotizaciones.blackmouth.agency/invitaciones/" target="_blank" rel="noopener">
+      <img src="img/invitaciones.webp" alt="" loading="lazy"><i class="barra"></i>
+      <div class="txt"><b>Invitaciones digitales</b><span>Para que tu evento también diga algo.</span></div>
+      <i class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+    </a>
+  </nav>
+
+  <section class="regalos">
+    <img src="img/regalos.webp" alt="">
+    <h2>Regalos por<br>una <em>palabra</em></h2>
+    <p>Escríbenos la palabra por mensaje directo o coméntala en cualquier publicación y te llega por DM.</p>
+    <div class="chips">
+      <a class="chip" href="https://ig.me/m/blackmouth.agency" target="_blank" rel="noopener"><b>MANUAL</b><span>Nuestro manual de identidad completo.</span></a>
+      <a class="chip" href="https://ig.me/m/blackmouth.agency" target="_blank" rel="noopener"><b>IDEA</b><span>La plantilla de brief que usamos.</span></a>
+      <a class="chip" href="https://ig.me/m/blackmouth.agency" target="_blank" rel="noopener"><b>IGUAL</b><span>Test: ¿tu marca suena igual a las demás?</span></a>
+      <a class="chip" href="https://ig.me/m/blackmouth.agency" target="_blank" rel="noopener"><b>FRASES</b><span>20 frases que ya no dicen nada.</span></a>
+    </div>
+  </section>
+
+  <div class="mini">
+    <a href="mailto:black.mouth.agency@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Correo</a>
+    <a href="https://www.instagram.com/blackmouth.agency/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>Instagram</a>
+  </div>
+
+  <div class="marquesina" aria-hidden="true"><div>
+    <span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span><span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span>
+    <span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span><span>Ahora sí, abre la boca <i>✱</i></span><span>Que tu marca diga algo <i>✱</i></span>
+  </div></div>
+
+  <footer>
+    <img src="img/logo-negro.svg" alt="BLACKMOUTH">
+    <p>Cali, Colombia</p>
+  </footer>
+</div>
+</body>
+</html>
