@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Misuu · Uñas, pestañas y esenciales de belleza</title>
+<meta name="description" content="Uñas, pestañas y esenciales de belleza. Diseña tus uñas, pide tu kit o la lista para profesionales. Envíos a todo Colombia con pago contra entrega.">
+<meta name="theme-color" content="#E6007E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Misuu">
+<meta property="og:title" content="Misuu · Transforma tu look en minutos">
+<meta property="og:description" content="Diseña tus uñas y pide tu kit, o pide la lista para profesionales. Envíos a todo Colombia con pago contra entrega.">
+<meta property="og:image" content="https://conoce-mas.link/misuu/og.jpg">
+<meta property="og:url" content="https://conoce-mas.link/misuu/">
+<link rel="canonical" href="https://conoce-mas.link/misuu/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo de Misuu Profesional junto a unas manos con uñas almendra y una mariposa fucsia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Misuu · Transforma tu look en minutos">
+<meta name="twitter:description" content="Uñas, pestañas y esenciales de belleza. Pago contra entrega en todo Colombia.">
+<meta name="twitter:image" content="og.jpg">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,500;1,6..96,600&family=Great+Vibes&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/heroe.webp">
+<style>
+:root{
+  --fucsia:#E6007E; --fucsia2:#B3005F; --rosa:#F7D6E0; --rosa2:#FBE8EE; --rosa3:#FFF5F8; --negro:#141014; --negro2:#211A20;
+  --tinta:#2A1622; --gris:#6F5A66; --oro:#C99A78; --wa:#25D366;
+  --script:"Great Vibes", "Brush Script MT", cursive; --serif:"Bodoni Moda", Didot, Georgia, serif; --f:"Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sombra:0 10px 22px rgba(120,20,70,.13), 0 2px 5px rgba(120,20,70,.10);
+  --curva:cubic-bezier(.2,.8,.25,1.1);
+}
+*{margin:0; padding:0; box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+body{background:var(--rosa); color:var(--tinta); font:500 16px/1.45 var(--f); -webkit-font-smoothing:antialiased; min-height:100vh; overflow-x:hidden}
+.fondo{position:fixed; inset:0; z-index:0; pointer-events:none; background:
+  radial-gradient(60% 50% at 12% 18%, rgba(230,0,126,.28), transparent 70%),
+  radial-gradient(55% 45% at 88% 82%, rgba(230,0,126,.22), transparent 70%),
+  linear-gradient(160deg, #FBE8EE 0%, #F4C9D7 55%, #EFB3C8 100%)}
+.fondo svg{position:absolute; width:180px; opacity:.5}
+img{display:block; max-width:100%; height:auto}
+a{color:inherit}
+button, input{font:inherit; color:inherit}
+:focus-visible{outline:3px solid var(--fucsia); outline-offset:3px; border-radius:10px}
+
+.hoja{position:relative; z-index:1; width:100%; max-width:470px; margin:0 auto; min-height:100vh; background:var(--rosa3); padding-bottom:104px; overflow:hidden; isolation:isolate}
+@media (min-width:500px){ .hoja{margin:28px auto; min-height:auto; border-radius:22px; box-shadow:0 34px 80px rgba(120,10,60,.32), 0 4px 12px rgba(120,10,60,.18)} .fondo svg{display:block} }
+@media (max-width:499px){ .fondo svg{display:none} }
+
+.heroe{position:relative; height:clamp(410px, 113vw, 490px); overflow:hidden; background:#EBD3D8}
+.heroe .foto{position:absolute; inset:0}
+.heroe .foto img{width:100%; height:100%; object-fit:cover; object-position:50% 100%; animation:acerca 20s ease-in-out infinite alternate}
+@keyframes acerca{from{transform:scale(1.07)} to{transform:scale(1)}}
+.heroe .foto::after{content:""; position:absolute; inset:0; background:
+  linear-gradient(180deg, rgba(255,240,245,.55) 0%, rgba(255,240,245,0) 24%, rgba(30,8,22,0) 46%, rgba(30,8,22,.55) 70%, rgba(20,6,16,.9) 100%)}
+.logo{position:absolute; z-index:3; left:50%; top:16px; width:200px; margin-left:-100px}
+.logo h1{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+.logo img{filter:drop-shadow(0 2px 10px rgba(255,255,255,.7))}
+.mariposa{position:absolute; z-index:2; pointer-events:none; overflow:visible}
+.mariposa .ala{transform-box:fill-box; animation:aletea 1.9s ease-in-out infinite}
+.mariposa .ala.i{transform-origin:100% 60%} .mariposa .ala.d{transform-origin:0% 60%}
+@keyframes aletea{0%,100%{transform:scaleX(1)} 50%{transform:scaleX(.35)}}
+.mariposa.m1{width:30px; right:34px; top:118px; animation:vuela1 14s ease-in-out infinite}
+.mariposa.m2{width:20px; left:26px; top:190px; animation:vuela2 17s ease-in-out infinite}
+.mariposa.m2 .ala{animation-duration:2.3s}
+@keyframes vuela1{0%,100%{transform:translate(0,0) rotate(8deg)} 30%{transform:translate(-18px,-14px) rotate(-4deg)} 65%{transform:translate(-6px,10px) rotate(12deg)}}
+@keyframes vuela2{0%,100%{transform:translate(0,0) rotate(-10deg)} 40%{transform:translate(14px,-18px) rotate(4deg)} 70%{transform:translate(4px,-6px) rotate(-14deg)}}
+.titular{position:absolute; z-index:3; left:18px; right:16px; bottom:22px; color:#fff}
+.titular .t1{display:inline-block; font:700 10.5px/1 var(--f); letter-spacing:.16em; text-transform:uppercase; background:var(--fucsia); padding:7px 10px 6px; border-radius:3px; box-shadow:0 6px 14px rgba(230,0,126,.35)}
+.titular .t2{display:block; font:800 25px/1 var(--f); letter-spacing:.015em; white-space:nowrap; text-transform:uppercase; margin-top:12px; text-shadow:0 3px 16px rgba(0,0,0,.35)}
+.titular .t3{display:block; font:400 68px/.8 var(--script); color:#FFC9E0; margin:4px 0 0 70px; text-shadow:0 4px 18px rgba(80,0,40,.55)}
+.titular .t4{display:flex; align-items:center; gap:8px; margin-top:14px; font:600 12.5px/1.25 var(--f); color:#FBE3EC}
+.titular .t4 svg{flex:none; width:22px; height:22px}
+
+.enlaces{position:relative; z-index:4; display:flex; flex-direction:column; gap:11px; margin:16px 16px 0}
+.btn{position:relative; display:flex; align-items:center; gap:13px; min-height:62px; padding:10px 40px 10px 11px; text-decoration:none; color:var(--tinta);
+  background:#fff; border:0; border-radius:16px; width:100%; text-align:left; cursor:pointer; box-shadow:var(--sombra);
+  transition:transform .18s ease, box-shadow .18s ease; -webkit-tap-highlight-color:transparent}
+.btn:hover{transform:translateY(-2px); box-shadow:0 16px 28px rgba(120,20,70,.17), 0 2px 5px rgba(120,20,70,.1)}
+.btn:active{transform:translateY(1px) scale(.985)}
+.btn-ico{flex:none; width:44px; height:44px; display:grid; place-items:center; border-radius:50%; background:var(--rosa2)}
+.btn-ico svg{width:26px; height:26px}
+.btn-txt{display:flex; flex-direction:column; min-width:0}
+.btn-txt b{font:700 16px/1.2 var(--f)}
+.btn-txt small{font:500 12.5px/1.3 var(--f); color:var(--gris); margin-top:2px}
+.flecha{position:absolute; right:14px; top:50%; width:20px; height:20px; margin-top:-10px; transition:transform .18s ease}
+.flecha path{fill:none; stroke:currentColor; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round}
+.btn:hover .flecha{transform:translateX(3px)}
+
+.btn.compra{background:var(--negro); color:#fff; min-height:74px; overflow:hidden}
+.btn.compra::after{content:""; position:absolute; right:-40px; top:-40px; width:120px; height:120px; border-radius:50%; background:radial-gradient(circle, rgba(230,0,126,.55), transparent 68%)}
+.btn.compra .btn-ico{width:50px; height:50px; background:#fff}
+.btn.compra .btn-ico svg{width:32px; height:32px}
+.btn.compra .btn-txt b{font:800 17.5px/1.15 var(--f); letter-spacing:.01em}
+.btn.compra .btn-txt small{color:#F6C6DA}
+.btn.compra .flecha{z-index:1}
+.ico-dm{display:none} .sin-wa .ico-wa{display:none} .sin-wa .ico-dm{display:block}
+
+.duo{display:grid; grid-template-columns:1fr 1fr; gap:11px}
+.tarjeta{position:relative; display:flex; flex-direction:column; justify-content:space-between; gap:10px; min-height:104px; padding:13px 13px 12px; border-radius:16px; text-decoration:none; overflow:hidden;
+  box-shadow:var(--sombra); transition:transform .18s ease, box-shadow .18s ease; -webkit-tap-highlight-color:transparent}
+.tarjeta:hover{transform:translateY(-2px)} .tarjeta:active{transform:translateY(1px) scale(.985)}
+.tarjeta .btn-ico{width:40px; height:40px}
+.tarjeta b{display:block; font:800 15.5px/1.12 var(--f)}
+.tarjeta small{display:block; font:500 11.8px/1.3 var(--f); margin-top:3px}
+.tarjeta .flecha{top:18px; right:12px; margin:0}
+.tarjeta.disena{background:var(--fucsia); color:#fff}
+.tarjeta.disena .btn-ico{background:rgba(255,255,255,.18)}
+.tarjeta.disena small{color:#FFE0EE}
+.tarjeta.disena .unita{position:absolute; right:16px; top:46px; width:22px; opacity:.4; animation:titila 3.6s ease-in-out infinite}
+.tarjeta.pro{background:#fff; color:var(--tinta); border:1.5px solid #F2C5D6}
+.tarjeta.pro small{color:var(--gris)}
+.tarjeta.pro b em{font-style:normal; color:var(--fucsia2)}
+.duo.chico .btn{min-height:58px; padding:8px 10px 8px 9px; gap:9px}
+.duo.chico .btn-ico{width:38px; height:38px}
+.duo.chico .btn-ico svg{width:22px; height:22px}
+.duo.chico .btn-txt b{font-size:14px; white-space:nowrap}
+.duo.chico .btn-txt small{font-size:11.2px; white-space:nowrap}
+
+.sec{position:relative; margin:52px 16px 0}
+.antetitulo{display:inline-flex; align-items:center; gap:7px; font:700 10.5px/1 var(--f); letter-spacing:.16em; text-transform:uppercase; color:var(--fucsia2); margin-bottom:6px}
+.antetitulo::before{content:""; width:18px; height:2px; background:currentColor}
+.titulo{font:800 25px/1.08 var(--f); letter-spacing:-.005em; color:var(--tinta); text-wrap:balance}
+.titulo .sc{display:block; font:400 52px/.9 var(--script); color:var(--fucsia); letter-spacing:0; margin:2px 0 0 -2px}
+.bajada{font:500 14.3px/1.5 var(--f); color:var(--gris); margin:10px 0 0; text-wrap:pretty}
+
+.mec{position:relative; margin:56px 0 0; padding:34px 16px 30px; background:#fff; transition:background-color .6s ease, color .6s ease}
+.mec::before{content:""; position:absolute; left:0; right:0; top:0; height:6px; background:linear-gradient(90deg, var(--rosa), var(--fucsia), var(--rosa))}
+.mec[data-modo="salon"]{background:var(--negro); color:#fff}
+.mec[data-modo="salon"] .antetitulo{color:#FF8CC4}
+.mec[data-modo="salon"] .titulo{color:#fff}
+.mec[data-modo="salon"] .bajada{color:#D9C3CF}
+.mec .cab{text-align:center}
+.mec .cab .antetitulo::after{content:""; width:18px; height:2px; background:currentColor}
+.mec .titulo .sc{margin:0}
+
+.interruptor{position:relative; display:grid; grid-template-columns:1fr 1fr; margin:20px auto 0; max-width:360px; padding:5px; border-radius:40px; background:var(--rosa2); box-shadow:inset 0 2px 6px rgba(120,20,70,.12); transition:background-color .6s ease}
+.mec[data-modo="salon"] .interruptor{background:#2C2229; box-shadow:inset 0 2px 8px rgba(0,0,0,.5)}
+.interruptor .bola{position:absolute; top:5px; bottom:5px; left:5px; width:calc(50% - 5px); border-radius:34px; background:var(--fucsia); box-shadow:0 8px 18px rgba(230,0,126,.4); transition:transform .5s var(--curva)}
+.mec[data-modo="salon"] .interruptor .bola{transform:translateX(100%); background:#fff; box-shadow:0 8px 18px rgba(0,0,0,.4)}
+.interruptor button{position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:8px; height:56px; border:0; background:none; cursor:pointer; font:800 15.5px/1 var(--f); color:var(--fucsia2); transition:color .4s ease; -webkit-tap-highlight-color:transparent}
+.interruptor button svg{width:21px; height:21px}
+.interruptor button[aria-pressed="true"]{color:#fff}
+.mec[data-modo="salon"] .interruptor button{color:#E9D3DE}
+.mec[data-modo="salon"] .interruptor button[aria-pressed="true"]{color:var(--negro)}
+
+.panel[hidden]{display:none}
+.panel{animation:panel .55s var(--curva)}
+@keyframes panel{from{transform:translateY(14px)} to{transform:none}}
+
+.pestanas{display:flex; justify-content:center; gap:8px; margin:22px 0 4px}
+.pestanas button{display:flex; align-items:center; gap:7px; height:40px; padding:0 16px; border-radius:30px; border:1.5px solid #F2C5D6; background:#fff; font:700 13.5px/1 var(--f); color:var(--gris); cursor:pointer}
+.pestanas button svg{width:18px; height:18px}
+.pestanas button[aria-selected="true"]{background:var(--tinta); border-color:var(--tinta); color:#fff}
+
+.escena{position:relative; height:330px; margin:12px -6px 0; border-radius:26px; overflow:hidden;
+  background:radial-gradient(70% 60% at 50% 42%, #fff 0%, var(--rosa2) 48%, var(--rosa) 100%)}
+.escena::before{content:""; position:absolute; left:50%; top:50%; width:270px; height:270px; margin:-150px 0 0 -135px; border-radius:50%; background:radial-gradient(circle, rgba(230,0,126,.16), transparent 66%)}
+.escena .mano{position:absolute; left:50%; top:2px; width:300px; height:326px; margin-left:-150px; animation:flota 5s ease-in-out infinite}
+@keyframes flota{0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-5px) rotate(-.8deg)}}
+.escena .brillo{position:absolute; width:16px; fill:var(--fucsia); opacity:.7; animation:titila 3.2s ease-in-out infinite}
+@keyframes titila{0%,100%{transform:scale(.7) rotate(0)} 50%{transform:scale(1.1) rotate(20deg)}}
+.resumen{position:absolute; left:12px; bottom:12px; z-index:2; display:flex; flex-direction:column; gap:1px; padding:8px 12px 8px; border-radius:14px; background:rgba(255,255,255,.82); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); box-shadow:0 6px 16px rgba(120,20,70,.12)}
+.resumen small{font:700 9.5px/1.2 var(--f); letter-spacing:.14em; text-transform:uppercase; color:var(--gris)}
+.resumen b{font:400 26px/1 var(--script); color:var(--fucsia)}
+.resumen span{font:700 11.5px/1.25 var(--f); color:var(--tinta)}
+.detalle{position:absolute; right:10px; bottom:10px; z-index:2; width:96px; height:96px; border-radius:50%; background:#fff; box-shadow:0 10px 22px rgba(120,20,70,.18), inset 0 0 0 3px var(--rosa); overflow:hidden}
+.detalle svg{width:100%; height:100%}
+.detalle i{position:absolute; left:0; right:0; bottom:9px; text-align:center; font:700 8.5px/1 var(--f); font-style:normal; letter-spacing:.14em; text-transform:uppercase; color:var(--gris)}
+
+.paso-lbl{display:flex; align-items:center; gap:8px; font:800 12px/1 var(--f); letter-spacing:.12em; text-transform:uppercase; color:var(--tinta); margin:22px 0 10px}
+.paso-lbl i{font:800 12px/1 var(--f); font-style:normal; width:24px; height:24px; display:grid; place-items:center; border-radius:50%; background:var(--fucsia); color:#fff; letter-spacing:0}
+.paso-lbl.falta{animation:sacude .4s} .paso-lbl.falta i{background:#FFB703; color:var(--negro)}
+@keyframes sacude{0%,100%{translate:0} 25%{translate:-6px} 75%{translate:6px}}
+.mec[data-modo="salon"] .paso-lbl{color:#fff}
+
+.formas{display:grid; grid-template-columns:repeat(5, 1fr); gap:7px}
+.formas button{display:flex; flex-direction:column; align-items:center; gap:5px; padding:8px 2px 8px; border-radius:14px; border:1.5px solid #F2C5D6; background:#fff; cursor:pointer; font:700 11px/1.1 var(--f); color:var(--gris); transition:all .25s ease}
+.formas svg{width:26px; height:40px}
+.formas svg path{fill:var(--rosa); stroke:var(--fucsia2); stroke-width:1.2; transition:fill .25s ease}
+.formas button[aria-pressed="true"]{border-color:var(--fucsia); background:var(--rosa2); color:var(--fucsia2); box-shadow:0 6px 14px rgba(230,0,126,.18)}
+.formas button[aria-pressed="true"] svg path{fill:var(--fucsia); stroke:var(--fucsia)}
+.largos{display:grid; grid-template-columns:repeat(3, 1fr); gap:7px}
+.largos button{display:flex; align-items:center; justify-content:center; gap:8px; height:48px; border-radius:14px; border:1.5px solid #F2C5D6; background:#fff; cursor:pointer; font:700 13px/1.1 var(--f); color:var(--gris); transition:all .25s ease}
+.largos button i{display:block; width:8px; border-radius:4px 4px 2px 2px; background:var(--rosa); border:1.3px solid var(--fucsia2)}
+.largos button[aria-pressed="true"]{border-color:var(--fucsia); background:var(--rosa2); color:var(--fucsia2)}
+.largos button[aria-pressed="true"] i{background:var(--fucsia); border-color:var(--fucsia)}
+.colores{display:grid; grid-template-columns:repeat(5, 1fr); gap:7px}
+.colores button{display:flex; flex-direction:column; align-items:center; gap:6px; padding:4px 0; border:0; background:none; cursor:pointer; font:700 10.8px/1.15 var(--f); color:var(--gris); text-align:center}
+.colores button i{display:block; width:42px; height:42px; border-radius:50%; background:var(--c); box-shadow:inset 0 -6px 10px rgba(0,0,0,.12), inset 0 5px 8px rgba(255,255,255,.55), 0 4px 10px rgba(120,20,70,.16); outline:2px solid transparent; outline-offset:3px; transition:outline-color .25s ease, transform .25s var(--curva)}
+.colores button[aria-pressed="true"]{color:var(--tinta)}
+.colores button[aria-pressed="true"] i{outline-color:var(--fucsia); transform:scale(1.06)}
+
+.necesitas{margin-top:26px; padding:18px 14px 16px; border-radius:20px; background:var(--rosa3); border:1.5px dashed #EFB3C8}
+.necesitas h3{font:800 16px/1.2 var(--f); color:var(--tinta)}
+.necesitas h3 em{font:400 30px/1 var(--script); font-style:normal; color:var(--fucsia); margin-left:2px}
+.pasos{list-style:none; display:grid; gap:10px; margin-top:12px; counter-reset:p}
+.pasos li{display:grid; grid-template-columns:44px 1fr; gap:11px; align-items:center}
+.pasos .pi{position:relative; width:44px; height:44px; border-radius:14px; background:#fff; display:grid; place-items:center; box-shadow:0 4px 10px rgba(120,20,70,.1)}
+.pasos .pi svg{width:26px; height:26px}
+.pasos .pi::after{counter-increment:p; content:counter(p); position:absolute; left:-5px; top:-5px; width:18px; height:18px; border-radius:50%; background:var(--fucsia); color:#fff; font:800 10px/18px var(--f); text-align:center}
+.pasos b{display:block; font:700 14px/1.25 var(--f); color:var(--tinta)}
+.pasos small{display:block; font:600 11.5px/1.3 var(--f); color:var(--fucsia2); margin-top:1px}
+
+.pedir{display:flex; align-items:center; justify-content:center; gap:10px; width:100%; min-height:62px; margin-top:20px; padding:10px 18px; border:0; border-radius:40px; cursor:pointer; text-decoration:none;
+  background:var(--fucsia); color:#fff; font:800 15.5px/1.2 var(--f); text-align:center; box-shadow:0 14px 28px rgba(230,0,126,.35); transition:transform .18s ease, box-shadow .18s ease}
+.pedir:hover{transform:translateY(-2px)} .pedir:active{transform:scale(.98)}
+.pedir svg{flex:none; width:26px; height:26px}
+.pedir .pt{display:flex; flex-direction:column; align-items:flex-start; text-align:left}
+.pedir .pt b{font:800 16px/1.15 var(--f)}
+.pedir .pt small{font:600 12px/1.2 var(--f); color:#FFE0EE; margin-top:2px}
+.pedir-nota{display:flex; align-items:center; justify-content:center; gap:6px; margin-top:10px; font:600 12px/1.3 var(--f); color:var(--gris); text-align:center}
+.pedir-nota svg{width:16px; height:16px; flex:none}
+.mec[data-modo="salon"] .pedir-nota{color:#CDB6C3}
+
+.escena.ojo-esc{height:auto; padding:14px 6px 10px; background:radial-gradient(80% 70% at 50% 45%, #fff 0%, var(--rosa2) 60%, var(--rosa) 100%)}
+.escena.ojo-esc::before{display:none}
+.ojo-svg{display:block; width:100%; height:auto}
+.ojo-svg .num{font:800 10px var(--f); fill:var(--fucsia2)}
+.ojo-svg .nota{font:700 10.5px var(--f); fill:var(--tinta)}
+.ojo-svg .nota.f{fill:var(--fucsia2)}
+.racimo{transition:transform .5s var(--curva)}
+.racimo.oculto{transform:scale(0)}
+.efectos{display:grid; grid-template-columns:repeat(3, 1fr); gap:7px}
+.efectos button{height:48px; border-radius:14px; border:1.5px solid #F2C5D6; background:#fff; cursor:pointer; font:700 13px/1.1 var(--f); color:var(--gris); transition:all .25s ease}
+.efectos button[aria-pressed="true"]{border-color:var(--fucsia); background:var(--rosa2); color:var(--fucsia2)}
+.repetir{display:flex; align-items:center; gap:6px; margin:10px auto 0; height:34px; padding:0 14px; border-radius:30px; border:0; background:var(--tinta); color:#fff; font:700 12px/1 var(--f); cursor:pointer}
+.repetir svg{width:15px; height:15px}
+.reglas{display:grid; gap:9px; margin-top:16px}
+.regla{display:grid; grid-template-columns:34px 1fr; gap:10px; align-items:center; padding:10px 12px; border-radius:14px; background:var(--rosa3); border:1.5px solid #F7D0DE}
+.regla svg{width:34px; height:34px}
+.regla b{display:block; font:800 13.5px/1.25 var(--f)}
+.regla span{display:block; font:500 12.3px/1.35 var(--f); color:var(--gris)}
+.foto-ojo{position:relative; margin-top:14px; border-radius:18px; overflow:hidden; box-shadow:var(--sombra)}
+.foto-ojo img{width:100%; aspect-ratio:640/333; object-fit:cover}
+.foto-ojo span{position:absolute; left:12px; bottom:10px; font:400 30px/1 var(--script); color:#fff; text-shadow:0 2px 10px rgba(80,0,40,.6)}
+
+.salon-foto{position:relative; margin:22px -16px 0; height:250px; overflow:hidden}
+.salon-foto img{width:100%; height:100%; object-fit:cover; object-position:50% 40%}
+.salon-foto::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,16,20,.15) 0%, rgba(20,16,20,0) 35%, rgba(20,16,20,.75) 78%, var(--negro) 100%)}
+.salon-foto .tt{position:absolute; z-index:1; left:18px; right:18px; bottom:14px}
+.salon-foto .tt b{display:block; font:400 54px/.9 var(--script); color:#FF8CC4; text-shadow:0 3px 14px rgba(0,0,0,.6)}
+.salon-foto .tt span{display:inline-block; margin:4px 0 0 40px; font:800 22px/1 var(--f); letter-spacing:.04em; text-transform:uppercase; color:#fff}
+.beneficios{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:18px}
+.benef{padding:14px 12px 13px; border-radius:16px; background:var(--negro2); border:1px solid #3A2C36}
+.benef svg{width:30px; height:30px}
+.benef b{display:block; font:800 13.8px/1.2 var(--f); color:#fff; margin-top:8px}
+.benef span{display:block; font:500 11.8px/1.35 var(--f); color:#CDB6C3; margin-top:4px}
+.benef.destacado{grid-column:1 / -1; display:grid; grid-template-columns:auto 1fr; gap:4px 14px; align-items:center; background:linear-gradient(135deg, var(--fucsia), #A8005A); border:0}
+.benef.destacado svg{grid-row:span 2; width:40px; height:40px}
+.benef.destacado b{margin:0; font-size:15.5px}
+.benef.destacado span{margin:0; color:#FFE0EE}
+
+.productos{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.prod{position:relative; display:flex; flex-direction:column; border-radius:18px; overflow:hidden; background:#fff; color:var(--tinta); border:0; padding:0; cursor:pointer; text-align:left; box-shadow:0 10px 22px rgba(0,0,0,.35); transition:transform .2s ease, box-shadow .2s ease}
+.prod:active{transform:scale(.98)}
+.prod .im{position:relative; aspect-ratio:1; background:var(--rosa2); overflow:hidden}
+.prod .im img, .prod .im svg{width:100%; height:100%; object-fit:cover}
+.prod .tx{padding:9px 10px 11px}
+.prod b{display:block; font:800 13px/1.2 var(--f)}
+.prod small{display:block; font:500 11px/1.3 var(--f); color:var(--gris); margin-top:3px}
+.prod .chk{position:absolute; right:8px; top:8px; z-index:2; width:28px; height:28px; border-radius:50%; background:rgba(255,255,255,.92); display:grid; place-items:center; box-shadow:0 3px 8px rgba(0,0,0,.25); transition:background-color .25s ease}
+.prod .chk svg{width:16px; height:16px; stroke:#D7BFCB; transition:stroke .25s ease}
+.prod[aria-pressed="true"]{box-shadow:0 0 0 3px var(--fucsia), 0 12px 26px rgba(230,0,126,.35)}
+.prod[aria-pressed="true"] .chk{background:var(--fucsia)} .prod[aria-pressed="true"] .chk svg{stroke:#fff}
+.prod .feats{display:flex; flex-wrap:wrap; gap:4px; margin-top:6px}
+.prod .feats i{font:700 9.5px/1 var(--f); font-style:normal; padding:4px 6px; border-radius:20px; background:var(--rosa2); color:var(--fucsia2)}
+.extras{display:flex; flex-wrap:wrap; gap:7px; margin-top:10px}
+.chip{display:inline-flex; align-items:center; gap:6px; height:38px; padding:0 13px; border-radius:30px; border:1.5px solid #4A3944; background:transparent; color:#EBD7E1; font:700 12.5px/1 var(--f); cursor:pointer; transition:all .25s ease}
+.chip[aria-pressed="true"]{background:var(--fucsia); border-color:var(--fucsia); color:#fff}
+.negocios{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+.negocios .chip{justify-content:center; height:46px; border-radius:14px; font-size:13px}
+.negocios .chip svg{width:19px; height:19px}
+.campo{display:block; width:100%; height:52px; padding:0 16px; border-radius:14px; border:1.5px solid #4A3944; background:var(--negro2); color:#fff; font:600 15px/1 var(--f)}
+.campo::placeholder{color:#8F7A86}
+.campo:focus{outline:none; border-color:var(--fucsia)}
+.clave{display:flex; align-items:center; gap:12px; margin-top:18px; padding:12px 14px; border-radius:16px; border:1.5px dashed #5A4452}
+.clave svg{flex:none; width:30px; height:30px}
+.clave p{font:500 12.5px/1.4 var(--f); color:#D9C3CF}
+.clave b{color:#fff; font-weight:800; letter-spacing:.06em}
+
+.catalogo{display:grid; grid-template-columns:repeat(4, 1fr); gap:8px; margin-top:16px}
+.catalogo button{display:flex; flex-direction:column; align-items:center; gap:6px; padding:12px 3px 10px; border-radius:16px; border:0; background:#fff; box-shadow:var(--sombra); cursor:pointer; font:700 10.8px/1.15 var(--f); color:var(--tinta); text-align:center; transition:transform .18s ease}
+.catalogo button:active{transform:scale(.96)}
+.catalogo .ci{width:42px; height:42px; border-radius:50%; background:var(--rosa2); display:grid; place-items:center}
+.catalogo .ci svg{width:26px; height:26px}
+.catalogo-nota{font:600 12px/1.4 var(--f); color:var(--gris); text-align:center; margin-top:12px}
+
+.contra{position:relative; margin:56px 16px 0; padding:26px 18px 22px; border-radius:24px; background:var(--negro); color:#fff; overflow:hidden}
+.contra::before{content:""; position:absolute; right:-60px; top:-70px; width:220px; height:220px; border-radius:50%; background:radial-gradient(circle, rgba(230,0,126,.5), transparent 66%)}
+.contra .antetitulo{color:#FF8CC4}
+.contra h2{position:relative; font:800 22px/1.1 var(--f); text-transform:uppercase; letter-spacing:.01em}
+.contra h2 em{display:block; font:400 50px/.9 var(--script); font-style:normal; text-transform:none; color:#FF8CC4; letter-spacing:0; margin-bottom:2px}
+.contra ol{position:relative; list-style:none; display:grid; gap:12px; margin:18px 0 0}
+.contra li{display:grid; grid-template-columns:42px 1fr; gap:12px; align-items:center}
+.contra li i{width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#2C2229; font:800 16px/1 var(--f); font-style:normal; color:#FF8CC4; border:1.5px solid #4A3944}
+.contra li:last-child i{background:var(--fucsia); color:#fff; border-color:var(--fucsia)}
+.contra li b{display:block; font:700 14.5px/1.25 var(--f)}
+.contra li span{display:block; font:500 12.3px/1.35 var(--f); color:#CDB6C3}
+.contra .pedir{margin-top:20px}
+
+.pie{position:relative; margin:56px 16px 0; text-align:center}
+.pie .logo-pie{width:210px; margin:0 auto 14px}
+.pie h2{font:400 40px/1 var(--script); color:var(--fucsia); text-wrap:balance}
+.pie > p{font:500 14px/1.45 var(--f); color:var(--gris); margin:8px 0 16px}
+.pie .btn{max-width:360px; margin:0 auto}
+.pie .datos{margin-top:22px}
+.pie .datos p{font:500 13px/1.6 var(--f); color:var(--gris); margin:0 0 4px}
+.pie .datos a{color:var(--fucsia2); font-weight:700; text-decoration:none}
+.firma{display:inline-block; margin-top:22px; font:600 10.5px/1 var(--f); letter-spacing:.14em; text-transform:uppercase; color:#B49AA7; text-decoration:none}
+.firma b{font-weight:800; color:#8E7381}
+
+.fija{position:fixed; z-index:60; left:50%; bottom:max(12px, env(safe-area-inset-bottom)); width:min(440px, calc(100% - 24px)); display:flex; gap:10px;
+  transform:translate(-50%, 140%); transition:transform .35s cubic-bezier(.2,.9,.3,1.1)}
+.fija.ver{transform:translate(-50%, 0)}
+.fija > *{display:flex; align-items:center; justify-content:center; gap:9px; height:58px; text-decoration:none; border:0; cursor:pointer; box-shadow:0 12px 26px rgba(80,0,40,.38)}
+.fija .principal{flex:1; padding:0 18px; background:var(--fucsia); color:#fff; font:800 15px/1.1 var(--f); border-radius:30px}
+.fija .principal svg{width:22px; height:22px; flex:none}
+.fija .contacto{width:58px; flex:none; background:#fff; border-radius:50%}
+.fija .contacto svg{width:32px; height:32px}
+.aviso{position:fixed; left:50%; bottom:90px; z-index:70; transform:translate(-50%, 30px); opacity:0; max-width:calc(100% - 32px); background:var(--negro); color:#fff; font:700 14px/1.3 var(--f); padding:13px 18px; border-radius:30px; text-align:center; transition:.25s; pointer-events:none; box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.aviso.ver{transform:translate(-50%,0); opacity:1}
+
+.entra{animation:entra .55s var(--curva) both; animation-delay:var(--d,0s)}
+@keyframes entra{from{translate:0 18px; scale:.97} to{translate:0 0; scale:1}}
+.logo.entra{animation-name:cae}
+@keyframes cae{0%{translate:0 -16px; scale:1.06} 100%{translate:0 0; scale:1}}
+[data-rv]{translate:0 22px; transition:translate .6s var(--curva)}
+[data-rv].si{translate:0 0}
+@media (prefers-reduced-motion:reduce){
+  *, *::before, *::after{animation:none!important; transition:none!important}
+  [data-rv]{translate:0 0!important}
+  html{scroll-behavior:auto}
+}
+@media (max-width:360px){
+  .titular .t2{font-size:25px} .titular .t3{font-size:60px; margin-left:44px}
+  .duo.chico .btn-txt small{display:none}
+  .formas button{font-size:9.8px} .colores button{font-size:9.8px} .colores button i{width:36px; height:36px}
+  .escena .mano{transform:scale(.92)}
+}
+</style>
+</head>
+<body class="sin-wa">
+<div class="fondo" aria-hidden="true">
+  <svg style="left:6%; top:12%" viewBox="0 0 60 50"><path d="M30 25C23 7 5 2 5 14s14 12 25 11c-12 4-21 18-14 21s14-9 14-21zm0 0C37 7 55 2 55 14S41 26 30 25c12 4 21 18 14 21s-14-9-14-21z" fill="rgba(255,255,255,.25)" stroke="#E6007E" stroke-width="1.3" stroke-linejoin="round"/><path d="M30 13v22M30 13l-4-7M30 13l4-7" stroke="#B3005F" stroke-width="1.2" stroke-linecap="round" fill="none"/></svg>
+  <svg style="right:7%; bottom:14%; width:130px" viewBox="0 0 60 50"><path d="M30 25C23 7 5 2 5 14s14 12 25 11c-12 4-21 18-14 21s14-9 14-21zm0 0C37 7 55 2 55 14S41 26 30 25c12 4 21 18 14 21s-14-9-14-21z" fill="rgba(255,255,255,.25)" stroke="#E6007E" stroke-width="1.3" stroke-linejoin="round"/><path d="M30 13v22M30 13l-4-7M30 13l4-7" stroke="#B3005F" stroke-width="1.2" stroke-linecap="round" fill="none"/></svg>
+</div>
+<main class="hoja">
+
+<header class="heroe">
+  <div class="foto"><img src="img/heroe.webp" alt="Manos con uñas almendra en tono nude sostienen una mariposa fucsia" width="825" height="1024" fetchpriority="high"></div>
+  <svg class="mariposa m1" viewBox="0 0 40 32" aria-hidden="true"><g fill="rgba(230,0,126,.18)" stroke="#E6007E" stroke-width="1.6" stroke-linejoin="round"><path class="ala i" d="M20 16C15 4 3 1 3 9s9 8 17 7c-8 3-14 12-9 14s9-6 9-14z"/><path class="ala d" d="M20 16C25 4 37 1 37 9s-9 8-17 7c8 3 14 12 9 14s-9-6-9-14z"/></g><path d="M20 9v14M20 9l-3-5M20 9l3-5" stroke="#B3005F" stroke-width="1.4" stroke-linecap="round" fill="none"/></svg>
+  <svg class="mariposa m2" viewBox="0 0 40 32" aria-hidden="true"><g fill="rgba(255,255,255,.35)" stroke="#E6007E" stroke-width="1.8" stroke-linejoin="round"><path class="ala i" d="M20 16C15 4 3 1 3 9s9 8 17 7c-8 3-14 12-9 14s9-6 9-14z"/><path class="ala d" d="M20 16C25 4 37 1 37 9s-9 8-17 7c8 3 14 12 9 14s-9-6-9-14z"/></g></svg>
+  <div class="logo entra" style="--d:.05s">
+    <h1>Misuu · Uñas, pestañas y esenciales de belleza</h1>
+    <img src="img/logo.webp" alt="Misuu Profesional" width="720" height="222">
+  </div>
+  <div class="titular">
+    <span class="t1 entra" style="--d:.12s">Uñas · Pestañas · Belleza</span>
+    <span class="t2 entra" style="--d:.2s">Transforma tu look</span>
+    <span class="t3 entra" style="--d:.28s">en minutos</span>
+    <span class="t4 entra" style="--d:.34s"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8CC4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4.5L21 12.5V16h-8"/><circle cx="6" cy="17.5" r="2" fill="#141014"/><circle cx="17" cy="17.5" r="2" fill="#141014"/></svg>Envíos a todo Colombia · Pago contra entrega</span>
+  </div>
+</header>
+
+<nav class="enlaces" aria-label="Enlaces de Misuu">
+  <a class="btn compra entra" style="--d:.3s" id="btn-compra" href="https://ig.me/m/misuu_colombia" target="_blank" rel="noopener">
+    <span class="btn-ico">
+      <svg class="ico-wa" viewBox="0 0 32 32"><path fill="#25D366" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3z"/><path fill="#fff" d="M11.6 9.6c.3-.6.6-.6.9-.6h.8c.2 0 .6 0 .8.6l1.1 2.7c.1.3 0 .6-.1.8l-.7.8c-.2.2-.3.5-.1.8.4.8 1 1.6 1.7 2.3.9.8 1.8 1.3 2.5 1.6.3.1.6.1.8-.1l.9-1.1c.2-.3.5-.3.8-.2l2.6 1.2c.3.2.5.3.5.5 0 .4 0 1.3-.6 2-.6.7-1.9 1.3-3.1 1.1-1.2-.2-3.3-.8-5.5-2.8-2.6-2.4-3.5-4.7-3.8-5.9-.3-1.2.2-2.5.5-3.1z"/></svg>
+      <svg class="ico-dm" viewBox="0 0 32 32"><defs><linearGradient id="gig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEC053"/><stop offset=".45" stop-color="#F2203E"/><stop offset=".75" stop-color="#B729A8"/><stop offset="1" stop-color="#5342D6"/></linearGradient></defs><circle cx="16" cy="16" r="14" fill="url(#gig)"/><path d="M23.5 9 8.5 14.6l5.6 2.2m9.4-7.8-6.5 14-2.9-6.2m9.4-7.8-9.4 7.8" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+    </span>
+    <span class="btn-txt"><b id="compra-t">Compra por mensaje</b><small id="compra-s">Por Instagram · pago contra entrega</small></span>
+    <svg class="flecha" viewBox="0 0 24 24"><path d="M4 12h15M13.5 6.5 19 12l-5.5 5.5"/></svg>
+  </a>
+  <div class="duo">
+    <a class="tarjeta disena entra" style="--d:.36s" href="#elige" data-modo="mi">
+      <span class="btn-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3.5c-3 3.6-4.4 7.3-4.4 10.4v4.6h8.8v-4.6c0-3.1-1.4-6.8-4.4-10.4z" fill="rgba(255,255,255,.25)"/><path d="M10.5 18.5h11v4.2a5.5 5.5 0 0 1-11 0z"/><path d="M14 8.5c-.6 1.6-.9 3.2-.9 4.6"/></svg></span>
+      <span><b>Diseña tus uñas</b><small>Forma, largo y color</small></span>
+      <svg class="flecha" viewBox="0 0 24 24"><path d="M4 12h15M13.5 6.5 19 12l-5.5 5.5"/></svg>
+      <svg class="unita" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0c1 6 4 9 10 10-6 1-9 4-10 10-1-6-4-9-10-10C6 9 9 6 10 0z" fill="#fff"/></svg>
+    </a>
+    <a class="tarjeta pro entra" style="--d:.42s" href="#elige" data-modo="salon">
+      <span class="btn-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h20v13a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z" fill="#fff"/><path d="M12 11V8.5A2.5 2.5 0 0 1 14.5 6h3A2.5 2.5 0 0 1 20 8.5V11"/><path d="M6 16.5h20"/><path d="M16 13.5l.9 1.8 2 .3-1.4 1.4.3 2-1.8-.9-1.8.9.3-2-1.4-1.4 2-.3z" fill="#E6007E" stroke="none"/></svg></span>
+      <span><b>Soy <em>profesional</em></b><small>Lista para salones y manicuristas</small></span>
+      <svg class="flecha" viewBox="0 0 24 24"><path d="M4 12h15M13.5 6.5 19 12l-5.5 5.5"/></svg>
+    </a>
+  </div>
+  <div class="duo chico">
+    <a class="btn entra" style="--d:.48s" href="#contraentrega">
+      <span class="btn-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="24" height="15" rx="2.5" fill="#fff"/><circle cx="16" cy="16.5" r="3.6" fill="#F7D6E0"/><path d="M8 13v7M24 13v7"/></svg></span>
+      <span class="btn-txt"><b>Contra entrega</b><small>Pagas al recibir</small></span>
+    </a>
+    <a class="btn entra" style="--d:.52s" href="https://www.instagram.com/misuu_colombia/" target="_blank" rel="noopener">
+      <span class="btn-ico"><svg viewBox="0 0 32 32"><defs><linearGradient id="gig2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEC053"/><stop offset=".45" stop-color="#F2203E"/><stop offset=".75" stop-color="#B729A8"/><stop offset="1" stop-color="#5342D6"/></linearGradient></defs><rect x="4" y="4" width="24" height="24" rx="7" fill="url(#gig2)"/><circle cx="16" cy="16" r="5.2" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="22.4" cy="9.6" r="1.5" fill="#fff"/></svg></span>
+      <span class="btn-txt"><b>Instagram</b><small>@misuu_colombia</small></span>
+    </a>
+  </div>
+</nav>
+
+<section class="mec" id="elige" data-modo="mi" aria-labelledby="mec-t">
+  <div class="cab">
+    <span class="antetitulo">Tu look, a tu manera</span>
+    <h2 class="titulo" id="mec-t"><span id="mec-a">¿Me quedará bien?</span><span class="sc" id="mec-b">Pruébalo aquí</span></h2>
+  </div>
+  <div class="interruptor" role="group" aria-label="¿Para quién es?">
+    <span class="bola" aria-hidden="true"></span>
+    <button type="button" id="modo-mi" aria-pressed="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 20.5s-7.5-4.6-7.5-10.1A4.2 4.2 0 0 1 12 8a4.2 4.2 0 0 1 7.5 2.4c0 5.5-7.5 10.1-7.5 10.1z"/></svg>Para mí</button>
+    <button type="button" id="modo-salon" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M10 21v-5h4v5"/></svg>Para mi salón</button>
+  </div>
+
+  <div class="panel" id="panel-mi">
+    <div class="pestanas" role="tablist">
+      <button type="button" role="tab" id="tab-unas" aria-selected="true" aria-controls="sub-unas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5c-2.4 2.8-3.4 5.6-3.4 8v4.5h6.8v-4.5c0-2.4-1-5.2-3.4-8z"/><path d="M8.6 15h6.8v3a3.4 3.4 0 0 1-6.8 0z"/></svg>Uñas</button>
+      <button type="button" role="tab" id="tab-pest" aria-selected="false" aria-controls="sub-pest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2.5 14c3-4 6-5.5 9.5-5.5s6.5 1.5 9.5 5.5"/><path d="M5 11.5 3.5 8.5M8.5 9.5 7.6 6M12 8.5V5M15.5 9.5l.9-3.5M19 11.5l1.5-3"/></svg>Pestañas</button>
+    </div>
+
+    <div id="sub-unas" role="tabpanel" aria-labelledby="tab-unas">
+      <div class="escena" id="escena">
+        <div class="resumen" aria-live="polite"><small>Tu diseño</small><b id="res-forma">Almendra</b><span id="res-resto">Media · Nude</span></div>
+        <svg class="brillo" style="left:18%; top:58%" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0c1 6 4 9 10 10-6 1-9 4-10 10-1-6-4-9-10-10C6 9 9 6 10 0z"/></svg>
+        <svg class="brillo" style="right:20%; top:14%; width:11px; animation-delay:1.2s" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0c1 6 4 9 10 10-6 1-9 4-10 10-1-6-4-9-10-10C6 9 9 6 10 0z"/></svg>
+        <svg class="mano" id="mano" viewBox="0 -44 300 370" role="img" aria-label="Mano ilustrada con el diseño de uñas que eliges"></svg>
+        <div class="detalle" aria-hidden="true"><svg id="detalle" viewBox="0 0 96 96"></svg></div>
+      </div>
+
+      <div class="paso-lbl"><i>1</i>Forma</div>
+      <div class="formas" id="formas" role="group" aria-label="Forma de la uña"></div>
+      <div class="paso-lbl"><i>2</i>Largo</div>
+      <div class="largos" id="largos" role="group" aria-label="Largo de la uña"></div>
+      <div class="paso-lbl"><i>3</i>Color de base</div>
+      <div class="colores" id="colores" role="group" aria-label="Color de base"></div>
+
+      <div class="necesitas">
+        <h3>Lo que <em>necesitas</em></h3>
+        <ol class="pasos">
+          <li><span class="pi"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="3" width="6" height="26" rx="3" transform="rotate(35 16 16)" fill="#F7D6E0"/><path d="M12.5 10.5l3 2M10.5 13.5l3 2M8.5 16.5l3 2" transform="translate(2 -1)"/></svg></span><span><b>Lima tu uña natural</b><small>Lima</small></span></li>
+          <li><span class="pi"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5c-2.6 3-3.6 6.2-3.6 8.6V27h7.2V13.6C12.6 11.2 11.6 8 9 5z" fill="#F7D6E0"/><path d="M23 5c-2.6 3-3.6 6.2-3.6 8.6V27h7.2V13.6C26.6 11.2 25.6 8 23 5z" fill="#fff"/><path d="M16 9v14" stroke-dasharray="2 3"/></svg></span><span><b>Elige tu tamaño de tip</b><small>Soft Gel Tips o press-on</small></span></li>
+          <li><span class="pi"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="12" width="12" height="16" rx="3" fill="#F7D6E0"/><path d="M13 12V8h6v4M14.5 8V4h3v4"/></svg></span><span><b>Aplica la base y presiona</b><small>Base</small></span></li>
+          <li><span class="pi"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 25a12 11 0 0 1 24 0z" fill="#fff"/><path d="M8.5 25a7.5 6.5 0 0 1 15 0" fill="#E9D5FF" stroke="#8B5CF6"/><rect x="12" y="15.5" width="8" height="4" rx="1" fill="#141014" stroke="none"/></svg></span><span><b>Cura en lámpara y da brillo</b><small>Lámpara LED UV</small></span></li>
+        </ol>
+      </div>
+
+      <button class="pedir" type="button" id="pedir-unas"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="pt"><b>Pedir mi kit</b><small>Con pago contra entrega</small></span></button>
+      <p class="pedir-nota"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Te llega el mensaje con tu forma, largo y color</p>
+    </div>
+
+    <div id="sub-pest" role="tabpanel" aria-labelledby="tab-pest" hidden>
+      <div class="escena ojo-esc">
+        <svg class="ojo-svg" id="ojo" viewBox="0 0 320 236" role="img" aria-label="Ojo ilustrado con pestañas por racimos de más largas afuera a más cortas adentro"></svg>
+        <button class="repetir" type="button" id="repetir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.4-5.7L4 8.6"/><path d="M4 4v4.6h4.6"/></svg>Ver cómo se ponen</button>
+      </div>
+      <div class="paso-lbl"><i>1</i>Efecto que quieres</div>
+      <div class="efectos" id="efectos" role="group" aria-label="Efecto de pestañas"></div>
+      <div class="reglas">
+        <div class="regla"><svg viewBox="0 0 34 34" fill="none" stroke="#B3005F" stroke-width="1.8" stroke-linecap="round"><circle cx="17" cy="17" r="16" fill="#fff" stroke="#F2C5D6"/><path d="M8 19c3-3.5 6-5 9-5s6 1.5 9 5"/><path d="M17 14v-4M13 14.6l-1.6-3.4M21 14.6l1.6-3.4" stroke="#E6007E"/></svg><span><b>Desde la raíz</b><span>Pégalas desde la raíz, sin tocar la línea de agua.</span></span></div>
+        <div class="regla"><svg viewBox="0 0 34 34" fill="none" stroke="#B3005F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="17" r="16" fill="#fff" stroke="#F2C5D6"/><path d="M25 22V9M21 22v-9M17 22v-6.5M13 22v-4.5M9 22v-3" stroke="#E6007E"/></svg><span><b>De más largas a más cortas</b><span>Empieza afuera con las más largas y termina adentro con las más cortas.</span></span></div>
+      </div>
+      <figure class="foto-ojo"><img src="img/ojo.webp" alt="Ojo con pestañas postizas y un cepillo rosado" width="640" height="333" loading="lazy"><span>Así lucen</span></figure>
+      <button class="pedir" type="button" id="pedir-pest"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="pt"><b>Pedir mis pestañas</b><small>Con pago contra entrega</small></span></button>
+      <p class="pedir-nota"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Te llega el mensaje con el efecto que elegiste</p>
+    </div>
+  </div>
+
+  <div class="panel" id="panel-salon" hidden>
+    <div class="salon-foto"><img src="img/salon.webp" alt="Manicurista con guantes negros usa el torno profesional Misuu" width="900" height="562" loading="lazy"><div class="tt"><b>Ahorra tiempo</b><span>por clienta</span></div></div>
+    <div class="beneficios">
+      <div class="benef destacado"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="21" r="14"/><path d="M20 13v8l5 3M16 4h8"/></svg><b>Uñas extra largas sin esculpir</b><span>Con Soft Gel Tips, en tiempo récord.</span></div>
+      <div class="benef"><svg viewBox="0 0 30 30" fill="none" stroke="#FF8CC4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3l2.6 6.3 6.8.5-5.2 4.4 1.6 6.6L15 17.2l-5.8 3.6 1.6-6.6-5.2-4.4 6.8-.5z"/></svg><b>Acabado de salón</b><span>Un resultado perfecto en cada clienta.</span></div>
+      <div class="benef"><svg viewBox="0 0 30 30" fill="none" stroke="#FF8CC4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="18" height="23" rx="2.5"/><path d="M11 10h8M11 15h8M11 20h5"/></svg><b>Lista para profesionales</b><span>Para manicuristas, lashistas, salones y distribuidoras.</span></div>
+      <div class="benef" style="grid-column:1 / -1"><svg viewBox="0 0 30 30" fill="none" stroke="#FF8CC4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h14v12h-14zM16.5 11.5h5.5l4 4.5v4h-9.5"/><circle cx="8" cy="22" r="2.4"/><circle cx="21.5" cy="22" r="2.4"/></svg><b>Pago contra entrega a todo Colombia</b><span>Pides, te llega a tu salón y pagas al recibir.</span></div>
+    </div>
+
+    <div class="paso-lbl"><i>1</i>¿Qué te interesa?</div>
+    <div class="productos" id="productos">
+      <button class="prod" type="button" aria-pressed="false" data-p="Torno profesional"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="im"><img src="img/torno.webp" alt="Torno profesional Misuu en uso con guantes negros" width="600" height="600" loading="lazy"></span><span class="tx"><b>Torno profesional</b><small>Para preparar y dar forma</small></span></button>
+      <button class="prod" type="button" aria-pressed="false" data-p="Lámpara LED UV profesional"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="im"><img src="img/lampara.webp" alt="Lámpara LED UV profesional con su caja Misuu" width="600" height="600" loading="lazy"></span><span class="tx"><b>Lámpara LED UV</b><span class="feats"><i>Alta potencia</i><i>30/60/90 s</i><i>Sensor automático</i><i>LEDs de larga duración</i></span></span></button>
+      <button class="prod" type="button" aria-pressed="false" data-p="Soft Gel Tips"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="im"><svg id="tips-ilus" viewBox="0 0 200 200" aria-hidden="true"></svg></span><span class="tx"><b>Soft Gel Tips</b><small>Extra largas sin esculpir</small></span></button>
+      <button class="prod" type="button" aria-pressed="false" data-p="Pestañas por racimos"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="im"><img src="img/racimos.webp" alt="Lashista aplicando pestañas con pinzas" width="600" height="600" loading="lazy"></span><span class="tx"><b>Pestañas por racimos</b><small>Buenas pestañas, clientas que regresan</small></span></button>
+    </div>
+    <div class="extras" id="extras">
+      <button class="chip" type="button" aria-pressed="false" data-p="Pegamentos">+ Pegamentos</button>
+      <button class="chip" type="button" aria-pressed="false" data-p="Piedras y brocas">+ Piedras y brocas</button>
+      <button class="chip" type="button" aria-pressed="false" data-p="Brochas">+ Brochas</button>
+      <button class="chip" type="button" aria-pressed="false" data-p="Press-on">+ Press-on</button>
+    </div>
+
+    <div class="paso-lbl" id="lbl-negocio"><i>2</i>Tu negocio</div>
+    <div class="negocios" id="negocios">
+      <button class="chip" type="button" aria-pressed="false" data-n="manicurista"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5c-2.4 2.8-3.4 5.6-3.4 8v4.5h6.8v-4.5c0-2.4-1-5.2-3.4-8z"/><path d="M8.6 15h6.8v3a3.4 3.4 0 0 1-6.8 0z"/></svg>Manicurista</button>
+      <button class="chip" type="button" aria-pressed="false" data-n="lashista"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2.5 14c3-4 6-5.5 9.5-5.5s6.5 1.5 9.5 5.5"/><path d="M5 11.5 3.5 8.5M8.5 9.5 7.6 6M12 8.5V5M15.5 9.5l.9-3.5M19 11.5l1.5-3"/></svg>Lashista</button>
+      <button class="chip" type="button" aria-pressed="false" data-n="salón de belleza"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M10 21v-5h4v5"/></svg>Salón</button>
+      <button class="chip" type="button" aria-pressed="false" data-n="distribuidora"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>Distribuidora</button>
+    </div>
+    <div class="paso-lbl" id="lbl-ciudad"><i>3</i>Tu ciudad</div>
+    <input class="campo" id="ciudad" type="text" autocomplete="address-level2" placeholder="¿En qué ciudad estás?" aria-labelledby="lbl-ciudad" maxlength="40">
+
+    <button class="pedir" type="button" id="pedir-salon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 9h6M9 13h6M9 17h3"/></svg><span class="pt"><b>Quiero la lista para profesionales</b><small>Te la enviamos por mensaje</small></span></button>
+    <p class="pedir-nota"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Con pago contra entrega a todo Colombia</p>
+    <div class="clave"><svg viewBox="0 0 30 30" fill="none" stroke="#FF8CC4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6h20v14H13l-5 4v-4H5z"/><path d="M10 11.5h10M10 15h6"/></svg><p>¿Nos viste en Instagram? Comenta <b>SALÓN</b> en nuestras publicaciones y te pasamos la lista.</p></div>
+  </div>
+</section>
+
+<section class="sec" data-rv aria-labelledby="cat-t">
+  <span class="antetitulo">Todo para tu look</span>
+  <h2 class="titulo" id="cat-t">Pregunta por<span class="sc">tus favoritos</span></h2>
+  <div class="catalogo" id="catalogo">
+    <button type="button" data-p="Soft Gel Tips"><span class="ci"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.7" stroke-linejoin="round"><path d="M10 4c-2.5 3.5-3.6 7-3.6 9.6V28h7.2V13.6C13.6 11 12.5 7.5 10 4z" fill="#fff"/><path d="M22 4c-2.5 3.5-3.6 7-3.6 9.6V28h7.2V13.6C25.6 11 24.5 7.5 22 4z" fill="#fff"/></svg></span>Soft Gel Tips</button>
+    <button type="button" data-p="Uñas press-on"><span class="ci"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M16 3c-3 3.6-4.4 7.2-4.4 10V26h8.8V13c0-2.8-1.4-6.4-4.4-10z" fill="#E6007E" stroke="#E6007E"/><path d="M14 9c-.6 1.4-.8 2.8-.8 4" stroke="#fff"/></svg></span>Press-on</button>
+    <button type="button" data-p="Pestañas por racimos"><span class="ci"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.7" stroke-linecap="round"><path d="M4 20c4-5 8-7 12-7s8 2 12 7"/><path d="M8 16.5 6 12M11.5 14.5l-1-5M16 13.2V7.5M20.5 14.5l1-5M24 16.5l2-4.5" stroke="#141014"/></svg></span>Pestañas por racimos</button>
+    <button type="button" data-p="Pegamentos"><span class="ci"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M11 14h10v12a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2z" fill="#fff"/><path d="M13 14l1.5-5h3L19 14M16 9V5"/><path d="M16 18.5c-1.4 1.6-1.4 3.4 0 4 1.4-.6 1.4-2.4 0-4z" fill="#E6007E" stroke="none"/></svg></span>Pegamentos</button>
+    <button type="button" data-p="Torno profesional"><span class="ci"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M20 5l7 7-9.5 9.5-7-7z" fill="#F7D6E0"/><path d="M10.5 14.5 7 18l7 7 3.5-3.5M7.5 24.5 4 28"/><path d="M13 12l7 7" stroke="#E6007E"/></svg></span>Torno</button>
+    <button type="button" data-p="Lámpara LED UV profesional"><span class="ci"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.7" stroke-linejoin="round"><path d="M4 25a12 11 0 0 1 24 0z" fill="#fff"/><path d="M9 25a7 6 0 0 1 14 0" fill="#E9D5FF" stroke="#8B5CF6"/><rect x="12.5" y="15" width="7" height="3.5" rx="1" fill="#141014" stroke="none"/></svg></span>Lámpara LED UV</button>
+    <button type="button" data-p="Piedras y brocas"><span class="ci"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M10 28V16M16 28V14M22 28V16"/><rect x="8" y="8" width="4" height="8" rx="2" fill="#F7D6E0"/><path d="M14 14V7l2-3 2 3v7z" fill="#fff"/><rect x="20" y="9" width="4" height="7" rx="1" fill="#E6007E" stroke="#E6007E"/></svg></span>Piedras y brocas</button>
+    <button type="button" data-p="Brochas"><span class="ci"><svg viewBox="0 0 32 32" fill="none" stroke="#B3005F" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M9 28l9.5-12.5" stroke-width="2.6"/><path d="M18.5 15.5l2-2.5 3 2.3-2 2.6z" fill="#C99A78"/><path d="M20.5 13c2-4 4.6-7.6 7.5-9-.6 3.5-2.5 7.7-4.5 11.3z" fill="#141014" stroke="#141014"/></svg></span>Brochas</button>
+  </div>
+  <p class="catalogo-nota">Toca un producto y te respondemos por mensaje.</p>
+</section>
+
+<section class="contra" id="contraentrega" data-rv aria-labelledby="contra-t">
+  <span class="antetitulo">Envíos a todo Colombia</span>
+  <h2 id="contra-t"><em>Pagas</em>cuando lo recibes</h2>
+  <ol>
+    <li><i>1</i><span><b>Haces tu pedido por mensaje</b><span>Nos cuentas qué quieres y a qué ciudad va.</span></span></li>
+    <li><i>2</i><span><b>Te lo enviamos</b><span>Despachamos a cualquier ciudad de Colombia.</span></span></li>
+    <li><i>3</i><span><b>Pagas al recibir</b><span>Pagas cuando tu pedido llega a tus manos.</span></span></li>
+  </ol>
+  <button class="pedir" type="button" id="pedir-contra"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Hacer mi pedido</button>
+</section>
+
+<footer class="pie" data-rv>
+  <img class="logo-pie" src="img/logo.webp" alt="Misuu Profesional" width="720" height="222" loading="lazy">
+  <h2>Productos que elevan tu estilo</h2>
+  <p>¿Conoces a alguien que vive pendiente de sus uñas?<br>Mándale este link.</p>
+  <button class="btn" id="compartir" type="button">
+    <span class="btn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#B3005F" stroke-width="2.2"><circle cx="18" cy="5" r="3" fill="#F7D6E0"/><circle cx="6" cy="12" r="3" fill="#F7D6E0"/><circle cx="18" cy="19" r="3" fill="#F7D6E0"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></span>
+    <span class="btn-txt"><b>Comparte este link</b><small>Por WhatsApp o donde quieras</small></span>
+  </button>
+  <div class="datos">
+    <p>Uñas, pestañas y esenciales de belleza<br>Envíos a todo Colombia · Pago contra entrega</p>
+    <p><a href="https://www.instagram.com/misuu_colombia/" target="_blank" rel="noopener">@misuu_colombia</a></p>
+  </div>
+  <a class="firma" href="https://www.blackmouth.agency" target="_blank" rel="noopener">Hecho por <b>BLACKMOUTH</b></a>
+</footer>
+</main>
+
+<div class="fija" id="fija">
+  <button class="principal" type="button" id="fija-p"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c-2.4 2.8-3.4 5.6-3.4 8v4.5h6.8v-4.5c0-2.4-1-5.2-3.4-8z" fill="rgba(255,255,255,.25)"/><path d="M8.6 15h6.8v3a3.4 3.4 0 0 1-6.8 0z"/></svg><span id="fija-t">Diseña tus uñas</span></button>
+  <a class="contacto" id="fija-c" href="https://ig.me/m/misuu_colombia" target="_blank" rel="noopener" aria-label="Escríbenos">
+    <svg class="ico-wa" viewBox="0 0 32 32"><path fill="#25D366" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3z"/><path fill="#fff" d="M11.6 9.6c.3-.6.6-.6.9-.6h.8c.2 0 .6 0 .8.6l1.1 2.7c.1.3 0 .6-.1.8l-.7.8c-.2.2-.3.5-.1.8.4.8 1 1.6 1.7 2.3.9.8 1.8 1.3 2.5 1.6.3.1.6.1.8-.1l.9-1.1c.2-.3.5-.3.8-.2l2.6 1.2c.3.2.5.3.5.5 0 .4 0 1.3-.6 2-.6.7-1.9 1.3-3.1 1.1-1.2-.2-3.3-.8-5.5-2.8-2.6-2.4-3.5-4.7-3.8-5.9-.3-1.2.2-2.5.5-3.1z"/></svg>
+    <svg class="ico-dm" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="url(#gig)"/><path d="M23.5 9 8.5 14.6l5.6 2.2m9.4-7.8-6.5 14-2.9-6.2m9.4-7.8-9.4 7.8" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+  </a>
+</div>
+<div class="aviso" id="aviso" role="status"></div>
+
+<script>
+(function(){
+const WHATSAPP = "";
+const DM = "https://ig.me/m/misuu_colombia";
+const SALUDO = "Hola, Misuu.";
+
+function $(s){ return document.querySelector(s); }
+function $$(s){ return Array.prototype.slice.call(document.querySelectorAll(s)); }
+var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+var NS = "http://www.w3.org/2000/svg";
+function el(tag, attrs, padre){ var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (padre) padre.appendChild(e); return e; }
+
+var numero = String(WHATSAPP).replace(/\D/g, "");
+if (numero && numero.length === 10) numero = "57" + numero;
+var conWA = numero.length >= 11;
+if (conWA){
+  document.body.classList.remove("sin-wa");
+  $("#compra-t").textContent = "Compra por WhatsApp"; $("#compra-s").textContent = "Pago contra entrega a todo Colombia";
+  $("#fija-c").setAttribute("aria-label", "Escríbenos por WhatsApp");
+}
+
+var aviso = $("#aviso"), avisoT;
+function avisar(t, ms){ aviso.textContent = t; aviso.classList.add("ver"); clearTimeout(avisoT); avisoT = setTimeout(function(){ aviso.classList.remove("ver"); }, ms || 2200); }
+function copiar(t){
+  if (navigator.clipboard && window.isSecureContext){ return navigator.clipboard.writeText(t).catch(function(){ return copiaVieja(t); }); }
+  return Promise.resolve(copiaVieja(t));
+}
+function copiaVieja(t){
+  var ta = document.createElement("textarea"); ta.value = t; ta.setAttribute("readonly", ""); ta.style.cssText = "position:fixed;top:-100px;opacity:0";
+  document.body.appendChild(ta); ta.select(); var ok = false; try { ok = document.execCommand("copy"); } catch(e){} document.body.removeChild(ta); return ok;
+}
+function enlace(texto){ return conWA ? "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto) : DM; }
+function contactar(texto){
+  window.__ultimoMensaje = texto;
+  window.__ultimoEnlace = enlace(texto);
+  if (conWA){ window.open(window.__ultimoEnlace, "_blank", "noopener"); return; }
+  copiar(texto);
+  avisar("Copiamos tu pedido: pégalo en el chat", 2600);
+  setTimeout(function(){ var w = window.open(DM, "_blank", "noopener"); if (!w) location.href = DM; }, 900);
+}
+window.__mensajeMisuu = function(){ return window.__ultimoMensaje || ""; };
+
+var GENERAL = SALUDO + " Quiero hacer un pedido con pago contra entrega.";
+function preparaContacto(a){
+  a.href = enlace(GENERAL);
+  a.addEventListener("click", function(ev){ ev.preventDefault(); contactar(GENERAL); });
+}
+preparaContacto($("#btn-compra")); preparaContacto($("#fija-c"));
+
+var FORMAS = [
+  {k:"almendra", n:"Almendra", hw:.13, s:.34},
+  {k:"bailarina", n:"Bailarina", hw:.27, s:.05},
+  {k:"cuadrada", n:"Cuadrada", hw:.49, s:.07},
+  {k:"stiletto", n:"Stiletto", hw:.015, s:.02},
+  {k:"ovalada", n:"Ovalada", hw:.47, s:.46}
+];
+var LARGOS = [{k:"corta", n:"Corta", e:.22}, {k:"media", n:"Media", e:.9}, {k:"extra", n:"Extra larga", e:1.85}];
+var COLORES = [
+  {k:"nude", n:"Nude", c:"#E7B7A3", c2:"#F3D2C3"},
+  {k:"rosa", n:"Rosa", c:"#F29BBD", c2:"#FBC9DC"},
+  {k:"fucsia", n:"Fucsia", c:"#E6007E", c2:"#FF5AAE"},
+  {k:"lechoso", n:"Blanco lechoso", c:"#F3ECEA", c2:"#FFFFFF"},
+  {k:"rojo", n:"Rojo", c:"#C5122E", c2:"#EC4B5E"}
+];
+var est = {forma:FORMAS[0], largo:LARGOS[1], color:COLORES[0]};
+
+function f(n){ return Math.round(n * 100) / 100; }
+function unaPath(W, Hb, p){
+  var E = p.e * W, top = -(Hb + E), y0 = -1.2;
+  var hw = Math.max(p.hw * W, .35), s = Math.max(p.s * W, .45);
+  var ty = top + s, c1y = -Hb * .62;
+  var c2x = W / 2 + (hw - W / 2) * .28, c2y = ty + (c1y - ty) * .5;
+  var k = s * 1.33, h = W / 2;
+  return "M" + f(h) + " " + y0 + "C" + f(h) + " " + f(c1y) + " " + f(c2x) + " " + f(c2y) + " " + f(hw) + " " + f(ty) +
+    "C" + f(hw) + " " + f(ty - k) + " " + f(-hw) + " " + f(ty - k) + " " + f(-hw) + " " + f(ty) +
+    "C" + f(-c2x) + " " + f(c2y) + " " + f(-h) + " " + f(c1y) + " " + f(-h) + " " + y0 +
+    "Q0 " + f(W * .34) + " " + f(h) + " " + y0 + "Z";
+}
+function brilloPath(W, Hb, p){
+  var E = p.e * W, top = -(Hb + E), hw = Math.max(p.hw * W, .35), s = Math.max(p.s * W, .45);
+  var x1 = -W * .2, y1 = -Hb * .28, x2 = -Math.min(hw * .55, W * .2) - W * .03, y2 = top + s + W * .32;
+  return "M" + f(x1) + " " + f(y1) + "Q" + f((x1 + x2) / 2 - W * .05) + " " + f((y1 + y2) / 2) + " " + f(x2) + " " + f(y2);
+}
+
+var mano = $("#mano");
+var defs = el("defs", {}, mano);
+var gp = el("linearGradient", {id:"piel", x1:"0", x2:"1", y1:"0", y2:"0"}, defs);
+el("stop", {offset:"0", "stop-color":"#D99C80"}, gp); el("stop", {offset:".42", "stop-color":"#F4D2BF"}, gp); el("stop", {offset:".6", "stop-color":"#F1CAB4"}, gp); el("stop", {offset:"1", "stop-color":"#D69779"}, gp);
+var gpp = el("linearGradient", {id:"palma", x1:"0", x2:"1", y1:"0", y2:".2"}, defs);
+el("stop", {offset:"0", "stop-color":"#DDA184"}, gpp); el("stop", {offset:".45", "stop-color":"#F3CFBB"}, gpp); el("stop", {offset:"1", "stop-color":"#D9997B"}, gpp);
+var gb = el("linearGradient", {id:"brillo", x1:"0", x2:"1", y1:"0", y2:"1"}, defs);
+el("stop", {offset:"0", "stop-color":"#fff", "stop-opacity":".55"}, gb); el("stop", {offset:".5", "stop-color":"#fff", "stop-opacity":"0"}, gb);
+var sombra = el("filter", {id:"som", x:"-20%", y:"-20%", width:"140%", height:"140%"}, defs);
+el("feDropShadow", {dx:"0", dy:"6", stdDeviation:"7", "flood-color":"#9A3A5E", "flood-opacity":".25"}, sombra);
+
+var DEDOS = [
+  {x:92, y:238, a:-40, l:84, w:31},
+  {x:125, y:170, a:-7, l:116, w:27},
+  {x:154, y:160, a:-1.5, l:130, w:28},
+  {x:182, y:166, a:4, l:120, w:27},
+  {x:208, y:186, a:10, l:94, w:23}
+];
+var gm = el("g", {filter:"url(#som)"}, mano);
+var unas = [];
+function dedo(d, padre){
+  var g = el("g", {transform:"translate(" + d.x + " " + d.y + ") rotate(" + d.a + ")"}, padre);
+  var r = d.w * .43, w2 = d.w / 2;
+  el("path", {d:"M" + (-w2) + " 30L" + f(-r) + " " + f(-d.l + r) + "A" + f(r) + " " + f(r) + " 0 0 1 " + f(r) + " " + f(-d.l + r) + "L" + w2 + " 30Z", fill:"url(#piel)"}, g);
+  el("path", {d:"M" + f(-r * .5) + " " + f(-d.l * .48) + "q" + f(r * .5) + " -3 " + f(r) + " 0", fill:"none", stroke:"#C98568", "stroke-opacity":".45", "stroke-width":"1.2", "stroke-linecap":"round"}, g);
+  var W = d.w * (d === DEDOS[0] ? .7 : .66), Hb = d.w * .92;
+  var gu = el("g", {transform:"translate(0 " + f(-d.l + Hb + 1.5) + ")"}, g);
+  var base = el("path", {class:"una", stroke:"rgba(90,30,40,.16)", "stroke-width":".8"}, gu);
+  var luz = el("path", {fill:"url(#brillo)"}, gu);
+  var raya = el("path", {fill:"none", stroke:"#fff", "stroke-opacity":".6", "stroke-width":f(W * .09), "stroke-linecap":"round"}, gu);
+  unas.push({W:W, Hb:Hb, base:base, luz:luz, raya:raya});
+}
+dedo(DEDOS[0], gm);
+el("path", {d:"M108 178C112 160 128 150 140 156 150 148 165 148 172 156 182 150 197 154 200 164 210 162 224 172 226 186 232 206 228 234 220 256 214 274 206 290 204 326H124C122 300 112 284 98 268 86 254 80 240 88 228 96 218 104 206 108 178Z", fill:"url(#palma)"}, gm);
+DEDOS.slice(1).forEach(function(d){ dedo(d, gm); });
+el("path", {d:"M125 300c26 7 52 7 79 0", fill:"none", stroke:"#C99A78", "stroke-width":"2.2", "stroke-linecap":"round"}, mano);
+el("path", {d:"M125 300c26 7 52 7 79 0", fill:"none", stroke:"#F3DCC6", "stroke-width":"1", "stroke-dasharray":"1.5 3.5", "stroke-linecap":"round"}, mano);
+var dije = el("g", {transform:"translate(164 306)"}, mano);
+el("path", {d:"M0 0c-3-6-9-7-9-3s5 4 9 3c-4 2-6 6-4 7s4-3 4-7zm0 0c3-6 9-7 9-3s-5 4-9 3c4 2 6 6 4 7s-4-3-4-7z", fill:"#E6007E"}, dije);
+
+var det = $("#detalle");
+var dg = el("g", {transform:"translate(48 116)"}, det);
+el("path", {d:"M-23 30L-20 -52A20 20 0 0 1 20 -52L23 30Z", fill:"url(#piel)"}, dg);
+var detU = el("g", {transform:"translate(0 -36)"}, dg);
+var dW = 28, dHb = 34;
+var dBase = el("path", {stroke:"rgba(90,30,40,.16)", "stroke-width":".8"}, detU);
+var dLuz = el("path", {fill:"url(#brillo)"}, detU);
+var dRaya = el("path", {fill:"none", stroke:"#fff", "stroke-opacity":".6", "stroke-width":"2.4", "stroke-linecap":"round"}, detU);
+unas.push({W:dW, Hb:dHb, base:dBase, luz:dLuz, raya:dRaya, det:true});
+
+var actual = {hw:est.forma.hw, s:est.forma.s, e:est.largo.e};
+function pinta(p){
+  unas.forEach(function(u){
+    var pp = u.det ? {hw:p.hw, s:p.s, e:Math.min(p.e, 1.05)} : p;
+    var d = unaPath(u.W, u.Hb, pp);
+    u.base.setAttribute("d", d); u.luz.setAttribute("d", d); u.raya.setAttribute("d", brilloPath(u.W, u.Hb, pp));
+  });
+}
+function colorea(){
+  unas.forEach(function(u){ u.base.style.fill = est.color.c; });
+  mano.style.setProperty("--c", est.color.c);
+}
+unas.forEach(function(u){ u.base.style.transition = "fill .6s ease"; });
+var anim;
+function anima(){
+  var meta = {hw:est.forma.hw, s:est.forma.s, e:est.largo.e}, desde = {hw:actual.hw, s:actual.s, e:actual.e};
+  cancelAnimationFrame(anim);
+  if (reduce){ actual = meta; pinta(actual); return; }
+  var t0 = performance.now(), dur = 650;
+  (function paso(t){
+    var x = Math.min(1, (t - t0) / dur), e = x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+    actual = {hw:desde.hw + (meta.hw - desde.hw) * e, s:desde.s + (meta.s - desde.s) * e, e:desde.e + (meta.e - desde.e) * e};
+    pinta(actual);
+    if (x < 1) anim = requestAnimationFrame(paso);
+  })(t0);
+}
+function resumen(){
+  $("#res-forma").textContent = est.forma.n;
+  $("#res-resto").textContent = est.largo.n + " · " + est.color.n;
+}
+
+var cf = $("#formas");
+FORMAS.forEach(function(fm, i){
+  var b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+  var sv = el("svg", {viewBox:"-14 -38 28 40", "aria-hidden":"true"}, b);
+  el("path", {d:unaPath(15, 13, {hw:fm.hw, s:fm.s, e:1.4})}, sv);
+  b.appendChild(document.createTextNode(fm.n));
+  b.onclick = function(){ est.forma = fm; marca(cf, b); anima(); resumen(); };
+  cf.appendChild(b);
+});
+var cl = $("#largos");
+LARGOS.forEach(function(lg, i){
+  var b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-pressed", i === 1 ? "true" : "false");
+  var ii = document.createElement("i"); ii.style.height = (8 + lg.e * 8) + "px"; b.appendChild(ii);
+  b.appendChild(document.createTextNode(lg.n));
+  b.onclick = function(){ est.largo = lg; marca(cl, b); anima(); resumen(); };
+  cl.appendChild(b);
+});
+var cc = $("#colores");
+COLORES.forEach(function(co, i){
+  var b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+  var ii = document.createElement("i"); ii.style.setProperty("--c", "radial-gradient(circle at 35% 30%, " + co.c2 + ", " + co.c + " 70%)"); b.appendChild(ii);
+  b.appendChild(document.createTextNode(co.n));
+  b.onclick = function(){ est.color = co; marca(cc, b); colorea(); resumen(); };
+  cc.appendChild(b);
+});
+function marca(cont, b){ Array.prototype.forEach.call(cont.children, function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); }
+pinta(actual); colorea(); resumen();
+
+var tips = $("#tips-ilus");
+el("rect", {width:"200", height:"200", fill:"#FBE8EE"}, tips);
+el("circle", {cx:"100", cy:"118", r:"78", fill:"#F7D6E0"}, tips);
+[-36, -18, 0, 18, 36].forEach(function(a, i){
+  var g = el("g", {transform:"translate(100 176) rotate(" + a + ") translate(0 -8)"}, tips);
+  el("path", {d:unaPath(30, 24, {hw:.13, s:.34, e:3.1}), fill:i === 2 ? "#fff" : "rgba(255,255,255,.82)", stroke:"#E6007E", "stroke-width":"1.3", "stroke-opacity":".55"}, g);
+  el("path", {d:brilloPath(30, 24, {hw:.13, s:.34, e:3.1}), fill:"none", stroke:"#F7D6E0", "stroke-width":"3", "stroke-linecap":"round"}, g);
+});
+
+var EFECTOS = [
+  {k:"natural", n:"Natural", min:15, max:30, pw:1, hebras:4},
+  {k:"gato", n:"Ojo de gato", min:13, max:48, pw:1.9, hebras:5},
+  {k:"volumen", n:"Volumen", min:26, max:42, pw:1, hebras:7}
+];
+var efecto = EFECTOS[1];
+var ojo = $("#ojo");
+var P0 = [46, 118], C = [150, 26], P1 = [284, 98];
+function bz(t){ var u = 1 - t; return [u*u*P0[0] + 2*u*t*C[0] + t*t*P1[0], u*u*P0[1] + 2*u*t*C[1] + t*t*P1[1]]; }
+function tg(t){ return [2*(1-t)*(C[0]-P0[0]) + 2*t*(P1[0]-C[0]), 2*(1-t)*(C[1]-P0[1]) + 2*t*(P1[1]-C[1])]; }
+var od = el("defs", {}, ojo);
+var gi = el("radialGradient", {id:"iris", cx:".45", cy:".4", r:".6"}, od);
+el("stop", {offset:"0", "stop-color":"#B97A3E"}, gi); el("stop", {offset:".55", "stop-color":"#7A4A22"}, gi); el("stop", {offset:"1", "stop-color":"#3E2412"}, gi);
+var gpar = el("linearGradient", {id:"parpado", x1:"0", x2:"0", y1:"0", y2:"1"}, od);
+el("stop", {offset:"0", "stop-color":"#E9B9A2"}, gpar); el("stop", {offset:"1", "stop-color":"#F4D3C2"}, gpar);
+var clip = el("clipPath", {id:"globo"}, od);
+var globoD = "M46 118Q150 26 284 98Q170 176 46 118Z";
+el("path", {d:globoD}, clip);
+el("path", {d:"M30 120Q150 -4 298 92Q150 30 30 120Z", fill:"#EBC0AC", opacity:".55"}, ojo);
+el("path", {d:"M40 96Q150 6 290 76", fill:"none", stroke:"#C98568", "stroke-opacity":".5", "stroke-width":"1.6", "stroke-linecap":"round"}, ojo);
+el("path", {d:globoD, fill:"#FBF7F5"}, ojo);
+var gIris = el("g", {"clip-path":"url(#globo)"}, ojo);
+el("circle", {cx:"168", cy:"104", r:"40", fill:"url(#iris)"}, gIris);
+el("circle", {cx:"168", cy:"104", r:"16", fill:"#1A0F0A"}, gIris);
+el("circle", {cx:"158", cy:"94", r:"6.5", fill:"#fff", opacity:".9"}, gIris);
+el("path", {d:"M46 118Q150 26 284 98", fill:"none", stroke:"rgba(80,30,20,.25)", "stroke-width":"7"}, gIris);
+el("path", {d:"M50 120Q170 172 280 101", fill:"none", stroke:"#E99AA6", "stroke-width":"3.2", "stroke-linecap":"round"}, ojo);
+el("path", {d:"M46 118Q150 26 284 98", fill:"none", stroke:"#1B1210", "stroke-width":"3.4", "stroke-linecap":"round"}, ojo);
+var capaR = el("g", {}, ojo);
+var capaN = el("g", {}, ojo);
+el("path", {d:"M196 168l14-20", stroke:"#B3005F", "stroke-width":"1.2", "stroke-dasharray":"2 2"}, ojo);
+el("circle", {cx:"210", cy:"147", r:"2.4", fill:"#B3005F"}, ojo);
+var t1 = el("text", {x:"112", y:"186", class:"nota f"}, ojo); t1.textContent = "Línea de agua: no la toques";
+var t2 = el("text", {x:"306", y:"126", class:"nota", "text-anchor":"end"}, ojo); t2.textContent = "Más largas";
+var t3 = el("text", {x:"12", y:"146", class:"nota"}, ojo); t3.textContent = "Más cortas";
+el("path", {d:"M250 4Q160 -14 74 22", fill:"none", stroke:"#E6007E", "stroke-width":"1.5", "stroke-linecap":"round", "stroke-dasharray":"3 4"}, ojo);
+el("path", {d:"M80 15l-7 8 10 2", fill:"none", stroke:"#E6007E", "stroke-width":"1.5", "stroke-linecap":"round", "stroke-linejoin":"round"}, ojo);
+
+var racimos = [];
+function dibujaRacimos(){
+  capaR.innerHTML = ""; capaN.innerHTML = ""; racimos = [];
+  var N = 9, ta = .14, tb = .94;
+  for (var i = 0; i < N; i++){
+    var t = tb - (tb - ta) * i / (N - 1);
+    var b = bz(t), T = tg(t), lt = Math.hypot(T[0], T[1]);
+    var nx = T[1] / lt, ny = -T[0] / lt;
+    var q = Math.pow((t - ta) / (tb - ta), efecto.pw);
+    var L = efecto.min + (efecto.max - efecto.min) * q;
+    var lean = (10 + 26 * t) * Math.PI / 180;
+    var g = el("g", {class:"racimo", style:"transform-origin:" + f(b[0]) + "px " + f(b[1]) + "px"}, capaR);
+    for (var h = 0; h < efecto.hebras; h++){
+      var off = ((h / (efecto.hebras - 1)) - .5) * 26 * Math.PI / 180;
+      var ang = Math.atan2(ny, nx) + lean + off;
+      var dx = Math.cos(ang), dy = Math.sin(ang);
+      var Lh = L * (.86 + .14 * Math.sin(h * 2.3 + i));
+      var px = -dy, py = dx;
+      var tip = [b[0] + dx * Lh, b[1] + dy * Lh];
+      var cx = b[0] + dx * Lh * .55 - px * Lh * .16, cy = b[1] + dy * Lh * .55 - py * Lh * .16;
+      el("path", {d:"M" + f(b[0]) + " " + f(b[1]) + "Q" + f(cx) + " " + f(cy) + " " + f(tip[0]) + " " + f(tip[1]), fill:"none", stroke:"#1B1210", "stroke-width":"1.25", "stroke-linecap":"round"}, g);
+    }
+    var nt = el("text", {x:f(b[0] + nx * (L + 9) + Math.cos(Math.atan2(ny, nx) + lean) * 0), y:f(b[1] + ny * (L + 9)), class:"num", "text-anchor":"middle"}, capaN);
+    var ang0 = Math.atan2(ny, nx) + lean;
+    nt.setAttribute("x", f(b[0] + Math.cos(ang0) * (L + 9))); nt.setAttribute("y", f(b[1] + Math.sin(ang0) * (L + 9) + 3));
+    nt.textContent = i + 1;
+    racimos.push(g);
+  }
+}
+var tiempos = [];
+function coloca(){
+  tiempos.forEach(clearTimeout); tiempos = [];
+  if (reduce) return;
+  racimos.forEach(function(g){ g.classList.add("oculto"); });
+  racimos.forEach(function(g, i){ tiempos.push(setTimeout(function(){ g.classList.remove("oculto"); }, 250 + i * 230)); });
+}
+var ce = $("#efectos");
+EFECTOS.forEach(function(ef){
+  var b = document.createElement("button"); b.type = "button"; b.textContent = ef.n; b.setAttribute("aria-pressed", ef === efecto ? "true" : "false");
+  b.onclick = function(){ efecto = ef; marca(ce, b); dibujaRacimos(); coloca(); };
+  ce.appendChild(b);
+});
+var raiz = el("g", {transform:"translate(0 26)"}, ojo);
+Array.prototype.slice.call(ojo.childNodes).forEach(function(n){ if (n !== raiz && n.nodeName !== "defs") raiz.appendChild(n); });
+dibujaRacimos();
+$("#repetir").onclick = coloca;
+
+var subVista = "unas";
+function sub(cual){
+  subVista = cual;
+  $("#tab-unas").setAttribute("aria-selected", cual === "unas" ? "true" : "false");
+  $("#tab-pest").setAttribute("aria-selected", cual === "pest" ? "true" : "false");
+  $("#sub-unas").hidden = cual !== "unas"; $("#sub-pest").hidden = cual !== "pest";
+  if (cual === "pest") coloca();
+  act();
+}
+$("#tab-unas").onclick = function(){ sub("unas"); };
+$("#tab-pest").onclick = function(){ sub("pest"); };
+
+var mec = $("#elige"), modo = "mi";
+var TIT = {mi:["¿Me quedará bien?", "Pruébalo aquí"], salon:["Para tu salón", "trabaja con lo mejor"]};
+function ponModo(m){
+  if (m === modo) return;
+  modo = m; mec.setAttribute("data-modo", m);
+  $("#modo-mi").setAttribute("aria-pressed", m === "mi" ? "true" : "false");
+  $("#modo-salon").setAttribute("aria-pressed", m === "salon" ? "true" : "false");
+  $("#panel-mi").hidden = m !== "mi"; $("#panel-salon").hidden = m !== "salon";
+  $("#mec-a").textContent = TIT[m][0]; $("#mec-b").textContent = TIT[m][1];
+  act();
+}
+$("#modo-mi").onclick = function(){ ponModo("mi"); };
+$("#modo-salon").onclick = function(){ ponModo("salon"); };
+$$("a[data-modo]").forEach(function(a){ a.addEventListener("click", function(){ ponModo(a.getAttribute("data-modo")); if (a.getAttribute("data-modo") === "mi") sub("unas"); }); });
+
+function msgUnas(){
+  return SALUDO + " Quiero mi kit para hacerme las uñas en casa, con pago contra entrega.\n" +
+    "• Forma: " + est.forma.n + "\n• Largo: " + est.largo.n + "\n• Color de base: " + est.color.n + "\n" +
+    "¿Me ayudan con el pedido?";
+}
+function msgPest(){
+  return SALUDO + " Quiero pestañas por racimos, efecto " + efecto.n.toLowerCase() + ", con pago contra entrega.\n¿Qué más necesito para ponérmelas?";
+}
+var negocio = "";
+function msgSalon(){
+  var sel = $$("#productos .prod[aria-pressed='true'], #extras .chip[aria-pressed='true']").map(function(b){ return b.getAttribute("data-p"); });
+  var ciudad = $("#ciudad").value.trim();
+  return SALUDO + " SALÓN\nSoy " + negocio + " en " + ciudad + " y quiero la lista para profesionales con pago contra entrega." +
+    (sel.length ? "\nMe interesa: " + sel.join(", ") + "." : "");
+}
+$("#pedir-unas").onclick = function(){ contactar(msgUnas()); };
+$("#pedir-pest").onclick = function(){ contactar(msgPest()); };
+$("#pedir-contra").onclick = function(){ contactar(GENERAL); };
+$$("#productos .prod, #extras .chip").forEach(function(b){ b.onclick = function(){ b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true"); }; });
+var cn = $("#negocios");
+Array.prototype.forEach.call(cn.children, function(b){ b.onclick = function(){ negocio = b.getAttribute("data-n"); marca(cn, b); $("#lbl-negocio").classList.remove("falta"); }; });
+function falta(id){ var l = $(id); l.classList.remove("falta"); void l.offsetWidth; l.classList.add("falta"); l.scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"center"}); }
+function pedirSalon(){
+  if (!negocio){ falta("#lbl-negocio"); avisar("Cuéntanos qué tipo de negocio tienes"); return; }
+  if (!$("#ciudad").value.trim()){ falta("#lbl-ciudad"); $("#ciudad").focus({preventScroll:true}); avisar("Escribe tu ciudad"); return; }
+  contactar(msgSalon());
+}
+$("#pedir-salon").onclick = pedirSalon;
+$("#ciudad").addEventListener("keydown", function(e){ if (e.key === "Enter") pedirSalon(); });
+$$("#catalogo button").forEach(function(b){ b.onclick = function(){ contactar(SALUDO + " Quiero información de: " + b.getAttribute("data-p") + ". ¿Me ayudan?"); }; });
+
+$("#compartir").onclick = function(){
+  var url = location.href.split("#")[0];
+  if (navigator.share){ navigator.share({title:"Misuu", text:"Uñas, pestañas y esenciales de belleza con pago contra entrega", url:url}).catch(function(){}); }
+  else { copiar(url); avisar("¡Link copiado!"); }
+};
+
+var fija = $("#fija"), enlacesFuera = false, enMec = false;
+function act(){
+  var t = "Diseña tus uñas";
+  if (enMec) t = modo === "salon" ? "Quiero la lista" : (subVista === "pest" ? "Pedir mis pestañas" : "Pedir mi kit");
+  $("#fija-t").textContent = t;
+  fija.classList.toggle("ver", enlacesFuera);
+}
+$("#fija-p").onclick = function(){
+  if (!enMec){ ponModo("mi"); sub("unas"); mec.scrollIntoView({behavior: reduce ? "auto" : "smooth"}); return; }
+  if (modo === "salon") pedirSalon(); else if (subVista === "pest") contactar(msgPest()); else contactar(msgUnas());
+};
+
+var rv = $$("[data-rv]");
+if ("IntersectionObserver" in window){
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("si"); io.unobserve(e.target); } }); }, {rootMargin:"0px 0px 10% 0px"});
+  rv.forEach(function(x){ io.observe(x); });
+  new IntersectionObserver(function(es){ enlacesFuera = !es[0].isIntersecting && es[0].boundingClientRect.top < 0; act(); }).observe($(".enlaces"));
+  new IntersectionObserver(function(es){ enMec = es[0].isIntersecting; act(); }, {rootMargin:"-35% 0px -35% 0px"}).observe(mec);
+} else rv.forEach(function(x){ x.classList.add("si"); });
+if (/sal[oó]n|pro/i.test(location.hash)) ponModo("salon");
+})();
+</script>
+</body>
+</html>
