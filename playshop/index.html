@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Play Shop · Gadgets y tecnología en Cali</title>
+<meta name="description" content="Novedades virales y tecnología al mejor precio. Punto 14, local E66, Cali. Envíos nacionales, mayor y detal por WhatsApp. Busca el regalo perfecto y págalo a cuotas con Addi o Sistecrédito.">
+<meta name="theme-color" content="#0B0B0E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Play Shop">
+<meta property="og:title" content="Play Shop · ¿Y el regalo qué?">
+<meta property="og:description" content="Dinos para quién es el regalo y te mostramos qué le va a encantar. Gadgets y tecnología en Cali, a cuotas con Addi o Sistecrédito.">
+<meta property="og:image" content="https://conoce-mas.link/playshop/og.jpg">
+<meta property="og:url" content="https://conoce-mas.link/playshop/">
+<link rel="canonical" href="https://conoce-mas.link/playshop/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fachada de Play Shop en Punto 14, Cali, con el titular «¿Y el regalo qué?»">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800;1,900&family=Inter:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/heroe.webp">
+<style>
+:root{
+  --naranja:#EC4D37; --naranja2:#C93A26; --naranja-claro:#FFE3DD; --negro:#0B0B0E; --negro2:#1A1A20; --blanco:#fff;
+  --papel:#F4F1EB; --papel2:#E9E4DA; --gris:#5E5A55; --wa:#25D366; --amarillo:#FFD23F;
+  --cond:"Barlow Condensed", "Arial Narrow", Impact, sans-serif; --f:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif; --mano:"Permanent Marker", "Comic Sans MS", cursive;
+  --sombra:0 10px 20px rgba(11,11,14,.14), 0 2px 4px rgba(11,11,14,.12);
+  --duro:4px 4px 0 var(--negro);
+}
+*{margin:0; padding:0; box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+body{background:var(--negro); color:var(--negro); font:500 16px/1.45 var(--f); -webkit-font-smoothing:antialiased; min-height:100vh; overflow-x:hidden}
+.fondo{position:fixed; inset:0; z-index:0; pointer-events:none; background:radial-gradient(90% 60% at 50% 0%, #2a1512 0%, var(--negro) 60%)}
+.fondo::after{content:""; position:absolute; inset:0; background-image:radial-gradient(rgba(236,77,55,.22) 1.2px, transparent 1.6px); background-size:22px 22px; -webkit-mask:linear-gradient(180deg,#000,transparent 80%); mask:linear-gradient(180deg,#000,transparent 80%)}
+img{display:block; max-width:100%; height:auto}
+a{color:inherit}
+button{font:inherit; color:inherit}
+:focus-visible{outline:3px solid var(--amarillo); outline-offset:3px; border-radius:8px}
+.oculto{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+
+.hoja{position:relative; z-index:1; width:100%; max-width:470px; margin:0 auto; min-height:100vh; background:var(--papel); padding-bottom:110px; overflow:hidden; isolation:isolate}
+@media (min-width:500px){ .hoja{margin:28px auto; min-height:auto; border-radius:18px; box-shadow:0 30px 70px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06)} }
+
+.heroe{position:relative; height:clamp(390px, 106vw, 450px); overflow:hidden; background:var(--negro)}
+.heroe .foto{position:absolute; inset:0}
+.heroe .foto img{width:100%; height:100%; object-fit:cover; object-position:50% 0%; animation:acerca 20s ease-in-out infinite alternate; transform-origin:70% 20%}
+@keyframes acerca{from{transform:scale(1.07)} to{transform:scale(1)}}
+.heroe .foto::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(11,11,14,0) 0%, rgba(11,11,14,0) 34%, rgba(11,11,14,.55) 58%, rgba(11,11,14,.94) 84%, var(--negro) 100%)}
+.cae{position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:2}
+.cae svg{position:absolute; top:-50px; width:30px; height:30px; animation:caer var(--t,9s) linear infinite; animation-delay:var(--d,0s); filter:drop-shadow(0 3px 3px rgba(0,0,0,.35))}
+@keyframes caer{0%{transform:translate(0,-20px) rotate(0deg); opacity:0} 8%{opacity:.95} 85%{opacity:.95} 100%{transform:translate(var(--x,20px), 480px) rotate(var(--r,200deg)); opacity:0}}
+.etiqueta{position:absolute; z-index:3; left:122px; top:0; transform-origin:50% 0; animation:balanceo 3.2s ease-in-out infinite alternate}
+.etiqueta::before{content:""; display:block; width:2px; height:38px; margin:0 auto; background:linear-gradient(#bbb,#fff)}
+.etiqueta span{position:relative; display:block; padding:12px 12px 9px 14px; background:var(--amarillo); color:var(--negro); font:italic 900 17px/0.95 var(--cond); text-transform:uppercase; letter-spacing:.01em; text-align:center;
+  clip-path:polygon(50% 0, 100% 14px, 100% 100%, 0 100%, 0 14px); box-shadow:0 8px 14px rgba(0,0,0,.35)}
+.etiqueta span::before{content:""; position:absolute; left:50%; top:6px; width:6px; height:6px; margin-left:-3px; border-radius:50%; background:var(--negro)}
+.etiqueta small{display:block; font:800 10px/1.1 var(--f); letter-spacing:.06em; margin-top:3px}
+@keyframes balanceo{from{transform:rotate(-7deg)} to{transform:rotate(6deg)}}
+.sello{position:absolute; z-index:4; right:12px; bottom:20px; width:100px; height:100px; border-radius:50%; background:var(--naranja); color:#fff; display:grid; place-items:center; box-shadow:0 10px 18px rgba(0,0,0,.4); transform:rotate(-10deg); text-decoration:none}
+.sello svg{position:absolute; inset:0; width:100%; height:100%; animation:gira 22s linear infinite}
+.sello text{font:800 10.5px var(--f); letter-spacing:.14em; fill:#fff; text-transform:uppercase}
+.sello b{position:relative; font:italic 900 20px/.85 var(--cond); text-align:center; text-transform:uppercase}
+.sello b small{display:block; font:800 8px/1 var(--f); letter-spacing:.08em; margin-bottom:2px}
+@keyframes gira{to{transform:rotate(360deg)}}
+.titular{position:absolute; z-index:3; left:16px; right:16px; bottom:18px; color:#fff}
+.titular h1{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+.titular .t1{display:block; font:italic 900 74px/.84 var(--cond); text-transform:uppercase; letter-spacing:-.01em; text-shadow:0 4px 0 rgba(0,0,0,.35)}
+.titular .t1 em{font-style:inherit; color:var(--naranja); display:inline-block; transform:rotate(-3deg); text-shadow:0 4px 0 rgba(0,0,0,.45)}
+.titular .t2{display:inline-block; max-width:calc(100% - 112px); margin-top:10px; font:400 19px/1.15 var(--mano); color:var(--negro); background:#fff; padding:5px 10px 4px; transform:rotate(-1.5deg); box-shadow:3px 3px 0 var(--naranja)}
+.titular .t3{display:flex; flex-wrap:wrap; align-items:center; gap:4px 12px; max-width:calc(100% - 112px); margin-top:12px; font:600 12.5px/1.2 var(--f); color:#E9E3DC}
+.titular .t3 span{display:inline-flex; align-items:center; gap:5px}
+.titular .t3 svg{width:14px; height:14px; flex:none}
+
+.cinta{position:relative; z-index:4; margin:-6px -10px 0; background:var(--naranja); color:var(--negro); transform:rotate(-1.6deg); overflow:hidden; box-shadow:0 6px 12px rgba(11,11,14,.22); border-top:2px solid var(--negro); border-bottom:2px solid var(--negro)}
+.cinta div{display:flex; width:max-content; animation:corre 26s linear infinite}
+.cinta p{flex:none; white-space:nowrap; font:italic 900 15px/1 var(--cond); text-transform:uppercase; letter-spacing:.04em; padding:8px 0}
+.cinta i{display:inline-block; width:7px; height:7px; margin:0 12px 2px; background:var(--negro); transform:rotate(45deg)}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+.enlaces{display:flex; flex-direction:column; gap:10px; margin:18px 16px 0}
+.btn{position:relative; display:flex; align-items:center; gap:12px; min-height:62px; padding:9px 38px 9px 10px; text-decoration:none; color:var(--negro);
+  background:#fff; border:2px solid var(--negro); border-radius:14px; width:100%; text-align:left; cursor:pointer; box-shadow:var(--duro);
+  transition:transform .15s ease, box-shadow .15s ease; -webkit-tap-highlight-color:transparent}
+.btn:hover{transform:translate(-1px,-2px); box-shadow:5px 6px 0 var(--negro)}
+.btn:active{transform:translate(3px,3px); box-shadow:1px 1px 0 var(--negro)}
+.btn-ico{flex:none; width:44px; height:44px; display:grid; place-items:center; border-radius:12px; background:var(--papel)}
+.btn-ico svg{width:26px; height:26px}
+.btn-txt{display:flex; flex-direction:column; min-width:0}
+.btn-txt b{font:800 16px/1.2 var(--f)}
+.btn-txt small{font:500 12.6px/1.3 var(--f); color:var(--gris); margin-top:1px}
+.flecha{position:absolute; right:12px; top:50%; width:20px; height:20px; margin-top:-10px; transition:transform .18s ease}
+.flecha path{fill:none; stroke:currentColor; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round}
+.btn:hover .flecha{transform:translateX(3px)}
+.btn.regalo{background:var(--naranja); min-height:76px; overflow:hidden}
+.btn.regalo .btn-ico{width:50px; height:50px; background:var(--negro); border-radius:50%}
+.btn.regalo .btn-ico svg{width:28px; height:28px}
+.btn.regalo .btn-txt b{font:italic 900 27px/1 var(--cond); text-transform:uppercase; color:#fff; text-shadow:2px 2px 0 var(--negro)}
+.btn.regalo .btn-txt small{color:var(--negro); font-weight:700; margin-top:3px}
+.btn.regalo .flecha{color:#fff; transform:rotate(90deg)} .btn.regalo:hover .flecha{transform:rotate(90deg) translateX(3px)}
+.btn.regalo::after{content:""; position:absolute; top:0; bottom:0; left:-60%; width:40%; background:linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent); transform:skewX(-18deg); animation:brillo 4.2s ease-in-out infinite 1.4s; pointer-events:none}
+@keyframes brillo{0%,55%{left:-60%} 100%{left:130%}}
+.btn.wa .btn-ico{background:#E3F8EA}
+.par{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.par .btn{padding:8px 8px; gap:8px; min-height:58px}
+.par .btn-ico{width:36px; height:36px; border-radius:10px}
+.par .btn-ico svg{width:22px; height:22px}
+.par .btn-txt b{font-size:14.4px; white-space:nowrap}
+.par .btn-txt small{font-size:11.2px; white-space:nowrap}
+
+.sec{position:relative; margin:54px 16px 0}
+.ante{display:inline-block; font:italic 900 14px/1 var(--cond); letter-spacing:.06em; text-transform:uppercase; color:#fff; background:var(--negro); padding:6px 9px 5px; transform:rotate(-2deg); margin-bottom:10px}
+.titulo{font:italic 900 44px/.98 var(--cond); text-transform:uppercase; color:var(--negro); text-wrap:balance}
+.titulo em{font-style:inherit; color:var(--naranja)}
+.bajada{font:500 14.5px/1.45 var(--f); color:var(--gris); margin:10px 0 16px; text-wrap:pretty}
+.nota{font:400 16px/1.15 var(--mano); color:var(--naranja2); display:flex; align-items:flex-end; gap:6px}
+.nota svg{width:40px; height:30px; flex:none}
+
+.regalo-sec{margin:54px 0 0; padding:28px 16px 30px; background:var(--negro); color:#fff; position:relative}
+.regalo-sec::before{content:""; position:absolute; left:0; right:0; top:-12px; height:14px; background:var(--negro); -webkit-mask:radial-gradient(circle 8px at 50% 100%, #000 98%, transparent) 0 0/16px 14px repeat-x; mask:radial-gradient(circle 8px at 50% 100%, #000 98%, transparent) 0 0/16px 14px repeat-x}
+.regalo-sec .ante{background:var(--naranja); color:var(--negro)}
+.regalo-sec .titulo{color:#fff}
+.regalo-sec .bajada{color:#C9C3BC}
+.regalo-sec .nota{color:var(--amarillo)}
+.modo{display:grid; grid-template-columns:1fr 1fr; gap:0; padding:4px; border-radius:40px; background:var(--negro2); border:2px solid #34343c; margin:6px 0 8px; position:relative}
+.modo button{position:relative; z-index:1; border:0; background:none; padding:11px 6px; border-radius:30px; font:italic 900 19px/1 var(--cond); text-transform:uppercase; letter-spacing:.03em; color:#B7B0A8; cursor:pointer; transition:color .2s}
+.modo button small{display:block; font:600 10.5px/1.2 var(--f); font-style:normal; text-transform:none; letter-spacing:0; margin-top:2px; opacity:.85}
+.modo button[aria-pressed="true"]{color:var(--negro)}
+.modo .pastilla{position:absolute; z-index:0; top:4px; bottom:4px; left:4px; width:calc(50% - 4px); border-radius:30px; background:var(--naranja); transition:transform .35s cubic-bezier(.3,1.3,.5,1)}
+.modo.mayor .pastilla{transform:translateX(100%); background:var(--amarillo)}
+.modo-txt{font:500 12.8px/1.35 var(--f); color:#C9C3BC; min-height:18px; margin-bottom:14px}
+.modo-txt b{color:#fff}
+.cuotas-mini{display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:12px; background:#fff; color:var(--negro); margin:0 0 18px; transform:rotate(-.8deg); box-shadow:4px 4px 0 var(--naranja)}
+.cuotas-mini svg{width:30px; height:30px; flex:none}
+.cuotas-mini p{font:600 13px/1.3 var(--f)}
+.cuotas-mini b{font:italic 900 17px/1 var(--cond); text-transform:uppercase; display:block}
+
+.personas{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.pcard{position:relative; display:block; aspect-ratio:4/5; border:2px solid #fff; border-radius:16px; overflow:hidden; background:var(--negro2); cursor:pointer; text-align:left; padding:0; color:#fff; box-shadow:4px 4px 0 var(--naranja); transition:transform .18s ease, box-shadow .18s ease; -webkit-tap-highlight-color:transparent}
+.pcard:nth-child(3n+2){box-shadow:4px 4px 0 var(--amarillo)}
+.pcard:nth-child(3n){box-shadow:4px 4px 0 #fff}
+.pcard:hover{transform:translate(-1px,-3px) rotate(-.6deg)}
+.pcard:active{transform:translate(3px,3px); box-shadow:0 0 0 var(--naranja)}
+.pcard img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .5s ease}
+.pcard:hover img{transform:scale(1.06)}
+.pcard::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(11,11,14,.0) 30%, rgba(11,11,14,.6) 58%, rgba(11,11,14,.94) 100%)}
+.pcard .txt{position:absolute; z-index:2; left:10px; right:9px; bottom:10px}
+.pcard .para{display:inline-block; font:800 10px/1 var(--f); letter-spacing:.1em; text-transform:uppercase; background:var(--naranja); color:var(--negro); padding:4px 6px 3px; transform:rotate(-3deg); margin-bottom:5px}
+.pcard b{display:block; font:italic 900 22px/.92 var(--cond); text-transform:uppercase; text-wrap:balance; text-shadow:0 2px 6px rgba(0,0,0,.5)}
+.pcard .colgante{position:absolute; z-index:3; right:10px; top:-2px; transform-origin:50% 0; animation:balanceo 2.8s ease-in-out infinite alternate; animation-delay:var(--d,0s)}
+.pcard .colgante::before{content:""; display:block; width:2px; height:14px; margin:0 auto; background:#fff}
+.pcard .colgante span{display:grid; place-items:center; width:40px; height:40px; border-radius:50%; background:#fff; border:2px solid var(--negro); box-shadow:0 4px 8px rgba(0,0,0,.35)}
+.pcard .colgante svg{width:24px; height:24px}
+.pcard.sorpresa{background:var(--naranja); border-style:dashed; box-shadow:4px 4px 0 #fff}
+.pcard.sorpresa::after{display:none}
+.pcard.sorpresa .signo{position:absolute; left:50%; top:42%; transform:translate(-50%,-50%) rotate(-8deg); font:italic 900 120px/1 var(--cond); color:var(--negro); opacity:.9; animation:latido 2.4s ease-in-out infinite}
+@keyframes latido{0%,100%{scale:1} 50%{scale:1.08}}
+.pcard.sorpresa .para{background:var(--negro); color:#fff}
+.pcard.sorpresa b{color:var(--negro); text-shadow:none}
+.pcard.yo{grid-column:1 / -1; aspect-ratio:auto; height:150px}
+.pcard.yo img{object-position:50% 6%}
+.pcard.yo .txt{right:110px}
+.pcard.yo b{font-size:30px}
+
+.vitrina{display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 16px 18px; margin:0 -16px; scrollbar-width:none; -webkit-overflow-scrolling:touch}
+.vitrina::-webkit-scrollbar{display:none}
+.vcard{flex:none; width:58%; scroll-snap-align:start; position:relative; border-radius:16px; overflow:hidden; aspect-ratio:4/5; text-decoration:none; color:#fff; background:var(--negro); border:2px solid var(--negro); box-shadow:var(--duro)}
+.vcard img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .5s ease}
+.vcard:hover img{transform:scale(1.05)}
+.vcard::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 48%, rgba(11,11,14,.92) 100%)}
+.vcard div{position:absolute; z-index:2; left:12px; right:12px; bottom:12px}
+.vcard b{display:block; font:italic 900 24px/.95 var(--cond); text-transform:uppercase}
+.vcard span{display:inline-flex; align-items:center; gap:6px; margin-top:8px; font:700 12px/1 var(--f); background:var(--wa); color:#053019; padding:7px 10px; border-radius:20px}
+.vcard span svg{width:15px; height:15px}
+.vcard .precio{position:absolute; z-index:2; left:10px; top:10px; font:italic 900 16px/1 var(--cond); text-transform:uppercase; background:var(--amarillo); color:var(--negro); padding:6px 8px 5px; transform:rotate(-4deg); box-shadow:2px 2px 0 var(--negro)}
+.desliza{font:400 15px/1 var(--mano); color:var(--gris); display:flex; align-items:center; gap:6px; margin-top:-4px}
+.desliza svg{width:34px; height:14px}
+
+.cuotas{position:relative; margin:54px 16px 0; padding:22px 18px 20px; background:#fff; border:2px solid var(--negro); border-radius:18px; box-shadow:6px 6px 0 var(--naranja)}
+.cuotas .ante{position:absolute; top:-14px; left:16px; margin:0}
+.cuotas h2{font:italic 900 38px/.9 var(--cond); text-transform:uppercase; margin-top:4px}
+.cuotas h2 em{font-style:inherit; color:var(--naranja); display:inline-block; transform:rotate(-2deg)}
+.cuotas p{font:500 14.5px/1.45 var(--f); color:var(--gris); margin:10px 0 14px}
+.marcas{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px}
+.marcas div{display:flex; align-items:center; justify-content:center; height:54px; border-radius:12px; border:2px dashed var(--papel2); font:800 17px/1 var(--f); letter-spacing:-.01em; background:var(--papel)}
+.btn-wa{display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:15px 12px; border:2px solid var(--negro); border-radius:14px; background:var(--wa); color:#04230F; text-decoration:none; font:800 16px/1.15 var(--f); text-align:center; cursor:pointer; box-shadow:var(--duro); transition:transform .15s, box-shadow .15s}
+.btn-wa:hover{transform:translate(-1px,-2px); box-shadow:5px 6px 0 var(--negro)}
+.btn-wa:active{transform:translate(3px,3px); box-shadow:1px 1px 0 var(--negro)}
+.btn-wa svg{width:24px; height:24px; flex:none}
+.btn-wa.mayor{background:var(--amarillo)}
+.letra{font:500 12px/1.4 var(--f); color:var(--gris); text-align:center; margin-top:9px}
+
+.mayor-sec{margin:54px 16px 0; display:grid; grid-template-columns:1fr 112px; gap:14px; align-items:center}
+.mayor-sec .foto{position:relative; transform:rotate(4deg)}
+.mayor-sec .foto img{border-radius:10px; border:4px solid #fff; box-shadow:var(--sombra); aspect-ratio:4/5; object-fit:cover}
+.mayor-sec .foto::before{content:""; position:absolute; z-index:2; left:50%; top:-9px; width:54px; height:18px; margin-left:-27px; background:rgba(255,210,63,.85); transform:rotate(-6deg)}
+.mayor-sec .titulo{font-size:36px}
+.mayor-sec .bajada{margin-bottom:12px}
+.mayor-sec .btn-wa{grid-column:1 / -1}
+
+.visita{margin:54px 16px 0}
+.mapa{position:relative; border-radius:18px; overflow:hidden; border:2px solid var(--negro); box-shadow:var(--duro); background:var(--negro)}
+.mapa img{width:100%; aspect-ratio:16/10; object-fit:cover; object-position:50% 0%; opacity:.9}
+.mapa .dir{position:absolute; left:12px; right:12px; bottom:12px; background:#fff; border-radius:12px; padding:10px 12px; display:flex; align-items:center; gap:10px; box-shadow:0 8px 16px rgba(0,0,0,.3)}
+.mapa .dir svg{width:30px; height:30px; flex:none}
+.mapa .dir b{display:block; font:italic 900 21px/1 var(--cond); text-transform:uppercase}
+.mapa .dir span{font:500 12.5px/1.3 var(--f); color:var(--gris)}
+.visita .acciones{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px}
+.visita .acciones a{display:flex; align-items:center; justify-content:center; gap:8px; padding:13px 8px; border-radius:12px; text-decoration:none; font:800 14px/1 var(--f); border:2px solid var(--negro); box-shadow:3px 3px 0 var(--negro)}
+.visita .acciones a:first-child{background:var(--negro); color:#fff}
+.visita .acciones a:last-child{background:#fff}
+.visita .acciones svg{width:20px; height:20px}
+.envios{display:flex; align-items:center; gap:10px; margin-top:14px; padding:11px 12px; border-radius:12px; background:var(--naranja-claro); font:600 13.2px/1.35 var(--f)}
+.envios svg{width:32px; height:32px; flex:none}
+
+.pie{position:relative; margin:54px 16px 0; text-align:center}
+.placa{display:inline-block; background:var(--negro); padding:16px 20px 14px; border-radius:10px; transform:rotate(-2deg); box-shadow:5px 5px 0 var(--naranja)}
+.placa img{width:220px}
+.pie h2{font:italic 900 34px/.95 var(--cond); text-transform:uppercase; margin-top:22px; text-wrap:balance}
+.pie h2 em{font-style:inherit; color:var(--naranja)}
+.pie > p{font:500 14px/1.45 var(--f); color:var(--gris); margin:8px 0 16px}
+.pie .datos{margin-top:22px}
+.pie .datos p{font:500 13px/1.6 var(--f); color:var(--gris); margin:0 0 4px}
+.pie .datos b{color:var(--negro)}
+.pie .datos a{color:var(--naranja2); font-weight:700; text-decoration:none; white-space:nowrap}
+.firma{display:block; margin-top:22px; font:600 11px/1 var(--f); letter-spacing:.08em; text-transform:uppercase; color:#9a948d; text-decoration:none}
+
+.fija{position:fixed; z-index:60; left:50%; bottom:max(12px, env(safe-area-inset-bottom)); width:min(440px, calc(100% - 24px)); display:flex; gap:10px;
+  transform:translate(-50%, 150%); transition:transform .35s cubic-bezier(.2,.9,.3,1.1)}
+.fija.ver{transform:translate(-50%, 0)}
+.fija a{display:flex; align-items:center; justify-content:center; gap:9px; height:58px; text-decoration:none; border:2px solid var(--negro); box-shadow:0 12px 26px rgba(0,0,0,.4)}
+.fija .rg{flex:1; background:var(--naranja); color:#fff; font:italic 900 22px/1 var(--cond); text-transform:uppercase; border-radius:30px; text-shadow:1.5px 1.5px 0 var(--negro)}
+.fija .rg svg{width:26px; height:26px}
+.fija .wa{width:58px; flex:none; background:#fff; border-radius:50%}
+.fija .wa svg{width:32px; height:32px}
+
+.velo{position:fixed; inset:0; z-index:80; background:rgba(11,11,14,.6); -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px); opacity:0; pointer-events:none; transition:opacity .25s}
+.velo.ver{opacity:1; pointer-events:auto}
+.sheet{position:fixed; z-index:90; left:50%; bottom:0; width:min(470px, 100%); max-height:88vh; overflow-y:auto; overscroll-behavior:contain; background:var(--papel); border-radius:22px 22px 0 0; border:2px solid var(--negro); border-bottom:0;
+  transform:translate(-50%, 105%); transition:transform .4s cubic-bezier(.2,.9,.25,1.05); padding:0 16px calc(20px + env(safe-area-inset-bottom)); visibility:hidden}
+.sheet.ver{transform:translate(-50%, 0); visibility:visible}
+.sheet .agarra{position:sticky; top:0; z-index:3; display:flex; justify-content:center; padding:9px 0 6px; background:var(--papel)}
+.sheet .agarra i{width:46px; height:5px; border-radius:5px; background:#c9c2b8}
+.cerrar{position:absolute; z-index:4; right:12px; top:12px; width:40px; height:40px; border-radius:50%; border:2px solid var(--negro); background:#fff; display:grid; place-items:center; cursor:pointer}
+.cerrar svg{width:18px; height:18px}
+.s-cab{display:flex; gap:12px; align-items:flex-start; padding:4px 48px 0 0}
+.s-cab .ico{flex:none; width:54px; height:54px; border-radius:50%; background:var(--naranja); border:2px solid var(--negro); display:grid; place-items:center; transform:rotate(-8deg)}
+.s-cab .ico svg{width:30px; height:30px}
+.s-cab small{display:block; font:800 10.5px/1 var(--f); letter-spacing:.1em; text-transform:uppercase; color:var(--naranja2); margin:3px 0 4px}
+.s-cab h3{font:italic 900 30px/.92 var(--cond); text-transform:uppercase}
+.s-chiste{font:400 16.5px/1.25 var(--mano); color:var(--negro); background:#fff; padding:9px 12px; margin:14px 0 4px; transform:rotate(-.8deg); box-shadow:3px 3px 0 var(--naranja); border-radius:2px}
+.s-modo{display:inline-flex; align-items:center; gap:6px; margin:12px 0 4px; font:800 11px/1 var(--f); letter-spacing:.08em; text-transform:uppercase; padding:6px 10px; border-radius:20px; background:var(--negro); color:#fff}
+.s-modo i{width:8px; height:8px; border-radius:50%; background:var(--naranja)}
+.s-modo.mayor i{background:var(--amarillo)}
+.s-modo button{border:0; background:none; color:var(--amarillo); font:700 11px/1 var(--f); text-decoration:underline; cursor:pointer; margin-left:4px; letter-spacing:0; text-transform:none}
+.prod{display:grid; grid-template-columns:128px 1fr; gap:12px; margin-top:14px; padding:10px; background:#fff; border:2px solid var(--negro); border-radius:16px; box-shadow:var(--duro)}
+.prod img{width:128px; aspect-ratio:4/5; object-fit:cover; border-radius:10px}
+.prod h4{font:italic 900 24px/.92 var(--cond); text-transform:uppercase}
+.prod p{font:500 13.4px/1.38 var(--f); color:var(--gris); margin-top:6px}
+.chips{display:flex; flex-wrap:wrap; gap:5px; margin-top:8px}
+.chips span{font:700 10.8px/1 var(--f); padding:5px 7px; border-radius:20px; background:var(--papel); border:1px solid var(--papel2)}
+.chips span.desde{background:var(--amarillo); border-color:var(--negro)}
+.prod .btn-wa{grid-column:1 / -1; padding:13px 10px; font-size:15.5px}
+.cuotas-chk{display:flex; align-items:center; gap:10px; margin-top:16px; padding:12px; border-radius:12px; background:#fff; border:2px dashed var(--naranja); font:600 13.5px/1.3 var(--f); cursor:pointer}
+.cuotas-chk input{width:22px; height:22px; accent-color:var(--naranja); flex:none}
+.sorpresa-form label.lbl{display:block; font:italic 900 19px/1 var(--cond); text-transform:uppercase; margin:18px 0 8px}
+.sorpresa-form input[type=text]{width:100%; padding:13px 14px; border-radius:12px; border:2px solid var(--negro); background:#fff; font:600 16px/1.2 var(--f)}
+.sorpresa-form input[type=text]:focus{outline:none; box-shadow:3px 3px 0 var(--naranja)}
+.presu{display:flex; flex-wrap:wrap; gap:7px}
+.presu button{padding:10px 12px; border-radius:30px; border:2px solid var(--negro); background:#fff; font:700 13px/1 var(--f); cursor:pointer; transition:transform .12s}
+.presu button[aria-pressed="true"]{background:var(--negro); color:#fff; transform:rotate(-2deg)}
+.sorpresa-form .btn-wa{margin-top:18px}
+
+.aviso{position:fixed; left:50%; bottom:86px; z-index:95; transform:translate(-50%, 30px); opacity:0; background:var(--negro); color:#fff; font:600 14px/1 var(--f); padding:12px 18px; border-radius:30px; transition:.25s; pointer-events:none; border:2px solid var(--naranja)}
+.aviso.ver{transform:translate(-50%,0); opacity:1}
+
+.entra{animation:entra .5s cubic-bezier(.2,.8,.25,1.2) both; animation-delay:var(--d,0s)}
+@keyframes entra{from{translate:0 18px; scale:.96} to{translate:0 0; scale:1}}
+.titular .t1.entra{animation-name:golpe}
+@keyframes golpe{0%{scale:1.18; rotate:-2deg} 60%{scale:.98} 100%{scale:1; rotate:0deg}}
+[data-rv]{translate:0 22px; transition:translate .5s cubic-bezier(.2,.8,.25,1.1)}
+[data-rv].si{translate:0 0}
+@media (prefers-reduced-motion:reduce){
+  *, *::before, *::after{animation:none!important; transition:none!important}
+  [data-rv]{translate:0 0!important}
+  .cae{display:none}
+}
+@media (max-width:360px){
+  .titular .t1{font-size:62px}
+  .par .btn-txt small{display:none}
+  .pcard b{font-size:19px}
+  .prod{grid-template-columns:104px 1fr} .prod img{width:104px}
+  .sello{width:88px; height:88px}
+  .titular .t2, .titular .t3{max-width:calc(100% - 96px)}
+}
+</style>
+</head>
+<body>
+<div class="fondo" aria-hidden="true"></div>
+<main class="hoja">
+
+<header class="heroe">
+  <div class="foto"><img src="img/heroe.webp" alt="Fachada de Play Shop, Gadgets y Tecnología, en el local E1-66: estantes llenos de parlantes, cámaras y electrodomésticos" width="900" height="1097" fetchpriority="high"></div>
+  <div class="cae" aria-hidden="true">
+    <svg style="left:8%; --t:11s; --d:.3s; --x:30px; --r:220deg" viewBox="0 0 32 32"><rect x="5" y="13" width="22" height="15" rx="2" fill="#EC4D37" stroke="#0B0B0E" stroke-width="2"/><path d="M3.5 9h25v4h-25z" fill="#FFD23F" stroke="#0B0B0E" stroke-width="2"/><path d="M16 9v19" stroke="#0B0B0E" stroke-width="2.4"/></svg>
+    <svg style="left:38%; --t:13s; --d:4s; --x:-40px; --r:-180deg" viewBox="0 0 32 32"><path d="M18 3 7 18h8l-2 11 12-16h-8z" fill="#FFD23F" stroke="#0B0B0E" stroke-width="2" stroke-linejoin="round"/></svg>
+    <svg style="left:62%; --t:12s; --d:7.5s; --x:24px; --r:260deg" viewBox="0 0 32 32"><path d="M16 3l3.6 8.2 8.9.8-6.8 5.9 2 8.7L16 22l-7.7 4.6 2-8.7-6.8-5.9 8.9-.8z" fill="#fff" stroke="#0B0B0E" stroke-width="2" stroke-linejoin="round"/></svg>
+    <svg style="left:84%; --t:14s; --d:2s; --x:-28px; --r:200deg" viewBox="0 0 32 32"><rect x="5" y="13" width="22" height="15" rx="2" fill="#fff" stroke="#0B0B0E" stroke-width="2"/><path d="M3.5 9h25v4h-25z" fill="#EC4D37" stroke="#0B0B0E" stroke-width="2"/><path d="M16 9v19" stroke="#EC4D37" stroke-width="2.4"/></svg>
+    <svg style="left:24%; --t:15s; --d:9.5s; --x:18px; --r:-240deg" viewBox="0 0 32 32"><path d="M16 3l3.6 8.2 8.9.8-6.8 5.9 2 8.7L16 22l-7.7 4.6 2-8.7-6.8-5.9 8.9-.8z" fill="#EC4D37" stroke="#0B0B0E" stroke-width="2" stroke-linejoin="round"/></svg>
+  </div>
+  <div class="etiqueta entra" style="--d:.1s" aria-hidden="true"><span>Novedades<br>virales<small>tecnología</small></span></div>
+  <a class="sello entra" style="--d:.25s" href="#cuotas" aria-label="Págalo a cuotas con Addi o Sistecrédito">
+    <svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="circ" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0"/></defs><text><textPath href="#circ" textLength="234" lengthAdjust="spacing">Addi · Sistecrédito · Addi · Sistecrédito ·</textPath></text></svg>
+    <b><small>Págalo</small>a<br>cuotas</b>
+  </a>
+  <div class="titular">
+    <h1>Play Shop · Gadgets y tecnología en Cali</h1>
+    <span class="t1 entra" style="--d:.15s">¿Y el <em>regalo</em><br>qué?</span>
+    <span class="t2 entra" style="--d:.3s">Tranquilo, que aquí hay pa’ todo el mundo.</span>
+    <span class="t3 entra" style="--d:.38s">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="#EC4D37" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6.3-6.5-11a6.5 6.5 0 0 1 13 0c0 4.7-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3" fill="#EC4D37"/></svg>Punto 14 · local E66 · Cali</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="#EC4D37" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h11v10h-11zM13.5 10h4l3 3.5v3h-7"/><circle cx="6.5" cy="17.5" r="1.8" fill="#0B0B0E"/><circle cx="17" cy="17.5" r="1.8" fill="#0B0B0E"/></svg>Envíos nacionales</span>
+    </span>
+  </div>
+</header>
+
+<div class="cinta" aria-hidden="true"><div><p>Novedades virales<i></i>Tecnología al mejor precio<i></i>Envíos nacionales<i></i>Mayor y detal<i></i>A cuotas con Addi y Sistecrédito<i></i></p><p>Novedades virales<i></i>Tecnología al mejor precio<i></i>Envíos nacionales<i></i>Mayor y detal<i></i>A cuotas con Addi y Sistecrédito<i></i></p></div></div>
+
+<nav class="enlaces" aria-label="Enlaces de Play Shop">
+  <a class="btn regalo entra" style="--d:.32s" href="#regalo">
+    <span class="btn-ico"><svg viewBox="0 0 32 32" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="13" width="22" height="14" rx="2" fill="#EC4D37" stroke="#fff"/><path d="M3.5 9h25v4h-25z" fill="#FFD23F" stroke="#fff"/><path d="M16 9v18" stroke="#fff"/><path d="M16 9c-2-4-7-5.5-7.5-2.5S13 9 16 9zM16 9c2-4 7-5.5 7.5-2.5S19 9 16 9z" stroke="#fff"/></svg></span>
+    <span class="btn-txt"><b>Busca el regalo</b><small>Dinos para quién es y te ayudamos</small></span>
+    <svg class="flecha" viewBox="0 0 24 24"><path d="M4 12h15M13.5 6.5 19 12l-5.5 5.5"/></svg>
+  </a>
+  <a class="btn wa entra" style="--d:.38s" id="btn-wa" href="https://wa.me/573102014969" target="_blank" rel="noopener">
+    <span class="btn-ico"><svg viewBox="0 0 32 32"><path fill="#25D366" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3z"/><path fill="#fff" d="M11.6 9.6c.3-.6.6-.6.9-.6h.8c.2 0 .6 0 .8.6l1.1 2.7c.1.3 0 .6-.1.8l-.7.8c-.2.2-.3.5-.1.8.4.8 1 1.6 1.7 2.3.9.8 1.8 1.3 2.5 1.6.3.1.6.1.8-.1l.9-1.1c.2-.3.5-.3.8-.2l2.6 1.2c.3.2.5.3.5.5 0 .4 0 1.3-.6 2-.6.7-1.9 1.3-3.1 1.1-1.2-.2-3.3-.8-5.5-2.8-2.6-2.4-3.5-4.7-3.8-5.9-.3-1.2.2-2.5.5-3.1z"/></svg></span>
+    <span class="btn-txt"><b>Escríbenos por WhatsApp</b><small>Mayor y detal · te respondemos ahí</small></span>
+    <svg class="flecha" viewBox="0 0 24 24"><path d="M4 12h15M13.5 6.5 19 12l-5.5 5.5"/></svg>
+  </a>
+  <div class="par">
+    <a class="btn entra" style="--d:.43s" id="btn-cuotas" href="https://wa.me/573102014969" target="_blank" rel="noopener">
+      <span class="btn-ico" style="background:var(--naranja-claro)"><svg viewBox="0 0 32 32" fill="none" stroke="#0B0B0E" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="7" width="25" height="18" rx="3" fill="#fff"/><path d="M3.5 12.5h25" stroke="#EC4D37" stroke-width="3"/><path d="M8 20h6"/></svg></span>
+      <span class="btn-txt"><b>Compra a cuotas</b><small>Addi · Sistecrédito</small></span>
+    </a>
+    <a class="btn entra" style="--d:.47s" id="btn-mayor" href="https://wa.me/573102014969" target="_blank" rel="noopener">
+      <span class="btn-ico" style="background:#FFF4CC"><svg viewBox="0 0 32 32" fill="none" stroke="#0B0B0E" stroke-width="2.2" stroke-linejoin="round"><path d="M4 15h11v12H4zM17 15h11v12H17z" fill="#E9C9A0"/><path d="M10.5 3.5h11v11.5h-11z" fill="#F2DAB8"/><path d="M9.5 15v4M22.5 15v4M16 3.5v4" stroke="#EC4D37" stroke-width="2.6"/></svg></span>
+      <span class="btn-txt"><b>Por mayor</b><small>Para revender</small></span>
+    </a>
+    <a class="btn entra" style="--d:.51s" href="https://www.google.com/maps/search/?api=1&amp;query=Punto%2014%20Cali%20local%20E66" target="_blank" rel="noopener">
+      <span class="btn-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#0B0B0E" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28s-8.5-8.2-8.5-14.2a8.5 8.5 0 0 1 17 0C24.5 19.8 16 28 16 28z" fill="#fff"/><circle cx="16" cy="13.8" r="3.2" fill="#EC4D37" stroke="none"/></svg></span>
+      <span class="btn-txt"><b>Cómo llegar</b><small>Punto 14 · local E66</small></span>
+    </a>
+    <a class="btn entra" style="--d:.55s" href="https://www.instagram.com/playshop.col/" target="_blank" rel="noopener">
+      <span class="btn-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#0B0B0E" stroke-width="2.3"><rect x="5" y="5" width="22" height="22" rx="6.5" fill="#fff"/><circle cx="16" cy="16" r="5.2" stroke="#EC4D37" stroke-width="2.6"/><circle cx="22.6" cy="9.4" r="1.4" fill="#0B0B0E" stroke="none"/></svg></span>
+      <span class="btn-txt"><b>Instagram</b><small>@playshop.col</small></span>
+    </a>
+  </div>
+</nav>
+
+<section class="regalo-sec" id="regalo" aria-labelledby="t-regalo">
+  <span class="ante">Buscador de regalos</span>
+  <h2 class="titulo" id="t-regalo">¿Para quién es <em>el regalo?</em></h2>
+  <p class="bajada">Toca a la persona y te mostramos qué le va a encantar. Tú dices «lo quiero» y seguimos por WhatsApp.</p>
+  <div class="modo" id="modo" role="group" aria-label="Tipo de compra">
+    <i class="pastilla" aria-hidden="true"></i>
+    <button type="button" data-modo="detal" aria-pressed="true">Detal<small>Para regalar</small></button>
+    <button type="button" data-modo="mayor" aria-pressed="false">Por mayor<small>Para revender</small></button>
+  </div>
+  <p class="modo-txt" id="modo-txt" aria-live="polite">Pides una unidad y te contamos precio y disponibilidad.</p>
+  <a class="cuotas-mini" href="#cuotas">
+    <svg viewBox="0 0 32 32" fill="none" stroke="#0B0B0E" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="7" width="25" height="18" rx="3" fill="#FFD23F"/><path d="M3.5 12.5h25" stroke-width="3"/><path d="M8 20h6"/></svg>
+    <p><b>¿Te alcanza? Págalo a cuotas</b>Con Addi o Sistecrédito, sin esperar la quincena.</p>
+  </a>
+  <p class="nota" aria-hidden="true">toca una tarjeta<svg viewBox="0 0 40 30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 4c10 1 22 5 28 20"/><path d="M24 20l7 5 2-9"/></svg></p>
+  <div class="personas" id="personas"></div>
+</section>
+
+<section class="sec" aria-labelledby="t-vitrina" data-rv>
+  <span class="ante">Lo que más se mueve</span>
+  <h2 class="titulo" id="t-vitrina">Vitrina <em>viral</em></h2>
+  <p class="bajada">Productos reales de la tienda. Toca el que te guste y pregunta por él.</p>
+  <div class="vitrina" id="vitrina"></div>
+  <p class="desliza" aria-hidden="true">desliza<svg viewBox="0 0 34 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 7h28M25 2l5 5-5 5"/></svg></p>
+</section>
+
+<section class="cuotas" id="cuotas" aria-labelledby="t-cuotas" data-rv>
+  <span class="ante">Financiación</span>
+  <h2 id="t-cuotas">¡No esperes más <em>la quincena!</em></h2>
+  <p>Compra lo que tanto quieres y financia fácil con Addi y Sistecrédito.</p>
+  <div class="marcas" aria-label="Medios de financiación"><div>Addi</div><div>Sistecrédito</div></div>
+  <a class="btn-wa" id="cuotas-wa" href="https://wa.me/573102014969" target="_blank" rel="noopener"><svg viewBox="0 0 32 32"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3z"/><path fill="#25D366" d="M11.6 9.6c.3-.6.6-.6.9-.6h.8c.2 0 .6 0 .8.6l1.1 2.7c.1.3 0 .6-.1.8l-.7.8c-.2.2-.3.5-.1.8.4.8 1 1.6 1.7 2.3.9.8 1.8 1.3 2.5 1.6.3.1.6.1.8-.1l.9-1.1c.2-.3.5-.3.8-.2l2.6 1.2c.3.2.5.3.5.5 0 .4 0 1.3-.6 2-.6.7-1.9 1.3-3.1 1.1-1.2-.2-3.3-.8-5.5-2.8-2.6-2.4-3.5-4.7-3.8-5.9-.3-1.2.2-2.5.5-3.1z"/></svg>Quiero comprar a cuotas</a>
+  <p class="letra">Te explicamos el proceso por el chat.</p>
+</section>
+
+<section class="mayor-sec" aria-labelledby="t-mayor" data-rv>
+  <div>
+    <span class="ante">¿Tienes negocio?</span>
+    <h2 class="titulo" id="t-mayor">Te vendemos <em>por mayor</em></h2>
+    <p class="bajada">Para tu tienda, tu barbería o para revender en diciembre.</p>
+  </div>
+  <div class="foto"><img src="img/p-maquinas-asesor.webp" alt="Asesor de Play Shop con dos máquinas de afeitar en la mano" width="600" height="750" loading="lazy"></div>
+  <a class="btn-wa mayor" id="mayor-wa" href="https://wa.me/573102014969" target="_blank" rel="noopener"><svg viewBox="0 0 32 32"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3z"/><path fill="#FFD23F" d="M11.6 9.6c.3-.6.6-.6.9-.6h.8c.2 0 .6 0 .8.6l1.1 2.7c.1.3 0 .6-.1.8l-.7.8c-.2.2-.3.5-.1.8.4.8 1 1.6 1.7 2.3.9.8 1.8 1.3 2.5 1.6.3.1.6.1.8-.1l.9-1.1c.2-.3.5-.3.8-.2l2.6 1.2c.3.2.5.3.5.5 0 .4 0 1.3-.6 2-.6.7-1.9 1.3-3.1 1.1-1.2-.2-3.3-.8-5.5-2.8-2.6-2.4-3.5-4.7-3.8-5.9-.3-1.2.2-2.5.5-3.1z"/></svg>Pedir precios por mayor</a>
+</section>
+
+<section class="visita" id="visitanos" aria-labelledby="t-visita" data-rv>
+  <span class="ante">Ven a la tienda</span>
+  <h2 class="titulo" id="t-visita" style="margin-bottom:14px">Aquí nos <em>encuentras</em></h2>
+  <div class="mapa">
+    <img src="img/p-motos-tienda.webp" alt="Motos para niños frente al letrero de Play Shop" width="600" height="750" loading="lazy">
+    <div class="dir">
+      <svg viewBox="0 0 32 32" fill="none" stroke="#0B0B0E" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28s-8.5-8.2-8.5-14.2a8.5 8.5 0 0 1 17 0C24.5 19.8 16 28 16 28z" fill="#EC4D37"/><circle cx="16" cy="13.8" r="3.2" fill="#fff"/></svg>
+      <div><b>Punto 14 · local E66</b><span>Cali · busca el letrero de Play Shop</span></div>
+    </div>
+  </div>
+  <div class="acciones">
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Punto%2014%20Cali%20local%20E66" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6.3-6.5-11a6.5 6.5 0 0 1 13 0c0 4.7-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>Google Maps</a>
+    <a href="https://waze.com/ul?q=Punto%2014%20Cali&amp;navigate=yes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15c-1.5-6 3-11 8.5-11S21 8 21 12c0 3-2 5-5 5.5H9.5C7 18 5 17 4 15z"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="16" cy="19.5" r="1.6"/><path d="M10 10h.01M15 10h.01"/></svg>Waze</a>
+  </div>
+  <p class="envios"><svg viewBox="0 0 32 32" fill="none" stroke="#0B0B0E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h16v13H3z" fill="#fff"/><path d="M19 13h5.5l4 4.5V22H19z" fill="#EC4D37"/><circle cx="8" cy="23.5" r="2.5" fill="#fff"/><circle cx="23.5" cy="23.5" r="2.5" fill="#fff"/></svg><span>¿No estás en Cali? <b>Hacemos envíos nacionales.</b> Pídelo por WhatsApp y te lo mandamos.</span></p>
+</section>
+
+<footer class="pie" data-rv>
+  <span class="placa"><img src="img/logo.webp" alt="Play Shop · Gadgets y Tecnología" width="520" height="141" loading="lazy"></span>
+  <h2>Novedades virales y tecnología <em>al mejor precio</em></h2>
+  <p>¿Tienes a alguien que todavía no sabe qué regalar?<br>Mándale este link y sálvale la Navidad.</p>
+  <button class="btn" id="compartir" type="button">
+    <span class="btn-ico" style="background:var(--naranja-claro)"><svg viewBox="0 0 24 24" fill="none" stroke="#0B0B0E" stroke-width="2.2"><circle cx="18" cy="5" r="3" fill="#EC4D37"/><circle cx="6" cy="12" r="3" fill="#EC4D37"/><circle cx="18" cy="19" r="3" fill="#EC4D37"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></span>
+    <span class="btn-txt"><b>Comparte este link</b><small>Por WhatsApp o donde quieras</small></span>
+  </button>
+  <div class="datos">
+    <p><b>Play Shop · Gadgets y Tecnología</b><br>Punto 14, local E66, Cali · Envíos nacionales</p>
+    <p>WhatsApp <a href="https://wa.me/573102014969" target="_blank" rel="noopener">310 201 4969</a> · <a href="https://www.instagram.com/playshop.col/" target="_blank" rel="noopener">@playshop.col</a></p>
+  </div>
+  <a class="firma" href="https://www.blackmouth.agency" target="_blank" rel="noopener">Hecho por BLACKMOUTH</a>
+</footer>
+</main>
+
+<div class="fija" id="fija">
+  <a class="rg" href="#regalo"><svg viewBox="0 0 32 32" fill="none" stroke="#0B0B0E" stroke-width="2.2" stroke-linejoin="round"><rect x="5" y="13" width="22" height="14" rx="2" fill="#FFD23F"/><path d="M3.5 9h25v4h-25z" fill="#fff"/><path d="M16 9v18"/></svg>Busca el regalo</a>
+  <a class="wa" id="fija-wa" href="https://wa.me/573102014969" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 32 32"><path fill="#25D366" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3z"/><path fill="#fff" d="M11.6 9.6c.3-.6.6-.6.9-.6h.8c.2 0 .6 0 .8.6l1.1 2.7c.1.3 0 .6-.1.8l-.7.8c-.2.2-.3.5-.1.8.4.8 1 1.6 1.7 2.3.9.8 1.8 1.3 2.5 1.6.3.1.6.1.8-.1l.9-1.1c.2-.3.5-.3.8-.2l2.6 1.2c.3.2.5.3.5.5 0 .4 0 1.3-.6 2-.6.7-1.9 1.3-3.1 1.1-1.2-.2-3.3-.8-5.5-2.8-2.6-2.4-3.5-4.7-3.8-5.9-.3-1.2.2-2.5.5-3.1z"/></svg></a>
+</div>
+
+<div class="velo" id="velo"></div>
+<section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="s-tit" aria-hidden="true">
+  <div class="agarra"><i></i></div>
+  <button class="cerrar" id="cerrar" type="button" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="#0B0B0E" stroke-width="3" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  <div id="sheet-cuerpo"></div>
+</section>
+<div class="aviso" id="aviso" role="status"></div>
+
+<script>
+(function(){
+var WA = "573102014969";
+function wa(t){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(t); }
+function $(s){ return document.querySelector(s); }
+function el(h){ var d = document.createElement("div"); d.innerHTML = h.trim(); return d.firstChild; }
+var WAICO = '<svg viewBox="0 0 32 32"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3z"/><path fill="#fff" opacity=".9" d="M11.6 9.6c.3-.6.6-.6.9-.6h.8c.2 0 .6 0 .8.6l1.1 2.7c.1.3 0 .6-.1.8l-.7.8c-.2.2-.3.5-.1.8.4.8 1 1.6 1.7 2.3.9.8 1.8 1.3 2.5 1.6.3.1.6.1.8-.1l.9-1.1c.2-.3.5-.3.8-.2l2.6 1.2c.3.2.5.3.5.5 0 .4 0 1.3-.6 2-.6.7-1.9 1.3-3.1 1.1-1.2-.2-3.3-.8-5.5-2.8-2.6-2.4-3.5-4.7-3.8-5.9-.3-1.2.2-2.5.5-3.1z"/></svg>';
+
+var ICO = {
+  carro:'<path d="M5 21v-5l3-6h16l3 6v5z" fill="#EC4D37"/><path d="M5 21v3h4v-3M23 21v3h4v-3M8.5 16h15"/><circle cx="9.5" cy="18.5" r="1.2" fill="#0B0B0E"/><circle cx="22.5" cy="18.5" r="1.2" fill="#0B0B0E"/><path d="M11 6.5c1-1.5 2-1.5 3 0M18 6.5c1-1.5 2-1.5 3 0" stroke="#EC4D37"/>',
+  tv:'<rect x="4" y="7" width="24" height="16" rx="2" fill="#FFD23F"/><path d="M12 27h8M16 23v4M12 3l4 4 4-4"/><path d="M13 12l6 3-6 3z" fill="#0B0B0E"/>',
+  maquina:'<rect x="11" y="10" width="10" height="18" rx="3" fill="#EC4D37"/><path d="M10 10h12l-1.2-5.5H11.2z" fill="#fff"/><path d="M13 4.5V2.5M16 4.5V2.5M19 4.5V2.5M14 16h4"/>',
+  casa:'<path d="M4 15 16 5l12 10" /><path d="M7 13v14h18V13" fill="#fff"/><circle cx="16" cy="19.5" r="3.6" fill="#EC4D37"/><circle cx="16" cy="19.5" r="1.2" fill="#0B0B0E"/>',
+  silla:'<path d="M7 9h18v11H7z" fill="#FFD23F"/><path d="M3 24h26l-2 3H5z" fill="#0B0B0E"/><path d="M11 14h4M11 17h8"/>',
+  moto:'<circle cx="8" cy="22" r="4.5" fill="#fff"/><circle cx="24" cy="22" r="4.5" fill="#fff"/><path d="M8 22l5-8h6l5 8" /><path d="M11 14h10l-2 5h-6z" fill="#EC4D37"/><path d="M19 14l2-5h3"/>',
+  maletin:'<rect x="4" y="10" width="24" height="16" rx="2.5" fill="#EC4D37"/><path d="M12 10V7h8v3M4 17h24"/><rect x="14" y="15" width="4" height="4" fill="#fff"/>',
+  huevo:'<path d="M16 4c5 0 9 8.5 9 14a9 9 0 0 1-18 0C7 12.5 11 4 16 4z" fill="#fff"/><path d="M8.5 15l3 2.5 3-3 3 3 3-3 3.5 2.5"/>',
+  nota:'<path d="M12 23V7l13-3v16"/><circle cx="9" cy="23" r="3.4" fill="#EC4D37"/><circle cx="22" cy="20" r="3.4" fill="#EC4D37"/>',
+  corona:'<path d="M5 24 3.5 10l7 5L16 6l5.5 9 7-5L27 24z" fill="#FFD23F"/><path d="M5 27.5h22"/><circle cx="16" cy="18" r="1.6" fill="#EC4D37"/>',
+  pregunta:'<path d="M11 11a5 5 0 1 1 7 4.6c-1.4.7-2 1.6-2 3.2V20" stroke-width="2.8"/><circle cx="16" cy="25" r="1.6" fill="#0B0B0E"/>'
+};
+function ico(n){ return '<svg viewBox="0 0 32 32" fill="none" stroke="#0B0B0E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' + ICO[n] + '</svg>'; }
+
+var P = {
+  scooter:{n:"Scooter eléctrica", art:"la scooter eléctrica", f:"p-scooter", l:"¿Aún sufres por los trancones en Cali? Esta les pasa por el ladito a todos.", c:["Pantalla digital","Bluetooth","Direccionales","Campanita"]},
+  tvbox:{n:"TV box onn", art:"el TV box onn", f:"p-tvbox", l:"Convierte cualquier televisor en Smart TV. Sin comprar televisor nuevo.", c:["Netflix","YouTube","Control con asistente de voz"]},
+  maquinas:{n:"Máquinas de afeitar", art:"una máquina de afeitar", pl:"las máquinas de afeitar", f:"p-maquinas", l:"Para cortes y perfiles en la casa… o para montar la barbería.", c:["Detal y por mayor","Cortes y perfiles"], desde:"Desde $10.000"},
+  camara:{n:"Cámara wifi 360°", art:"la cámara wifi 360°", f:"p-camara", l:"Mira la casa desde el celular, de día y de noche. Y regaña al perro cuando se sube al sofá.", c:["Visión nocturna","Sensor de movimiento","Audio bidireccional"]},
+  masajeador:{n:"Masajeador de cuello", art:"el masajeador de cuello", f:"p-masajeador", l:"Regálate el descanso que te mereces.", c:["Para el cuello"]},
+  motos:{n:"Motos para niños", art:"una moto para niños", pl:"las motos para niños", f:"p-motos", l:"Ojo: son para niños, aunque este muchacho no se quería bajar.", c:[]},
+  patineta:{n:"Patineta para niños", art:"una patineta para niños", pl:"las patinetas para niños", f:"p-patineta", l:"Pa’ que gasten la energía en el parque y no en la sala.", c:[]},
+  futuro:{n:"Parlante «del futuro»", art:"el parlante inteligente «del futuro»", f:"p-parlante-futuro-2", l:"Parlante, reloj y pantalla digital en uno. Ideal para el escritorio o la oficina.", c:["Pantalla digital","Bluetooth","Reloj"]},
+  tws:{n:"Parlante TWS de colores", art:"un parlante TWS de colores", pl:"los parlantes TWS de colores", f:"p-parlante-tws", l:"Escoge el color y que suene la novena.", c:["Varios colores"]},
+  hervidora:{n:"Hervidora de huevos", art:"la hervidora de huevos", f:"p-hervidora", l:"Huevos perfectos en minutos.", c:["Cocedor de huevos"]}
+};
+
+var G = [
+  {id:"trancon", t:"El que vive en el trancón", i:"carro", f:"p-scooter-tienda", ch:"Llega tarde a todo y siempre es «culpa del trancón».", para:"alguien que vive en el trancón", p:["scooter"]},
+  {id:"novela", t:"El que nunca llega a la novela", i:"tv", f:"p-tv", ch:"Siempre llega cuando ya están dando los créditos… o cuando ya fue el gol.", para:"alguien que nunca llega a tiempo a la novela ni al partido", p:["tvbox"]},
+  {id:"papa", t:"El papá que se motila en la casa", i:"maquina", f:"p-maquinas", ch:"Se motila solo frente al espejo y queda «más o menos».", para:"mi papá, que se motila en la casa", p:["maquinas"]},
+  {id:"mama", t:"La mamá que cuida la casa", i:"casa", f:"p-camara", ch:"La que todo lo ve. Ahora también desde el celular.", para:"mi mamá, que cuida la casa", p:["camara"]},
+  {id:"sentado", t:"El que trabaja sentado todo el día", i:"silla", f:"p-masajeador", ch:"Ocho horas en la silla y el cuello ya pide auxilio.", para:"alguien que trabaja sentado todo el día", p:["masajeador"]},
+  {id:"ninos", t:"Los niños (y el que se cree niño)", i:"moto", f:"p-motos", ch:"Ya hicieron la carta al Niño Dios. Y el grande también quiere.", para:"los niños", p:["motos","patineta"]},
+  {id:"oficina", t:"El de la oficina", i:"maletin", f:"p-parlante-futuro", ch:"El que tiene el escritorio más aburrido de toda la oficina.", para:"alguien de la oficina", p:["futuro"]},
+  {id:"huevo", t:"El que no sabe ni hervir un huevo", i:"huevo", f:"p-hervidora", ch:"Se le quema hasta el agua. Esto lo salva.", para:"alguien que no sabe ni hervir un huevo", p:["hervidora"]},
+  {id:"novena", t:"El DJ de la novena", i:"nota", f:"p-parlante-tws", ch:"El que pone la música en la novena y no suelta el celular.", para:"el que pone la música en la novena", p:["tws"]},
+  {id:"sorpresa", t:"No sé, sorpréndanme", i:"pregunta", sorpresa:true},
+  {id:"yo", t:"Para mí, que me lo merezco", i:"corona", f:"p-scooter", ch:"Todo el año dando regalos. Este diciembre: primero usted.", yo:true, p:["masajeador","tws","scooter"]}
+];
+
+var estado = {modo:"detal", cuotas:false, persona:null, presu:"", quien:""};
+
+function mensaje(pid, g){
+  var pr = P[pid], m;
+  if (estado.modo === "mayor"){
+    m = "Hola Play Shop, quiero precio por mayor de " + (pr.pl || pr.art) + ". ¿Cuál es el mínimo de unidades?";
+  } else if (g && g.yo){
+    m = "Hola Play Shop, quiero " + pr.art + " para mí, que me lo merezco. ¿Me cuentan precio y disponibilidad?";
+  } else if (g){
+    m = "Hola Play Shop, quiero " + pr.art + " para regalar a " + g.para + ". ¿Me cuentan precio y disponibilidad?";
+  } else {
+    m = "Hola Play Shop, ¿tienen disponible " + pr.art + "? ¿Me cuentan el precio?";
+  }
+  if (estado.cuotas && estado.modo !== "mayor") m += " Me interesa pagarlo a cuotas con Addi o Sistecrédito.";
+  return m;
+}
+function mensajeSorpresa(){
+  var m;
+  if (estado.modo === "mayor"){
+    m = "Hola Play Shop, quiero comprar por mayor y no sé qué me conviene. ¿Qué es lo que más se está vendiendo y cuáles son los mínimos?";
+  } else {
+    m = "Hola Play Shop, no sé qué regalar. ";
+    m += estado.quien ? "Es para " + estado.quien + ". " : "";
+    m += estado.presu ? "Quiero gastar " + estado.presu + ". " : "";
+    m += "¿Qué me recomiendan?";
+  }
+  if (estado.cuotas && estado.modo !== "mayor") m += " Me interesa pagarlo a cuotas con Addi o Sistecrédito.";
+  return m;
+}
+window.playshopMensaje = function(pid, gid, modo, cuotas){
+  var a = {modo:estado.modo, cuotas:estado.cuotas};
+  estado.modo = modo || "detal"; estado.cuotas = !!cuotas;
+  var g = G.filter(function(x){ return x.id === gid; })[0];
+  var r = wa(mensaje(pid, g));
+  estado.modo = a.modo; estado.cuotas = a.cuotas;
+  return r;
+};
+
+$("#btn-wa").href = wa("Hola Play Shop, vi su página y quiero más información.");
+$("#fija-wa").href = $("#btn-wa").href;
+$("#btn-cuotas").href = wa("Hola Play Shop, quiero comprar a cuotas con Addi o Sistecrédito. ¿Cómo es el proceso?");
+$("#cuotas-wa").href = $("#btn-cuotas").href;
+$("#btn-mayor").href = wa("Hola Play Shop, quiero comprar por mayor. ¿Me cuentan precios y mínimos?");
+$("#mayor-wa").href = $("#btn-mayor").href;
+
+var cont = $("#personas");
+G.forEach(function(g, k){
+  var c;
+  if (g.sorpresa){
+    c = el('<button type="button" class="pcard sorpresa" data-id="' + g.id + '"><span class="signo" aria-hidden="true">?</span><span class="txt"><span class="para">Ni idea</span><b>' + g.t + '</b></span></button>');
+  } else {
+    c = el('<button type="button" class="pcard' + (g.yo ? " yo" : "") + '" data-id="' + g.id + '"><img src="img/' + g.f + '.webp" alt="" width="600" height="750" loading="lazy">' +
+      '<span class="colgante" style="--d:' + (k * .37 % 1.6).toFixed(2) + 's" aria-hidden="true"><span>' + ico(g.i) + '</span></span>' +
+      '<span class="txt"><span class="para">' + (g.yo ? "Y por último" : "Para") + '</span><b>' + g.t + '</b></span></button>');
+  }
+  c.addEventListener("click", function(){ abrir(g.id, c); });
+  cont.appendChild(c);
+});
+
+var V = [
+  ["scooter","p-scooter-tienda"],["camara","p-camara"],["futuro","p-parlante-futuro"],["maquinas","p-maquinas"],["tvbox","p-tvbox"],
+  ["masajeador","p-masajeador"],["motos","p-motos"],["hervidora","p-hervidora"],["tws","p-parlante-tws"],["patineta","p-patineta"]
+];
+var vit = $("#vitrina");
+function pintarVitrina(){
+  vit.innerHTML = "";
+  V.forEach(function(v){
+    var pr = P[v[0]];
+    vit.appendChild(el('<a class="vcard" href="' + wa(mensaje(v[0])) + '" target="_blank" rel="noopener"><img src="img/' + v[1] + '.webp" alt="' + pr.n + '" width="600" height="750" loading="lazy">' +
+      (pr.desde ? '<em class="precio">' + pr.desde + '</em>' : '') +
+      '<div><b>' + pr.n + '</b><span>' + WAICO + (estado.modo === "mayor" ? "Precio por mayor" : "Pregunta por este") + '</span></div></a>'));
+  });
+}
+pintarVitrina();
+
+var modo = $("#modo");
+modo.addEventListener("click", function(e){
+  var b = e.target.closest("button"); if (!b) return;
+  ponerModo(b.getAttribute("data-modo"));
+});
+function ponerModo(m){
+  estado.modo = m;
+  modo.classList.toggle("mayor", m === "mayor");
+  modo.querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-modo") === m ? "true" : "false"); });
+  $("#modo-txt").innerHTML = m === "mayor" ? "<b>Por mayor:</b> te pasamos precio para revender o para tu negocio." : "Pides una unidad y te contamos precio y disponibilidad.";
+  pintarVitrina();
+  if (estado.persona) pintarSheet();
+}
+
+var sheet = $("#sheet"), velo = $("#velo"), cuerpo = $("#sheet-cuerpo"), origen = null;
+function pintarSheet(){
+  var g = G.filter(function(x){ return x.id === estado.persona; })[0];
+  var h = '<div class="s-cab"><span class="ico">' + ico(g.i) + '</span><div><small>' + (g.yo ? "Regalo" : g.sorpresa ? "Tranquilo" : "Regalo para") + '</small><h3 id="s-tit">' + g.t + '</h3></div></div>';
+  h += '<span class="s-modo' + (estado.modo === "mayor" ? " mayor" : "") + '"><i></i>' + (estado.modo === "mayor" ? "Por mayor" : "Detal") +
+       '<button type="button" id="s-cambia">' + (estado.modo === "mayor" ? "cambiar a detal" : "cambiar a por mayor") + '</button></span>';
+  if (g.sorpresa){
+    h += '<p class="s-chiste">Cuéntanos para quién es y cuánto quieres gastar. Un asesor te recomienda.</p><div class="sorpresa-form">';
+    if (estado.modo !== "mayor"){
+      h += '<label class="lbl" for="quien">¿Para quién es?</label><input type="text" id="quien" maxlength="40" placeholder="Ej.: mi suegra, mi primo gamer" value="' + estado.quien.replace(/"/g, "&quot;") + '">';
+      h += '<p class="lbl" style="font:italic 900 19px/1 var(--cond); text-transform:uppercase; margin:18px 0 8px">¿Cuánto quieres gastar?</p><div class="presu" role="group" aria-label="Presupuesto">';
+      ["hasta 50 mil","de 50 a 150 mil","de 150 a 300 mil","más de 300 mil"].forEach(function(p){
+        h += '<button type="button" aria-pressed="' + (estado.presu === p ? "true" : "false") + '" data-p="' + p + '">' + p.charAt(0).toUpperCase() + p.slice(1) + '</button>';
+      });
+      h += '</div>';
+    }
+    h += (estado.modo === "mayor" ? "" : '<label class="cuotas-chk"><input type="checkbox" id="chk-cuotas"' + (estado.cuotas ? " checked" : "") + '> Quiero pagarlo a cuotas con Addi o Sistecrédito</label>');
+    h += '<a class="btn-wa' + (estado.modo === "mayor" ? " mayor" : "") + '" id="s-sorpresa" href="' + wa(mensajeSorpresa()) + '" target="_blank" rel="noopener">' + WAICO + 'Que me recomiende un asesor</a></div>';
+  } else {
+    h += '<p class="s-chiste">' + g.ch + '</p>';
+    g.p.forEach(function(pid){
+      var pr = P[pid];
+      h += '<article class="prod"><img src="img/' + pr.f + '.webp" alt="' + pr.n + '" width="600" height="750"><div><h4>' + pr.n + '</h4><p>' + pr.l + '</p><div class="chips">' +
+        (pr.desde ? '<span class="desde">' + pr.desde + '</span>' : '') + pr.c.map(function(c){ return '<span>' + c + '</span>'; }).join("") + '</div></div>' +
+        '<a class="btn-wa' + (estado.modo === "mayor" ? " mayor" : "") + '" data-pid="' + pid + '" href="' + wa(mensaje(pid, g)) + '" target="_blank" rel="noopener">' + WAICO + (estado.modo === "mayor" ? "Pedir precio por mayor" : "¡Lo quiero!") + '</a></article>';
+    });
+    h += (estado.modo === "mayor" ? "" : '<label class="cuotas-chk"><input type="checkbox" id="chk-cuotas"' + (estado.cuotas ? " checked" : "") + '> Quiero pagarlo a cuotas con Addi o Sistecrédito</label>');
+  }
+  cuerpo.innerHTML = h;
+  $("#s-cambia").onclick = function(){ ponerModo(estado.modo === "mayor" ? "detal" : "mayor"); };
+  var ck = $("#chk-cuotas"); if (ck) ck.onchange = function(){ estado.cuotas = this.checked; actualizarLinks(); };
+  var q = $("#quien"); if (q) q.oninput = function(){ estado.quien = this.value.trim(); actualizarLinks(); };
+  cuerpo.querySelectorAll(".presu button").forEach(function(b){
+    b.onclick = function(){
+      estado.presu = estado.presu === b.getAttribute("data-p") ? "" : b.getAttribute("data-p");
+      cuerpo.querySelectorAll(".presu button").forEach(function(x){ x.setAttribute("aria-pressed", x.getAttribute("data-p") === estado.presu ? "true" : "false"); });
+      actualizarLinks();
+    };
+  });
+}
+function actualizarLinks(){
+  var g = G.filter(function(x){ return x.id === estado.persona; })[0];
+  cuerpo.querySelectorAll("a[data-pid]").forEach(function(a){ a.href = wa(mensaje(a.getAttribute("data-pid"), g)); });
+  var s = $("#s-sorpresa"); if (s) s.href = wa(mensajeSorpresa());
+}
+function abrir(id, desde){
+  estado.persona = id; origen = desde || null;
+  pintarSheet();
+  sheet.scrollTop = 0;
+  sheet.classList.add("ver"); velo.classList.add("ver"); sheet.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  setTimeout(function(){ $("#cerrar").focus({preventScroll:true}); }, 60);
+}
+function cerrar(){
+  if (!estado.persona) return;
+  estado.persona = null;
+  sheet.classList.remove("ver"); velo.classList.remove("ver"); sheet.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  if (location.hash.indexOf("#para-") === 0) history.replaceState(null, "", location.pathname + location.search);
+  if (origen) origen.focus({preventScroll:true});
+}
+$("#cerrar").onclick = cerrar; velo.onclick = cerrar;
+document.addEventListener("keydown", function(e){ if (e.key === "Escape") cerrar(); });
+var y0 = null;
+sheet.addEventListener("touchstart", function(e){ y0 = sheet.scrollTop <= 0 ? e.touches[0].clientY : null; }, {passive:true});
+sheet.addEventListener("touchend", function(e){ if (y0 !== null && e.changedTouches[0].clientY - y0 > 90) cerrar(); y0 = null; }, {passive:true});
+function porHash(){
+  var h = location.hash;
+  if (h.indexOf("#para-") === 0){ var id = h.slice(6); if (G.some(function(x){ return x.id === id; })) abrir(id); }
+}
+porHash(); window.addEventListener("hashchange", porHash);
+
+var aviso = $("#aviso"), tAv;
+function avisar(t){ aviso.textContent = t; aviso.classList.add("ver"); clearTimeout(tAv); tAv = setTimeout(function(){ aviso.classList.remove("ver"); }, 2200); }
+$("#compartir").onclick = function(){
+  var url = location.href.split("#")[0];
+  if (navigator.share){ navigator.share({title:"Play Shop", text:"¿No sabes qué regalar? Mira esto: gadgets y tecnología en Cali, a cuotas.", url:url}).catch(function(){}); }
+  else if (navigator.clipboard){ navigator.clipboard.writeText(url).then(function(){ avisar("¡Link copiado!"); }); }
+  else { avisar(url); }
+};
+
+if ("IntersectionObserver" in window){
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("si"); io.unobserve(e.target); } }); }, {rootMargin:"0px 0px 10% 0px"});
+  document.querySelectorAll("[data-rv]").forEach(function(n){ io.observe(n); });
+  var fija = $("#fija"), fuera = false, enRegalo = false;
+  function act(){ fija.classList.toggle("ver", fuera && !enRegalo); }
+  new IntersectionObserver(function(es){ fuera = !es[0].isIntersecting && es[0].boundingClientRect.top < 0; act(); }).observe($(".enlaces"));
+  new IntersectionObserver(function(es){ enRegalo = es[0].isIntersecting; act(); }, {rootMargin:"-25% 0px -25% 0px"}).observe($("#regalo"));
+} else {
+  document.querySelectorAll("[data-rv]").forEach(function(n){ n.classList.add("si"); });
+}
+})();
+</script>
+</body>
+</html>
